@@ -7,55 +7,102 @@
     name="description"
     content="Headley Lab IT homelab portfolio covering networking, virtualization, Windows, Linux, and cybersecurity."
   >
-
   <title>Headley Lab</title>
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-  <header>
-    <h1>Headley Lab</h1>
-    <p>IT Homelab Portfolio</p>
-  </header>
-
-  <main>
-    <section>
-      <h2>About</h2>
-
-      <p>
-        Hands-on IT homelab focused on networking, virtualization,
-        Windows and Linux administration, system security, and troubleshooting.
+  <header class="hero">
+    <div class="container">
+      <p class="eyebrow">IT Homelab Portfolio</p>
+      <h1>Headley Lab</h1>
+      <p class="hero-text">
+        Hands-on projects in networking, virtualization, Windows and Linux
+        administration, troubleshooting, and cybersecurity.
       </p>
 
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="#projects">Projects</a>
+        <a href="lessons-learned.html">Lessons Learned</a>
+        <a href="#certificates">Certificates</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section>
+      <h2>About</h2>
       <p>
-        I use this site to document completed projects, technical problems,
+        I built Headley Lab to turn certification study into practical
+        experience. I document completed projects, technical problems,
         verification steps, and lessons learned.
+      </p>
+      <p>
+        My normal workflow is <strong>Plan → Do → Verify → Explain</strong>.
       </p>
     </section>
 
-    <section>
+    <section id="projects">
       <h2>Current Projects</h2>
+      <div class="project-grid">
+        <article class="card">
+          <h3>Virtualization</h3>
+          <p>
+            Hyper-V lab with Windows 11, Windows Server, and Ubuntu virtual
+            machines using checkpoints and isolated testing.
+          </p>
+        </article>
 
-      <ul>
-        <li>Hyper-V virtual lab</li>
-        <li>Windows Server Active Directory and DNS</li>
-        <li>Windows administration and troubleshooting</li>
-        <li>Linux administration and Bash scripting</li>
-        <li>Network security and remote administration</li>
-        <li>Cybersecurity and malware-response labs</li>
-      </ul>
+        <article class="card">
+          <h3>Active Directory and DNS</h3>
+          <p>
+            Built the batcave.local domain, configured DNS, joined clients,
+            created accounts, and troubleshot domain connectivity.
+          </p>
+        </article>
+
+        <article class="card">
+          <h3>Windows Administration</h3>
+          <p>
+            Practiced users, permissions, Defender, firewall, Task Scheduler,
+            recovery tools, PowerShell, and system troubleshooting.
+          </p>
+        </article>
+
+        <article class="card">
+          <h3>Linux Administration</h3>
+          <p>
+            Used Ubuntu for command-line administration, SSH, services,
+            package management, networking, permissions, and Bash scripting.
+          </p>
+        </article>
+
+        <article class="card">
+          <h3>Networking</h3>
+          <p>
+            Worked with DHCP reservations, Wi-Fi security, managed switching,
+            remote access, DNS testing, and layered connectivity troubleshooting.
+          </p>
+        </article>
+
+        <article class="card">
+          <h3>Cybersecurity</h3>
+          <p>
+            Practiced malware-response procedures, account security, least
+            privilege, Defender scans, recovery planning, and documentation.
+          </p>
+        </article>
+      </div>
     </section>
 
     <section>
       <h2>What I Built and Lessons Learned</h2>
-
       <p>
-        A detailed record of my Windows, Linux, networking,
-        virtualization, security, and troubleshooting experience.
+        A detailed record of my Windows, Linux, networking, virtualization,
+        security, and troubleshooting experience.
       </p>
-
-      <a href="lessons-learned.html">
-        View my complete lab experience
+      <a class="button" href="lessons-learned.html">
+        View complete lab experience
       </a>
     </section>
 
@@ -63,19 +110,17 @@
       <h2>Certificates and Competencies</h2>
 
       <div class="certificate-grid">
-        <article class="certificate-card">
+        <article class="card certificate-card">
           <h3>IT Hardware and Network Support</h3>
-
           <p>
             CompTIA performance-based competency certificate covering
             computer hardware, networking, installation, configuration,
             and technical support.
           </p>
-
           <p><strong>Completed:</strong> June 14, 2026</p>
-
           <a
-            href="comptia-hardware-network-support.pdf"
+            class="button"
+            href="CompTIA-Hardware-Network-Support.pdf"
             target="_blank"
             rel="noopener"
           >
@@ -83,19 +128,17 @@
           </a>
         </article>
 
-        <article class="certificate-card">
+        <article class="card certificate-card">
           <h3>IT Software and Systems Support</h3>
-
           <p>
             CompTIA performance-based competency certificate covering
             operating systems, software troubleshooting, security,
             administration, and operational procedures.
           </p>
-
           <p><strong>Completed:</strong> July 9, 2026</p>
-
           <a
-            href="comptia-software-systems-support.pdf"
+            class="button"
+            href="CompTIA-Software-Systems-Support.pdf"
             target="_blank"
             rel="noopener"
           >
@@ -107,7 +150,9 @@
   </main>
 
   <footer>
-    <p>Headley Lab — Hands-on IT and cybersecurity learning.</p>
+    <div class="container">
+      <p>Headley Lab — Hands-on IT and cybersecurity learning.</p>
+    </div>
   </footer>
 </body>
 </html>
