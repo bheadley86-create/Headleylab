@@ -277,3 +277,73 @@ footer p {
     align-items: flex-start;
   }
 }
+
+
+.lab-intro {
+  margin-bottom: 1.5rem;
+}
+
+.lab-detail-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.lab-detail-card {
+  padding: 1.4rem;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: rgba(15, 27, 45, 0.94);
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.18);
+}
+
+.lab-detail-card h2 {
+  margin: 0.8rem 0 1rem;
+  font-size: 1.3rem;
+}
+
+.lab-detail-card h3 {
+  margin-bottom: 0.35rem;
+  color: var(--accent-light);
+  font-size: 0.95rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.lab-detail-card p {
+  margin-bottom: 0;
+}
+
+.lab-detail-heading {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.65rem;
+  align-items: center;
+}
+
+.lab-tag,
+.complete-badge {
+  display: inline-block;
+  padding: 0.3rem 0.65rem;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 800;
+}
+
+.lab-tag {
+  color: var(--accent-light);
+  border: 1px solid var(--border);
+  background: var(--panel-alt);
+}
+
+.complete-badge {
+  color: #d1fae5;
+  border: 1px solid #166534;
+  background: #14532d;
+}
+
+@media (min-width: 900px) {
+  .lab-detail-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
