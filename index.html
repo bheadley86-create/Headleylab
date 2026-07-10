@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -7,13 +6,29 @@
 
   <title>Headley Lab | IT Homelab Portfolio</title>
 
-<meta
-name="description"
-content="Headley Lab documents hands-on projects in networking, virtualization, Windows and Linux administration, troubleshooting, and cybersecurity."
-
->
+  <meta
+    name="description"
+    content="Headley Lab documents hands-on projects in networking, virtualization, Windows and Linux administration, troubleshooting, and cybersecurity."
+  >
 
   <link rel="stylesheet" href="style.css">
+
+  <style>
+    .certificate-toggle {
+      border: 0;
+      cursor: pointer;
+      font: inherit;
+    }
+
+    .certificate-details {
+      width: 100%;
+      margin-top: 18px;
+    }
+
+    .certificate-details[hidden] {
+      display: none;
+    }
+  </style>
 </head>
 
 <body>
@@ -22,244 +37,269 @@ content="Headley Lab documents hands-on projects in networking, virtualization, 
     <div class="container">
       <p class="eyebrow">IT Homelab Portfolio</p>
 
-```
-  <h1>Headley Lab</h1>
+      <h1>Headley Lab</h1>
 
-  <p class="intro">
-    Hands-on projects in networking, virtualization, Windows and Linux
-    administration, troubleshooting, and cybersecurity.
-  </p>
+      <p class="intro">
+        Hands-on projects in networking, virtualization, Windows and Linux
+        administration, troubleshooting, and cybersecurity.
+      </p>
 
-  <nav aria-label="Main navigation">
-    <a href="#projects">Projects</a>
-    <a href="lessons-learned.html">Lessons Learned</a>
-    <a href="completed-labs.html">Completed Labs</a>
-    <a href="#certificates">Certificates</a>
-    <a href="#about">About</a>
-  </nav>
-</div>
-```
-
+      <nav aria-label="Main navigation">
+        <a href="#projects">Projects</a>
+        <a href="lessons-learned.html">Lessons Learned</a>
+        <a href="completed-labs.html">Completed Labs</a>
+        <a href="#certificates">Certificates</a>
+        <a href="#about">About</a>
+      </nav>
+    </div>
   </header>
 
   <main class="container">
 
-```
-<section id="about">
-  <h2>About</h2>
-
-  <p>
-    I built Headley Lab to turn certification study into practical
-    experience. I document completed projects, technical problems,
-    verification steps, and lessons learned.
-  </p>
-
-  <p class="workflow">
-    My normal workflow is
-    <strong>Plan → Do → Verify → Explain.</strong>
-  </p>
-</section>
-
-<section id="projects">
-  <h2>Current Projects</h2>
-
-  <div class="project-grid">
-
-    <article class="project-card">
-      <h3>Custom PC Build and Configuration</h3>
+    <section id="about">
+      <h2>About</h2>
 
       <p>
-        Planned, assembled, and configured a custom Windows 11 Pro desktop
-        using an AMD Ryzen 7 7700X, Gigabyte B650 EAGLE AX motherboard,
-        32 GB of DDR5 memory, NVMe storage, and an AMD Radeon XFX graphics
-        card.
+        I built Headley Lab to turn certification study into practical
+        experience. I document completed projects, technical problems,
+        verification steps, and lessons learned.
       </p>
 
-      <p>
-        Installed the operating system, drivers, security tools, and
-        Hyper-V, then verified storage, memory, networking, temperatures,
-        and system stability.
+      <p class="workflow">
+        My normal workflow is
+        <strong>Plan → Do → Verify → Explain.</strong>
       </p>
-    </article>
+    </section>
 
-    <article class="project-card">
-      <h3>Monitoring, Logging, and Task Automation</h3>
+    <section id="projects">
+      <h2>Current Projects</h2>
 
-      <p>
-        Created Windows Task Scheduler jobs and PowerShell scripts to
-        collect logs, monitor performance, record system configuration,
-        and support routine maintenance and troubleshooting.
-      </p>
-    </article>
+      <div class="project-grid">
 
-    <article class="project-card">
-      <h3>Virtualization</h3>
+        <article class="project-card">
+          <h3>Custom PC Build and Configuration</h3>
 
-      <p>
-        Built a Hyper-V lab with Windows 11, Windows Server, and Ubuntu
-        virtual machines using checkpoints and isolated testing.
-      </p>
-    </article>
+          <p>
+            Planned, assembled, and configured a custom Windows 11 Pro desktop
+            using an AMD Ryzen 7 7700X, Gigabyte B650 EAGLE AX motherboard,
+            32 GB of DDR5 memory, NVMe storage, and an AMD Radeon XFX graphics
+            card.
+          </p>
 
-    <article class="project-card">
-      <h3>Active Directory and DNS</h3>
+          <p>
+            Installed the operating system, drivers, security tools, and
+            Hyper-V, then verified storage, memory, networking, temperatures,
+            and system stability.
+          </p>
+        </article>
 
-      <p>
-        Built the <strong>batcave.local</strong> domain, configured DNS,
-        joined Windows clients, created user accounts, and troubleshot
-        domain connectivity.
-      </p>
-    </article>
+        <article class="project-card">
+          <h3>Monitoring, Logging, and Task Automation</h3>
 
-    <article class="project-card">
-      <h3>Windows Administration</h3>
+          <p>
+            Created Windows Task Scheduler jobs and PowerShell scripts to
+            collect logs, monitor performance, record system configuration,
+            and support routine maintenance and troubleshooting.
+          </p>
+        </article>
 
-      <p>
-        Practiced account management, permissions, Microsoft Defender,
-        Windows Firewall, Task Scheduler, recovery tools, PowerShell, and
-        system troubleshooting.
-      </p>
-    </article>
+        <article class="project-card">
+          <h3>Virtualization</h3>
 
-    <article class="project-card">
-      <h3>Linux Administration</h3>
+          <p>
+            Built a Hyper-V lab with Windows 11, Windows Server, and Ubuntu
+            virtual machines using checkpoints and isolated testing.
+          </p>
+        </article>
 
-      <p>
-        Used Ubuntu for command-line administration, SSH, services,
-        package management, networking, permissions, and Bash scripting.
-      </p>
-    </article>
+        <article class="project-card">
+          <h3>Active Directory and DNS</h3>
 
-    <article class="project-card">
-      <h3>Networking</h3>
+          <p>
+            Built the <strong>batcave.local</strong> domain, configured DNS,
+            joined Windows clients, created user accounts, and troubleshot
+            domain connectivity.
+          </p>
+        </article>
 
-      <p>
-        Worked with DHCP reservations, Wi-Fi security, managed switching,
-        remote access, DNS testing, and layered connectivity
-        troubleshooting.
-      </p>
-    </article>
+        <article class="project-card">
+          <h3>Windows Administration</h3>
 
-    <article class="project-card">
-      <h3>Wireless AP Placement and Wired Backhaul</h3>
+          <p>
+            Practiced account management, permissions, Microsoft Defender,
+            Windows Firewall, Task Scheduler, recovery tools, PowerShell, and
+            system troubleshooting.
+          </p>
+        </article>
 
-      <p>
-        Used a Wi-Fi analyzer to evaluate signal conditions and select
-        access-point placement.
-      </p>
+        <article class="project-card">
+          <h3>Linux Administration</h3>
 
-      <p>
-        Terminated and installed an Ethernet cable with RJ45 connectors to
-        establish a wired backhaul connection.
-      </p>
-    </article>
+          <p>
+            Used Ubuntu for command-line administration, SSH, services,
+            package management, networking, permissions, and Bash scripting.
+          </p>
+        </article>
 
-    <article class="project-card">
-      <h3>Cybersecurity</h3>
+        <article class="project-card">
+          <h3>Networking</h3>
 
-      <p>
-        Practiced malware-response procedures, account security, least
-        privilege, Microsoft Defender scans, recovery planning, and
-        technical documentation.
-      </p>
-    </article>
+          <p>
+            Worked with DHCP reservations, Wi-Fi security, managed switching,
+            remote access, DNS testing, and layered connectivity
+            troubleshooting.
+          </p>
+        </article>
 
-  </div>
-</section>
+        <article class="project-card">
+          <h3>Wireless AP Placement and Wired Backhaul</h3>
 
-<section id="lessons">
-  <h2>What I Built and Lessons Learned</h2>
+          <p>
+            Used a Wi-Fi analyzer to evaluate signal conditions and select
+            access-point placement.
+          </p>
 
-  <p>
-    A detailed record of my Windows, Linux, networking, virtualization,
-    security, and troubleshooting experience.
-  </p>
+          <p>
+            Terminated and installed an Ethernet cable with RJ45 connectors to
+            establish a wired backhaul connection.
+          </p>
+        </article>
 
-  <a class="button" href="lessons-learned.html">
-    View Complete Lab Experience
-  </a>
-</section>
+        <article class="project-card">
+          <h3>Cybersecurity</h3>
 
-<section id="completed-labs">
-  <h2>Completed Hands-On Labs</h2>
+          <p>
+            Practiced malware-response procedures, account security, least
+            privilege, Microsoft Defender scans, recovery planning, and
+            technical documentation.
+          </p>
+        </article>
 
-  <p>
-    View 85 completed CompTIA CertMaster Perform simulations covering
-    hardware, networking, Windows, Linux, virtualization, cloud, printing,
-    support procedures, and security.
-  </p>
-
-  <a class="button" href="completed-labs.html">
-    View Completed Labs
-  </a>
-</section>
-
-<section id="certificates">
-  <h2>Certificates</h2>
-
-  <div class="cert-grid">
-
-    <article class="certificate-card">
-      <a
-        class="certificate-image-link"
-        href="CompTIA-Hardware-Network-Support_copy.png"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Open CompTIA Hardware and Network Support certificate"
-      >
-        <img
-          src="CompTIA-Hardware-Network-Support_copy.png"
-          alt="CompTIA Hardware and Network Support certificate earned by Robert Headley"
-        >
-      </a>
-
-      <div class="certificate-content">
-        <h3>CompTIA Hardware and Network Support</h3>
-        <p>Certificate date: June 5, 2026</p>
-
-        <a
-          class="button"
-          href="CompTIA-Hardware-Network-Support_copy.png"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          View Full Certificate
-        </a>
       </div>
-    </article>
+    </section>
 
-    <article class="certificate-card">
-      <a
-        class="certificate-image-link"
-        href="CompTIA-Software-Systems-Support_copy.png"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Open CompTIA Software and Systems Support certificate"
-      >
-        <img
-          src="CompTIA-Software-Systems-Support_copy.png"
-          alt="CompTIA Software and Systems Support certificate earned by Robert Headley"
-        >
+    <section id="lessons">
+      <h2>What I Built and Lessons Learned</h2>
+
+      <p>
+        A detailed record of my Windows, Linux, networking, virtualization,
+        security, and troubleshooting experience.
+      </p>
+
+      <a class="button" href="lessons-learned.html">
+        View Complete Lab Experience
       </a>
+    </section>
 
-      <div class="certificate-content">
-        <h3>CompTIA Software and Systems Support</h3>
-        <p>Certificate date: July 9, 2026</p>
+    <section id="completed-labs">
+      <h2>Completed Hands-On Labs</h2>
 
-        <a
-          class="button"
-          href="CompTIA-Software-Systems-Support_copy.png"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          View Full Certificate
-        </a>
+      <p>
+        View 85 completed CompTIA CertMaster Perform simulations covering
+        hardware, networking, Windows, Linux, virtualization, cloud, printing,
+        support procedures, and security.
+      </p>
+
+      <a class="button" href="completed-labs.html">
+        View Completed Labs
+      </a>
+    </section>
+
+    <section id="certificates">
+      <h2>Certificates</h2>
+
+      <div class="cert-grid">
+
+        <article class="certificate-card">
+          <div class="certificate-content">
+            <h3>CompTIA Hardware and Network Support</h3>
+            <p>Certificate date: June 5, 2026</p>
+
+            <button
+              class="button certificate-toggle"
+              type="button"
+              aria-expanded="false"
+              aria-controls="hardware-certificate"
+            >
+              Show Certificate
+            </button>
+
+            <div
+              class="certificate-details"
+              id="hardware-certificate"
+              hidden
+            >
+              <a
+                class="certificate-image-link"
+                href="CompTIA-Hardware-Network-Support_copy.png"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Open CompTIA Hardware and Network Support certificate"
+              >
+                <img
+                  src="CompTIA-Hardware-Network-Support_copy.png"
+                  alt="CompTIA Hardware and Network Support certificate earned by Robert Headley"
+                >
+              </a>
+
+              <a
+                class="button"
+                href="CompTIA-Hardware-Network-Support_copy.png"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Open Full Certificate
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="certificate-card">
+          <div class="certificate-content">
+            <h3>CompTIA Software and Systems Support</h3>
+            <p>Certificate date: July 9, 2026</p>
+
+            <button
+              class="button certificate-toggle"
+              type="button"
+              aria-expanded="false"
+              aria-controls="software-certificate"
+            >
+              Show Certificate
+            </button>
+
+            <div
+              class="certificate-details"
+              id="software-certificate"
+              hidden
+            >
+              <a
+                class="certificate-image-link"
+                href="CompTIA-Software-Systems-Support_copy.png"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Open CompTIA Software and Systems Support certificate"
+              >
+                <img
+                  src="CompTIA-Software-Systems-Support_copy.png"
+                  alt="CompTIA Software and Systems Support certificate earned by Robert Headley"
+                >
+              </a>
+
+              <a
+                class="button"
+                href="CompTIA-Software-Systems-Support_copy.png"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Open Full Certificate
+              </a>
+            </div>
+          </div>
+        </article>
+
       </div>
-    </article>
-
-  </div>
-</section>
-```
+    </section>
 
   </main>
 
@@ -268,6 +308,26 @@ content="Headley Lab documents hands-on projects in networking, virtualization, 
       <p>Headley Lab — Hands-on IT and cybersecurity learning.</p>
     </div>
   </footer>
+
+  <script>
+    document.querySelectorAll(".certificate-toggle").forEach((button) => {
+      button.addEventListener("click", () => {
+        const certificateId = button.getAttribute("aria-controls");
+        const certificate = document.getElementById(certificateId);
+        const isHidden = certificate.hasAttribute("hidden");
+
+        if (isHidden) {
+          certificate.removeAttribute("hidden");
+          button.setAttribute("aria-expanded", "true");
+          button.textContent = "Hide Certificate";
+        } else {
+          certificate.setAttribute("hidden", "");
+          button.setAttribute("aria-expanded", "false");
+          button.textContent = "Show Certificate";
+        }
+      });
+    });
+  </script>
 
 </body>
 </html>
