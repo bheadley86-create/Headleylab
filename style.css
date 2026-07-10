@@ -1,361 +1,230 @@
-:root {
-  color-scheme: dark;
-  --bg: #07101d;
-  --panel: #0f1b2d;
-  --panel-alt: #16243a;
-  --text: #e7eef8;
-  --muted: #aebed1;
-  --accent: #3b82f6;
-  --accent-light: #7db2ff;
-  --border: #2a3c56;
-  --max-width: 1120px;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-* {
-  box-sizing: border-box;
-}
+  <title>Headley Lab | IT Homelab Portfolio</title>
 
-html {
-  scroll-behavior: smooth;
-}
+  <meta
+    name="description"
+    content="Headley Lab documents hands-on projects in networking, virtualization, Windows and Linux administration, troubleshooting, and cybersecurity."
+  >
 
-body {
-  margin: 0;
-  min-height: 100vh;
-  font-family: Arial, Helvetica, sans-serif;
-  line-height: 1.65;
-  color: var(--text);
-  background:
-    radial-gradient(circle at top right, rgba(59, 130, 246, 0.18), transparent 34rem),
-    var(--bg);
-}
+  <link rel="stylesheet" href="style.css">
+</head>
 
-.container {
-  width: min(92%, var(--max-width));
-  margin-inline: auto;
-}
+<body>
 
-.hero {
-  padding: 4.5rem 0 3.5rem;
-  border-bottom: 1px solid var(--border);
-  background: rgba(7, 16, 29, 0.72);
-}
+  <header class="site-header">
+    <div class="container">
+      <p class="eyebrow">IT Homelab Portfolio</p>
 
-.small-hero {
-  padding-bottom: 3rem;
-}
+      <h1>Headley Lab</h1>
 
-.eyebrow {
-  margin: 0 0 0.6rem;
-  color: var(--accent-light);
-  font-weight: 800;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
+      <p class="intro">
+        Hands-on projects in networking, virtualization, Windows and Linux
+        administration, troubleshooting, and cybersecurity.
+      </p>
 
-h1,
-h2,
-h3 {
-  line-height: 1.2;
-}
+      <nav aria-label="Main navigation">
+        <a href="#projects">Projects</a>
+        <a href="lessons-learned.html">Lessons Learned</a>
+        <a href="completed-labs.html">Completed Labs</a>
+        <a href="#certificates">Certificates</a>
+        <a href="#about">About</a>
+      </nav>
+    </div>
+  </header>
 
-h1 {
-  margin: 0;
-  font-size: clamp(2.5rem, 7vw, 5rem);
-  letter-spacing: -0.045em;
-}
+  <main class="container">
 
-h2 {
-  margin: 0 0 1rem;
-  font-size: clamp(1.5rem, 3vw, 2rem);
-}
+    <section id="about">
+      <h2>About</h2>
 
-h3 {
-  margin-top: 0;
-}
+      <p>
+        I built Headley Lab to turn certification study into practical
+        experience. I document completed projects, technical problems,
+        verification steps, and lessons learned.
+      </p>
 
-.hero-text {
-  max-width: 760px;
-  margin: 1rem 0 1.5rem;
-  color: var(--muted);
-  font-size: 1.15rem;
-}
+      <p class="workflow">
+        My normal workflow is
+        <strong>Plan → Do → Verify → Explain.</strong>
+      </p>
+    </section>
 
-.nav-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem;
-}
+    <section id="certificates">
+      <h2>Certificates</h2>
 
-.nav-links a,
-.button {
-  display: inline-block;
-  padding: 0.72rem 1rem;
-  border-radius: 9px;
-  background: var(--accent);
-  color: #fff;
-  text-decoration: none;
-  font-weight: 800;
-}
+      <div class="cert-grid">
 
-.nav-links a:hover,
-.nav-links a:focus-visible,
-.button:hover,
-.button:focus-visible {
-  background: var(--accent-light);
-  color: #07101d;
-}
+        <article class="certificate-card">
+          <img
+            src="CompTIA-Hardware-Network-Support_copy.png"
+            alt="CompTIA Hardware and Network Support certificate earned by Robert Headley"
+          >
 
-.button.secondary {
-  background: transparent;
-  border: 1px solid var(--accent-light);
-  color: var(--accent-light);
-}
+          <h3>CompTIA Hardware and Network Support</h3>
+          <p>Earned June 14, 2026</p>
+        </article>
 
-main {
-  display: grid;
-  gap: 1.5rem;
-  padding: 2rem 0 3rem;
-}
+        <article class="certificate-card">
+          <img
+            src="CompTIA-Software-Systems-Support_copy.png"
+            alt="CompTIA Software and Systems Support certificate earned by Robert Headley"
+          >
 
-section {
-  padding: 1.6rem;
-  border: 1px solid var(--border);
-  border-radius: 14px;
-  background: rgba(15, 27, 45, 0.94);
-  box-shadow: 0 18px 44px rgba(0, 0, 0, 0.2);
-}
+          <h3>CompTIA Software and Systems Support</h3>
+          <p>Earned July 9, 2026</p>
+        </article>
 
-p {
-  color: var(--muted);
-}
+      </div>
+    </section>
 
-.project-grid,
-.certificate-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1rem;
-}
+    <section id="projects">
+      <h2>Current Projects</h2>
 
-.card {
-  padding: 1.25rem;
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  background: var(--panel-alt);
-}
+      <div class="project-grid">
 
-.card p:last-child {
-  margin-bottom: 0;
-}
+        <article class="project-card">
+          <h3>Custom PC Build and Configuration</h3>
 
-.article-layout section {
-  max-width: 900px;
-  width: 100%;
-  margin-inline: auto;
-}
+          <p>
+            Planned, assembled, and configured a custom Windows 11 Pro desktop
+            using an AMD Ryzen 7 7700X, Gigabyte B650 EAGLE AX motherboard,
+            32 GB of DDR5 memory, NVMe storage, and an AMD Radeon XFX graphics
+            card.
+          </p>
 
-ul,
-ol {
-  padding-left: 1.4rem;
-}
+          <p>
+            Installed the operating system, drivers, security tools, and
+            Hyper-V, then verified storage, memory, networking, temperatures,
+            and system stability.
+          </p>
+        </article>
 
-li + li {
-  margin-top: 0.45rem;
-}
+        <article class="project-card">
+          <h3>Monitoring, Logging, and Task Automation</h3>
 
-footer {
-  padding: 1.5rem 0 3rem;
-  border-top: 1px solid var(--border);
-}
+          <p>
+            Created Windows Task Scheduler jobs and PowerShell scripts to
+            collect logs, monitor performance, record system configuration,
+            and support routine maintenance and troubleshooting.
+          </p>
+        </article>
 
-footer p {
-  margin: 0;
-  text-align: center;
-  color: var(--muted);
-}
+        <article class="project-card">
+          <h3>Virtualization</h3>
 
-@media (max-width: 760px) {
-  .hero {
-    padding-top: 3rem;
-  }
+          <p>
+            Built a Hyper-V lab with Windows 11, Windows Server, and Ubuntu
+            virtual machines using checkpoints and isolated testing.
+          </p>
+        </article>
 
-  section {
-    padding: 1.2rem;
-  }
+        <article class="project-card">
+          <h3>Active Directory and DNS</h3>
 
-  .project-grid,
-  .certificate-grid {
-    grid-template-columns: 1fr;
-  }
-}
+          <p>
+            Built the <strong>batcave.local</strong> domain, configured DNS,
+            joined Windows clients, created user accounts, and troubleshot
+            domain connectivity.
+          </p>
+        </article>
 
+        <article class="project-card">
+          <h3>Windows Administration</h3>
 
-.stats-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1rem;
-  margin-top: 1.25rem;
-}
+          <p>
+            Practiced account management, permissions, Microsoft Defender,
+            Windows Firewall, Task Scheduler, recovery tools, PowerShell, and
+            system troubleshooting.
+          </p>
+        </article>
 
-.stat-card {
-  display: grid;
-  gap: 0.25rem;
-  padding: 1rem;
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  background: var(--panel-alt);
-}
+        <article class="project-card">
+          <h3>Linux Administration</h3>
 
-.stat-card strong {
-  color: var(--accent-light);
-  font-size: 1.45rem;
-}
+          <p>
+            Used Ubuntu for command-line administration, SSH, services,
+            package management, networking, permissions, and Bash scripting.
+          </p>
+        </article>
 
-.stat-card span {
-  color: var(--muted);
-}
+        <article class="project-card">
+          <h3>Networking</h3>
 
-.lab-category {
-  margin-top: 1rem;
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  overflow: hidden;
-  background: var(--panel-alt);
-}
+          <p>
+            Worked with DHCP reservations, Wi-Fi security, managed switching,
+            remote access, DNS testing, and layered connectivity
+            troubleshooting.
+          </p>
+        </article>
 
-.lab-category summary {
-  display: flex;
-  justify-content: space-between;
-  gap: 1rem;
-  padding: 1rem 1.15rem;
-  cursor: pointer;
-  font-weight: 800;
-}
+        <article class="project-card">
+          <h3>Wireless AP Placement and Wired Backhaul</h3>
 
-.lab-category summary:hover,
-.lab-category summary:focus-visible {
-  background: rgba(59, 130, 246, 0.12);
-}
+          <p>
+            Used a Wi-Fi analyzer to evaluate signal conditions and select
+            access-point placement.
+          </p>
 
-.lab-count {
-  flex: 0 0 auto;
-  color: var(--accent-light);
-}
+          <p>
+            Terminated and installed an Ethernet cable with RJ45 connectors to
+            establish a wired backhaul connection.
+          </p>
+        </article>
 
-.lab-category-content {
-  padding: 0 1.15rem 1.15rem;
-  border-top: 1px solid var(--border);
-}
+        <article class="project-card">
+          <h3>Cybersecurity</h3>
 
-.lab-list {
-  display: grid;
-  gap: 0.55rem;
-  padding: 0;
-  list-style: none;
-}
+          <p>
+            Practiced malware-response procedures, account security, least
+            privilege, Microsoft Defender scans, recovery planning, and
+            technical documentation.
+          </p>
+        </article>
 
-.lab-list li {
-  display: flex;
-  gap: 0.65rem;
-  align-items: flex-start;
-  padding: 0.65rem 0.75rem;
-  border-radius: 8px;
-  background: rgba(7, 16, 29, 0.45);
-}
+      </div>
+    </section>
 
-.check {
-  color: var(--accent-light);
-  font-weight: 900;
-}
+    <section id="lessons">
+      <h2>What I Built and Lessons Learned</h2>
 
-@media (max-width: 760px) {
-  .stats-grid {
-    grid-template-columns: 1fr;
-  }
+      <p>
+        A detailed record of my Windows, Linux, networking, virtualization,
+        security, and troubleshooting experience.
+      </p>
 
-  .lab-category summary {
-    align-items: flex-start;
-  }
-}
+      <a class="button" href="lessons-learned.html">
+        View Complete Lab Experience
+      </a>
+    </section>
 
+    <section id="completed-labs">
+      <h2>Completed Hands-On Labs</h2>
 
-.lab-intro {
-  margin-bottom: 1.5rem;
-}
+      <p>
+        View 85 completed CompTIA CertMaster Perform simulations covering
+        hardware, networking, Windows, Linux, virtualization, cloud, printing,
+        support procedures, and security.
+      </p>
 
-.lab-detail-grid {
-  display: grid;
-  gap: 1rem;
-}
+      <a class="button" href="completed-labs.html">
+        View Completed Labs
+      </a>
+    </section>
 
-.lab-detail-card {
-  padding: 1.4rem;
-  border: 1px solid var(--border);
-  border-radius: 14px;
-  background: rgba(15, 27, 45, 0.94);
-  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.18);
-}
+  </main>
 
-.lab-detail-card h2 {
-  margin: 0.8rem 0 1rem;
-  font-size: 1.3rem;
-}
+  <footer>
+    <div class="container">
+      <p>
+        Headley Lab — Hands-on IT and cybersecurity learning.
+      </p>
+    </div>
+  </footer>
 
-.lab-detail-card h3 {
-  margin-bottom: 0.35rem;
-  color: var(--accent-light);
-  font-size: 0.95rem;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-}
-
-.lab-detail-card p {
-  margin-bottom: 0;
-}
-
-.lab-detail-heading {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 0.65rem;
-  align-items: center;
-}
-
-.lab-tag,
-.complete-badge {
-  display: inline-block;
-  padding: 0.3rem 0.65rem;
-  border-radius: 999px;
-  font-size: 0.78rem;
-  font-weight: 800;
-}
-
-.lab-tag {
-  color: var(--accent-light);
-  border: 1px solid var(--border);
-  background: var(--panel-alt);
-}
-
-.complete-badge {
-  color: #d1fae5;
-  border: 1px solid #166534;
-  background: #14532d;
-}
-
-@media (min-width: 900px) {
-  .lab-detail-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}
-.cert-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 20px;
-  margin-top: 20px;
-}
-
-.cert-grid img {
-  width: 100%;
-  border-radius: 12px;
-  border: 1px solid #333;
-}
+</body>
+</html>
