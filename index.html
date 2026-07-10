@@ -3,172 +3,228 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Headley Lab | IT Homelab Portfolio</title>
+
   <meta
     name="description"
-    content="Headley Lab IT homelab portfolio covering networking, virtualization, Windows, Linux, and cybersecurity."
+    content="Headley Lab documents hands-on projects in networking, virtualization, Windows and Linux administration, troubleshooting, and cybersecurity."
   >
-  <title>Headley Lab</title>
+
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-  <header class="hero">
+
+  <header class="site-header">
     <div class="container">
       <p class="eyebrow">IT Homelab Portfolio</p>
+
       <h1>Headley Lab</h1>
-      <p class="hero-text">
+
+      <p class="intro">
         Hands-on projects in networking, virtualization, Windows and Linux
         administration, troubleshooting, and cybersecurity.
       </p>
 
-      <nav class="nav-links" aria-label="Main navigation">
+      <nav aria-label="Main navigation">
         <a href="#projects">Projects</a>
         <a href="lessons-learned.html">Lessons Learned</a>
         <a href="completed-labs.html">Completed Labs</a>
         <a href="#certificates">Certificates</a>
+        <a href="#about">About</a>
       </nav>
     </div>
   </header>
 
   <main class="container">
-    <section>
+
+    <section id="about">
       <h2>About</h2>
+
       <p>
         I built Headley Lab to turn certification study into practical
         experience. I document completed projects, technical problems,
         verification steps, and lessons learned.
       </p>
-      <p>
-        My normal workflow is <strong>Plan → Do → Verify → Explain</strong>.
+
+      <p class="workflow">
+        My normal workflow is
+        <strong>Plan → Do → Verify → Explain.</strong>
       </p>
     </section>
-    
-<section id="certificates">
-  <h2>Certificates</h2>
 
-  <div class="cert-grid">
-    <img src="CompTIA-Hardware-Network-Support_copy.png" alt="CompTIA Hardware and Network Support certificate">
-    <img src="CompTIA-Software-Systems-Support_copy.png" alt="CompTIA Software and Systems Support certificate">
-  </div>
-</section>
+    <section id="certificates">
+      <h2>Certificates</h2>
+
+      <div class="cert-grid">
+
+        <article class="certificate-card">
+          <img
+            src="CompTIA-Hardware-Network-Support_copy.png"
+            alt="CompTIA Hardware and Network Support certificate earned by Robert Headley"
+          >
+
+          <h3>CompTIA Hardware and Network Support</h3>
+          <p>Earned June 14, 2026</p>
+        </article>
+
+        <article class="certificate-card">
+          <img
+            src="CompTIA-Software-Systems-Support_copy.png"
+            alt="CompTIA Software and Systems Support certificate earned by Robert Headley"
+          >
+
+          <h3>CompTIA Software and Systems Support</h3>
+          <p>Earned July 9, 2026</p>
+        </article>
+
+      </div>
+    </section>
+
     <section id="projects">
       <h2>Current Projects</h2>
+
       <div class="project-grid">
 
-        <article class="card">
+        <article class="project-card">
           <h3>Custom PC Build and Configuration</h3>
+
           <p>
             Planned, assembled, and configured a custom Windows 11 Pro desktop
             using an AMD Ryzen 7 7700X, Gigabyte B650 EAGLE AX motherboard,
             32 GB of DDR5 memory, NVMe storage, and an AMD Radeon XFX graphics
-            card. Installed the operating system, drivers, security tools, and
+            card.
+          </p>
+
+          <p>
+            Installed the operating system, drivers, security tools, and
             Hyper-V, then verified storage, memory, networking, temperatures,
             and system stability.
           </p>
         </article>
 
-        <article class="card">
+        <article class="project-card">
           <h3>Monitoring, Logging, and Task Automation</h3>
+
           <p>
             Created Windows Task Scheduler jobs and PowerShell scripts to
             collect logs, monitor performance, record system configuration,
             and support routine maintenance and troubleshooting.
           </p>
         </article>
-        <article class="card">
+
+        <article class="project-card">
           <h3>Virtualization</h3>
+
           <p>
-            Hyper-V lab with Windows 11, Windows Server, and Ubuntu virtual
-            machines using checkpoints and isolated testing.
+            Built a Hyper-V lab with Windows 11, Windows Server, and Ubuntu
+            virtual machines using checkpoints and isolated testing.
           </p>
         </article>
 
-        <article class="card">
+        <article class="project-card">
           <h3>Active Directory and DNS</h3>
+
           <p>
-            Built the batcave.local domain, configured DNS, joined clients,
-            created accounts, and troubleshot domain connectivity.
+            Built the <strong>batcave.local</strong> domain, configured DNS,
+            joined Windows clients, created user accounts, and troubleshot
+            domain connectivity.
           </p>
         </article>
 
-        <article class="card">
+        <article class="project-card">
           <h3>Windows Administration</h3>
+
           <p>
-            Practiced users, permissions, Defender, firewall, Task Scheduler,
-            recovery tools, PowerShell, and system troubleshooting.
+            Practiced account management, permissions, Microsoft Defender,
+            Windows Firewall, Task Scheduler, recovery tools, PowerShell, and
+            system troubleshooting.
           </p>
         </article>
 
-        <article class="card">
+        <article class="project-card">
           <h3>Linux Administration</h3>
+
           <p>
             Used Ubuntu for command-line administration, SSH, services,
             package management, networking, permissions, and Bash scripting.
           </p>
         </article>
 
-        <article class="card">
+        <article class="project-card">
           <h3>Networking</h3>
+
           <p>
             Worked with DHCP reservations, Wi-Fi security, managed switching,
-            remote access, DNS testing, and layered connectivity troubleshooting.
+            remote access, DNS testing, and layered connectivity
+            troubleshooting.
           </p>
         </article>
 
-        <article class="card">
+        <article class="project-card">
           <h3>Wireless AP Placement and Wired Backhaul</h3>
+
           <p>
-            Used a Wi-Fi analyzer to evaluate signal conditions and choose
-            access point placement. Terminated and ran an Ethernet cable with
-            RJ45 connectors to establish a wired backhaul connection.
+            Used a Wi-Fi analyzer to evaluate signal conditions and select
+            access-point placement.
+          </p>
+
+          <p>
+            Terminated and installed an Ethernet cable with RJ45 connectors to
+            establish a wired backhaul connection.
           </p>
         </article>
 
-        <article class="card">
+        <article class="project-card">
           <h3>Cybersecurity</h3>
+
           <p>
             Practiced malware-response procedures, account security, least
-            privilege, Defender scans, recovery planning, and documentation.
+            privilege, Microsoft Defender scans, recovery planning, and
+            technical documentation.
           </p>
         </article>
+
       </div>
     </section>
 
-    <section>
+    <section id="lessons">
       <h2>What I Built and Lessons Learned</h2>
+
       <p>
         A detailed record of my Windows, Linux, networking, virtualization,
         security, and troubleshooting experience.
       </p>
+
       <a class="button" href="lessons-learned.html">
-        View complete lab experience
+        View Complete Lab Experience
       </a>
     </section>
 
-
-    <section>
+    <section id="completed-labs">
       <h2>Completed Hands-On Labs</h2>
+
       <p>
         View 85 completed CompTIA CertMaster Perform simulations covering
-        hardware, networking, Windows, Linux, virtualization, cloud,
-        printing, support procedures, and security.
+        hardware, networking, Windows, Linux, virtualization, cloud, printing,
+        support procedures, and security.
       </p>
+
       <a class="button" href="completed-labs.html">
-        View completed labs
+        View Completed Labs
       </a>
     </section>
 
-    <<section id="certificates">
-  <h2>Certificates</h2>
+  </main>
 
-  <div class="cert-grid">
-    <img src="CompTIA-Hardware-Network-Support_copy.png" alt="CompTIA Hardware and Network Support certificate">
-    <img src="CompTIA-Software-Systems-Support_copy.png" alt="CompTIA Software and Systems Support certificate">
-  </div>
-</section>
+  <footer>
     <div class="container">
-      <p>Headley Lab — Hands-on IT and cybersecurity learning.</p>
+      <p>
+        Headley Lab — Hands-on IT and cybersecurity learning.
+      </p>
     </div>
   </footer>
+
 </body>
 </html>
