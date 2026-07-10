@@ -24,6 +24,8 @@ img {
   margin: 0 auto;
 }
 
+/* Header */
+
 .site-header {
   padding: 70px 0 45px;
   text-align: center;
@@ -51,26 +53,36 @@ h1 {
   color: #b8c1cc;
 }
 
-nav {
+/* Navigation buttons */
+
+.site-header nav {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 12px;
+  gap: 14px;
+  margin-top: 24px;
 }
 
-nav a {
-  padding: 9px 14px;
+.site-header nav a {
+  display: inline-block;
+  min-width: 135px;
+  padding: 13px 22px;
+  font-size: 1rem;
+  font-weight: 700;
+  text-align: center;
   color: #e8edf3;
   text-decoration: none;
+  background: #0d1117;
   border: 1px solid #30363d;
   border-radius: 8px;
-  background: #0d1117;
 }
 
-nav a:hover {
+.site-header nav a:hover {
   color: #ffffff;
   border-color: #58a6ff;
 }
+
+/* Main sections */
 
 main {
   padding: 30px 0 65px;
@@ -100,14 +112,17 @@ p {
 
 .workflow {
   padding: 14px;
-  border-left: 4px solid #58a6ff;
   background: #0d1117;
+  border-left: 4px solid #58a6ff;
 }
+
+/* Certificates */
 
 .cert-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 24px;
+  align-items: start;
 }
 
 .certificate-card {
@@ -120,6 +135,9 @@ p {
 
 .certificate-card img {
   width: 100%;
+  max-width: 500px;
+  height: auto;
+  margin: 0 auto;
   background: #ffffff;
   border-bottom: 1px solid #30363d;
 }
@@ -131,6 +149,8 @@ p {
 .certificate-card p {
   margin: 0 15px 18px;
 }
+
+/* Projects */
 
 .project-grid {
   display: grid;
@@ -149,10 +169,12 @@ p {
   margin-bottom: 0;
 }
 
+/* Green page buttons */
+
 .button {
   display: inline-block;
   margin-top: 10px;
-  padding: 11px 18px;
+  padding: 12px 20px;
   font-weight: bold;
   color: #ffffff;
   text-decoration: none;
@@ -164,6 +186,8 @@ p {
   background: #2ea043;
 }
 
+/* Footer */
+
 footer {
   padding: 28px 0;
   text-align: center;
@@ -174,6 +198,8 @@ footer {
 footer p {
   margin: 0;
 }
+
+/* Mobile layout */
 
 @media (max-width: 750px) {
   .cert-grid,
@@ -188,30 +214,8 @@ footer p {
   .site-header {
     padding-top: 45px;
   }
-}
-.certificate-card img {
-  width: 100%;
-  max-width: 500px;
-  margin: 0 auto;
-  height: auto;
-}
 
-.cert-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 24px;
-  align-items: start;
-}
-.site-header nav a {
-  display: inline-block;
-  padding: 12px 20px;
-  font-size: 1rem;
-  font-weight: 700;
-  min-width: 120px;
-  text-align: center;
-}
-
-.site-header nav {
-  gap: 14px;
-  margin-top: 24px;
+  .site-header nav a {
+    min-width: 145px;
+  }
 }
