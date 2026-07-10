@@ -1,230 +1,191 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+* {
+  box-sizing: border-box;
+}
 
-  <title>Headley Lab | IT Homelab Portfolio</title>
+html {
+  scroll-behavior: smooth;
+}
 
-  <meta
-    name="description"
-    content="Headley Lab documents hands-on projects in networking, virtualization, Windows and Linux administration, troubleshooting, and cybersecurity."
-  >
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  color: #e8edf3;
+  background: #0d1117;
+}
 
-  <link rel="stylesheet" href="style.css">
-</head>
+img {
+  display: block;
+  max-width: 100%;
+}
 
-<body>
+.container {
+  width: min(1100px, 92%);
+  margin: 0 auto;
+}
 
-  <header class="site-header">
-    <div class="container">
-      <p class="eyebrow">IT Homelab Portfolio</p>
+.site-header {
+  padding: 70px 0 45px;
+  text-align: center;
+  background: #161b22;
+  border-bottom: 1px solid #30363d;
+}
 
-      <h1>Headley Lab</h1>
+.eyebrow {
+  margin: 0 0 8px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  letter-spacing: 0.12rem;
+  text-transform: uppercase;
+  color: #58a6ff;
+}
 
-      <p class="intro">
-        Hands-on projects in networking, virtualization, Windows and Linux
-        administration, troubleshooting, and cybersecurity.
-      </p>
+h1 {
+  margin: 0;
+  font-size: clamp(2.5rem, 7vw, 4.5rem);
+}
 
-      <nav aria-label="Main navigation">
-        <a href="#projects">Projects</a>
-        <a href="lessons-learned.html">Lessons Learned</a>
-        <a href="completed-labs.html">Completed Labs</a>
-        <a href="#certificates">Certificates</a>
-        <a href="#about">About</a>
-      </nav>
-    </div>
-  </header>
+.intro {
+  max-width: 760px;
+  margin: 18px auto 30px;
+  color: #b8c1cc;
+}
 
-  <main class="container">
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
 
-    <section id="about">
-      <h2>About</h2>
+nav a {
+  padding: 9px 14px;
+  color: #e8edf3;
+  text-decoration: none;
+  border: 1px solid #30363d;
+  border-radius: 8px;
+  background: #0d1117;
+}
 
-      <p>
-        I built Headley Lab to turn certification study into practical
-        experience. I document completed projects, technical problems,
-        verification steps, and lessons learned.
-      </p>
+nav a:hover {
+  color: #ffffff;
+  border-color: #58a6ff;
+}
 
-      <p class="workflow">
-        My normal workflow is
-        <strong>Plan → Do → Verify → Explain.</strong>
-      </p>
-    </section>
+main {
+  padding: 30px 0 65px;
+}
 
-    <section id="certificates">
-      <h2>Certificates</h2>
+section {
+  margin: 28px 0;
+  padding: 30px;
+  background: #161b22;
+  border: 1px solid #30363d;
+  border-radius: 14px;
+}
 
-      <div class="cert-grid">
+h2 {
+  margin-top: 0;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #30363d;
+}
 
-        <article class="certificate-card">
-          <img
-            src="CompTIA-Hardware-Network-Support_copy.png"
-            alt="CompTIA Hardware and Network Support certificate earned by Robert Headley"
-          >
+h3 {
+  margin-top: 0;
+}
 
-          <h3>CompTIA Hardware and Network Support</h3>
-          <p>Earned June 14, 2026</p>
-        </article>
+p {
+  color: #c5ced8;
+}
 
-        <article class="certificate-card">
-          <img
-            src="CompTIA-Software-Systems-Support_copy.png"
-            alt="CompTIA Software and Systems Support certificate earned by Robert Headley"
-          >
+.workflow {
+  padding: 14px;
+  border-left: 4px solid #58a6ff;
+  background: #0d1117;
+}
 
-          <h3>CompTIA Software and Systems Support</h3>
-          <p>Earned July 9, 2026</p>
-        </article>
+.cert-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
 
-      </div>
-    </section>
+.certificate-card {
+  overflow: hidden;
+  text-align: center;
+  background: #0d1117;
+  border: 1px solid #30363d;
+  border-radius: 12px;
+}
 
-    <section id="projects">
-      <h2>Current Projects</h2>
+.certificate-card img {
+  width: 100%;
+  background: #ffffff;
+  border-bottom: 1px solid #30363d;
+}
 
-      <div class="project-grid">
+.certificate-card h3 {
+  margin: 18px 15px 4px;
+}
 
-        <article class="project-card">
-          <h3>Custom PC Build and Configuration</h3>
+.certificate-card p {
+  margin: 0 15px 18px;
+}
 
-          <p>
-            Planned, assembled, and configured a custom Windows 11 Pro desktop
-            using an AMD Ryzen 7 7700X, Gigabyte B650 EAGLE AX motherboard,
-            32 GB of DDR5 memory, NVMe storage, and an AMD Radeon XFX graphics
-            card.
-          </p>
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
 
-          <p>
-            Installed the operating system, drivers, security tools, and
-            Hyper-V, then verified storage, memory, networking, temperatures,
-            and system stability.
-          </p>
-        </article>
+.project-card {
+  padding: 22px;
+  background: #0d1117;
+  border: 1px solid #30363d;
+  border-radius: 12px;
+}
 
-        <article class="project-card">
-          <h3>Monitoring, Logging, and Task Automation</h3>
+.project-card p:last-child {
+  margin-bottom: 0;
+}
 
-          <p>
-            Created Windows Task Scheduler jobs and PowerShell scripts to
-            collect logs, monitor performance, record system configuration,
-            and support routine maintenance and troubleshooting.
-          </p>
-        </article>
+.button {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 11px 18px;
+  font-weight: bold;
+  color: #ffffff;
+  text-decoration: none;
+  background: #238636;
+  border-radius: 8px;
+}
 
-        <article class="project-card">
-          <h3>Virtualization</h3>
+.button:hover {
+  background: #2ea043;
+}
 
-          <p>
-            Built a Hyper-V lab with Windows 11, Windows Server, and Ubuntu
-            virtual machines using checkpoints and isolated testing.
-          </p>
-        </article>
+footer {
+  padding: 28px 0;
+  text-align: center;
+  background: #161b22;
+  border-top: 1px solid #30363d;
+}
 
-        <article class="project-card">
-          <h3>Active Directory and DNS</h3>
+footer p {
+  margin: 0;
+}
 
-          <p>
-            Built the <strong>batcave.local</strong> domain, configured DNS,
-            joined Windows clients, created user accounts, and troubleshot
-            domain connectivity.
-          </p>
-        </article>
+@media (max-width: 750px) {
+  .cert-grid,
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
 
-        <article class="project-card">
-          <h3>Windows Administration</h3>
+  section {
+    padding: 22px;
+  }
 
-          <p>
-            Practiced account management, permissions, Microsoft Defender,
-            Windows Firewall, Task Scheduler, recovery tools, PowerShell, and
-            system troubleshooting.
-          </p>
-        </article>
-
-        <article class="project-card">
-          <h3>Linux Administration</h3>
-
-          <p>
-            Used Ubuntu for command-line administration, SSH, services,
-            package management, networking, permissions, and Bash scripting.
-          </p>
-        </article>
-
-        <article class="project-card">
-          <h3>Networking</h3>
-
-          <p>
-            Worked with DHCP reservations, Wi-Fi security, managed switching,
-            remote access, DNS testing, and layered connectivity
-            troubleshooting.
-          </p>
-        </article>
-
-        <article class="project-card">
-          <h3>Wireless AP Placement and Wired Backhaul</h3>
-
-          <p>
-            Used a Wi-Fi analyzer to evaluate signal conditions and select
-            access-point placement.
-          </p>
-
-          <p>
-            Terminated and installed an Ethernet cable with RJ45 connectors to
-            establish a wired backhaul connection.
-          </p>
-        </article>
-
-        <article class="project-card">
-          <h3>Cybersecurity</h3>
-
-          <p>
-            Practiced malware-response procedures, account security, least
-            privilege, Microsoft Defender scans, recovery planning, and
-            technical documentation.
-          </p>
-        </article>
-
-      </div>
-    </section>
-
-    <section id="lessons">
-      <h2>What I Built and Lessons Learned</h2>
-
-      <p>
-        A detailed record of my Windows, Linux, networking, virtualization,
-        security, and troubleshooting experience.
-      </p>
-
-      <a class="button" href="lessons-learned.html">
-        View Complete Lab Experience
-      </a>
-    </section>
-
-    <section id="completed-labs">
-      <h2>Completed Hands-On Labs</h2>
-
-      <p>
-        View 85 completed CompTIA CertMaster Perform simulations covering
-        hardware, networking, Windows, Linux, virtualization, cloud, printing,
-        support procedures, and security.
-      </p>
-
-      <a class="button" href="completed-labs.html">
-        View Completed Labs
-      </a>
-    </section>
-
-  </main>
-
-  <footer>
-    <div class="container">
-      <p>
-        Headley Lab — Hands-on IT and cybersecurity learning.
-      </p>
-    </div>
-  </footer>
-
-</body>
-</html>
+  .site-header {
+    padding-top: 45px;
+  }
+}
