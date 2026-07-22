@@ -458,3 +458,52 @@
 
 </body>
 </html>
+
+
+bhead@HP-Laptop MINGW64 ~/GitHub/Headleylab-clean (main)
+$ git add index.html
+git commit -m "Repair certificates section"
+git push origin main
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        index-before-pi-network.html
+        update_projects.py
+
+nothing added to commit but untracked files present (use "git add" to track)
+To https://github.com/bheadley86-create/Headleylab.git
+ ! [rejected]        main -> main (fetch first)
+error: failed to push some refs to 'https://github.com/bheadley86-create/Headleylab.git'
+hint: Updates were rejected because the remote contains work that you do not
+hint: have locally. This is usually caused by another repository pushing to
+hint: the same ref. If you want to integrate the remote changes, use
+hint: 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+bhead@HP-Laptop MINGW64 ~/GitHub/Headleylab-clean (main)
+
+You haven’t actually replaced your local index.html yet, so Git had nothing to commit.
+
+Do this from that same folder:
+
+cp /c/Users/bhead/Downloads/index-fixed.html index.html
+If the file downloaded somewhere else, use its real path. Then verify:
+
+git status
+You should see index.html as modified.
+
+Now pull the GitHub changes safely, then commit and push:
+
+git pull --rebase origin main
+git add index.html
+git commit -m "Repair certificates section"
+git push origin main
+Leave these untracked files alone for now:
+
+index-before-pi-network.html
+update_projects.py
+Do not use force push.
+
+
