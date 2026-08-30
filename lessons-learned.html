@@ -1,177 +1,203 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Hands-on IT homelab projects and lessons learned by Bobby Headley.">
-  <title>Headley Lab — What I Built and Lessons Learned</title>
-  <link rel="stylesheet" href="../style.css">
-</head>
-<body>
-  <header class="site-header">
-    <nav aria-label="Primary navigation">
-      <a href="../index.html">Headley Lab</a>
-    </nav>
-  </header>
+# Headley Lab — What I Built and Lessons Learned
 
-  <main class="project-page">
-    <article>
-      <header class="project-hero">
-        <p class="eyebrow">Homelab Portfolio</p>
-        <h1>Headley Lab — What I Built and Lessons Learned</h1>
-        <p>Windows, Linux, networking, security, troubleshooting, and documentation experience developed through hands-on practice.</p>
-      </header>
+## Overview
 
-      <section class="project-section">
-  <h2>Overview</h2>
-<p>I built Headley Lab to turn certification study into practical experience. Instead of only memorizing commands and definitions, I used Windows 11 Pro, Hyper-V, Windows Server, Ubuntu Linux, and my home network to practice installation, administration, security, troubleshooting, recovery, and documentation.</p>
-<p>My normal workflow became: <strong>Plan → Do → Verify → Explain</strong>. I created checkpoints before risky VM changes, changed one item at a time, verified the result with a command or management tool, and documented what worked or failed.</p>
-</section>
-<section class="project-section">
-  <h2>Virtualization and Windows Administration</h2>
-<ul>
-<li>Configured Hyper-V on Windows 11 Pro.</li>
-<li>Created and managed two Windows 11 virtual machines, an Ubuntu virtual machine, and a Windows Server virtual machine.</li>
-<li>Used Hyper-V checkpoints before configuration changes and troubleshooting exercises.</li>
-<li>Practiced Windows administration with Task Manager, Services, Event Viewer, Task Scheduler, Device Manager, Disk Management, Windows Recovery Environment, Defender, Windows Firewall, local users, permissions, and PowerShell.</li>
-<li>Created scheduled maintenance tasks for Defender updates and scans, DISM health checks, file-health checks, and backup reminders.</li>
-<li>Enabled PowerShell transcription so administrative commands could be reviewed later.</li>
-<li>Applied least privilege by removing an unnecessary administrator account and confirming that the built-in Administrator account was disabled.</li>
-</ul>
-</section>
-<section class="project-section">
-  <h2>Active Directory, DNS, and Domain Administration</h2>
-<ul>
-<li>Installed Active Directory Domain Services and DNS on Windows Server.</li>
-<li>Created the <strong>batcave.local</strong> domain.</li>
-<li>Configured the domain controller at <strong>10.10.10.10</strong> and a Windows client at <strong>10.10.10.20</strong>.</li>
-<li>Joined Windows clients to the domain and signed in using domain accounts.</li>
-<li>Created and tested accounts such as Batman and Joker for administrator and standard-user scenarios.</li>
-<li>Worked with DNS forward and reverse lookup zones, domain name resolution, account permissions, password policy, and Remote Desktop access.</li>
-<li>Practiced the difference between local accounts and domain accounts and learned how DNS affects domain authentication, Group Policy, and access to network resources.</li>
-</ul>
-</section>
-<section class="project-section">
-  <h2>Managed Home Network and Connectivity Troubleshooting</h2>
-<ul>
-<li>Built a centrally managed home network using a dedicated gateway, hardware controller, multi-gigabit managed switching, Power over Ethernet, and two wired Wi-Fi 7 access points.</li>
-<li>Connected the switches in a controlled star topology and used wired backhaul for both access points to avoid relying on wireless mesh links.</li>
-<li>Adopted and managed the gateway, switches, and access points from one controller, then reviewed device status, connected clients, uplinks, event logs, and firmware.</li>
-<li>Configured DHCP reservations for infrastructure devices and other systems that benefit from predictable addressing.</li>
-<li>Deployed network-wide DNS filtering on the Linux server and verified that requests from multiple client devices reached the filtering service.</li>
-<li>Used separate wireless networks for trusted devices, guests or family devices, and smart-home equipment while planning additional VLAN-based separation for cameras and other higher-risk devices.</li>
-<li>Reviewed switch uplinks, trunk and access-port concepts, VLAN tagging, loop prevention, PoE budgets, and the difference between physical topology and logical segmentation.</li>
-<li>Used <code>ipconfig</code>, <code>ping</code>, <code>nslookup</code>, <code>tracert</code>, <code>pathping</code>, <code>netstat</code>, and <code>Test-NetConnection</code> to isolate connectivity problems.</li>
-<li>Diagnosed a Windows client that received an APIPA address and corrected its IPv4 and DNS configuration.</li>
-<li>Learned to troubleshoot in layers: client configuration, local link, gateway or route, DNS resolution, service port, and application.</li>
-<li>Investigated WPA3 compatibility and used a secure fallback only where older device support required it.</li>
-</ul>
-</section>
-<section class="project-section">
-  <h2>Remote Administration</h2>
-<ul>
-<li>Used Remote Desktop to access Windows systems and verified account and firewall requirements.</li>
-<li>Configured Windows Remote Management and PowerShell Remoting, including TrustedHosts where required, and successfully opened remote PowerShell sessions.</li>
-<li>Installed and used OpenSSH on Ubuntu.</li>
-<li>Connected to Ubuntu through SSH from Windows Terminal and used the SSH session for command-line administration and file work.</li>
-<li>Learned to verify remote access by checking reachability, the listening port, firewall rules, service status, and user authorization instead of assuming the remote tool itself was broken.</li>
-</ul>
-</section>
-<section class="project-section">
-  <h2>Linux Administration and Scripting</h2>
-<ul>
-<li>Practiced Linux navigation, file creation, copying, moving, deletion, permissions, package management, networking, processes, and services.</li>
-<li>Used commands including <code>ls</code>, <code>cd</code>, <code>mkdir</code>, <code>cp</code>, <code>mv</code>, <code>rm</code>, <code>chmod</code>, <code>ip</code>, <code>dig</code>, <code>nslookup</code>, <code>curl</code>, <code>ps</code>, <code>top</code>, <code>systemctl</code>, and <code>apt</code>.</li>
-<li>Learned the difference between a process snapshot with <code>ps</code> and live monitoring with <code>top</code>.</li>
-<li>Used <code>systemctl status</code> to investigate services before restarting them.</li>
-<li>Created Bash scripts using variables, user input, conditionals, <code>for</code> loops, <code>while</code> loops, command substitution, output redirection, and error redirection.</li>
-<li>Created and executed a storage-check script and practiced making scripts executable with <code>chmod</code>.</li>
-<li>Learned that interface display commands only show status, while <code>ip link set &lt;interface&gt; up</code> changes the interface state.</li>
-</ul>
-</section>
-<section class="project-section">
-  <h2>ARM Linux Server, DNS Filtering, and Secure Remote Administration</h2>
-<ul>
-<li>Deployed a small always-on Linux server to provide network-wide DNS filtering, shared storage, automated backups, and centralized service monitoring.</li>
-<li>Verified core services, mounted storage, available capacity, and the scheduled backup timer with a custom health-check script.</li>
-<li>Generated an Ed25519 SSH key on a Windows workstation and installed the public key in the Linux account's <code>authorized_keys</code> file.</li>
-<li>Created a Windows OpenSSH client configuration entry so the server could be reached with a short host alias while automatically selecting the correct username, address, and private key.</li>
-<li>Troubleshot failed SSH attempts caused by placeholder values and mismatched usernames, then verified successful key-based login from a new terminal session.</li>
-<li>Reviewed kernel logs to isolate a firmware warning instead of treating all journal metadata as separate errors.</li>
-<li>Confirmed there was no undervoltage or thermal throttling by checking the hardware status and receiving a clean <code>0x0</code> result.</li>
-<li>Checked the system bootloader version, staged the available EEPROM update, rebooted safely, and verified that the installed and latest versions matched afterward.</li>
-<li>Verified that the DNS-filtering service was actively processing requests from multiple network clients and blocking listed domains.</li>
-</ul>
-</section>
-<section class="project-section">
-  <h2>Security, Malware Response, and Recovery</h2>
-<ul>
-<li>Practiced Microsoft Defender scans, Windows Firewall review, Controlled Folder Access testing, protection history review, and offline scanning concepts.</li>
-<li>Performed a simulated CompTIA malware-removal scenario: identify symptoms, isolate the computer, disable System Restore, remediate and scan, update antimalware protection, schedule future scans and updates, re-enable System Restore, create a clean restore point, and educate the user.</li>
-<li>Decided that after a serious infection I would prefer a Windows reset, refresh, reimage, or clean installation when the system could no longer be trusted.</li>
-<li>Practiced the difference between quarantine, removal, recovery, and rebuilding.</li>
-<li>Investigated Defender detections located inside Hyper-V backup archives and confirmed the detections were associated with backed-up VM files rather than blindly assuming the host computer had an active infection.</li>
-<li>Used Bitwarden, MFA, and a YubiKey as part of my personal account-security practices.</li>
-</ul>
-</section>
-<section class="project-section">
-  <h2>Storage, Backup, and Recovery</h2>
-<ul>
-<li>Worked with Windows backup locations, restore points, recovery options, virtual disks, and system-image concepts.</li>
-<li>Practiced the correct order for preparing a new disk: initialize it, create a volume, assign a drive letter, format it, label it, and verify it.</li>
-<li>Used Windows Recovery Environment to identify Startup Repair, Startup Settings, System Restore, Command Prompt, and other recovery options.</li>
-<li>Learned that System Restore is not a complete file backup and that restore points may need to be disabled during malware remediation and recreated afterward.</li>
-<li>Deployed an ARM-based Linux storage server with internal solid-state storage and an external hard drive, then verified mounts, capacity, file sharing, and scheduled backups.</li>
-</ul>
-</section>
-<section class="project-section">
-  <h2>Troubleshooting Results and Failures</h2>
-<p>Not every lab ended with a clean fix, and I documented those results instead of pretending otherwise.</p>
-<ul>
-<li>Fixed an APIPA and DNS problem that prevented a Windows client from communicating correctly with the BATCAVE domain.</li>
-<li>Learned that a client can have basic IP connectivity while DNS or domain services are still broken.</li>
-<li>Confirmed that incorrect DNS settings can cause domain login, Group Policy, and network-resource failures.</li>
-<li>Learned that the HOSTS file can override DNS and that flushing the DNS cache does not remove a bad HOSTS entry.</li>
-<li>Practiced NTFS and share permissions and learned that access over the network is controlled by the most restrictive effective combination.</li>
-<li>Troubleshot Windows Sandbox errors <code>0x80070003</code> and <code>0x80070002</code> by checking Windows features, services, system files, containers, and related settings. The issue remained unresolved, but the process improved my ability to document attempted fixes and stop making random changes.</li>
-<li>Investigated Windows activation and VM licensing issues and learned to separate licensing problems from operating-system or network problems.</li>
-</ul>
-</section>
-<section class="project-section">
-  <h2>HeadleyLab.com Portfolio Deployment</h2>
-<ul>
-<li>Purchased and configured the <strong>headleylab.com</strong> domain.</li>
-<li>Created a public GitHub repository and added the initial <code>index.html</code> and <code>README.md</code>.</li>
-<li>Deployed the site with GitHub Pages.</li>
-<li>Configured the required GoDaddy DNS A records and the <code>www</code> CNAME record.</li>
-<li>Corrected custom-domain and DNS issues until both the root domain and HTTPS worked.</li>
-<li>Began organizing the site into sections for the homelab, networking, security, certifications, and individual projects.</li>
-<li>Used Git and GitHub as both version control and proof that I can document technical work publicly.</li>
-</ul>
-</section>
-<section class="project-section">
-  <h2>Main Lessons Learned</h2>
-<ol>
-<li><strong>DNS is foundational.</strong> A machine can ping an IP address and still fail domain login, Group Policy, or name-based access because DNS is wrong.</li>
-<li><strong>Troubleshoot one layer at a time.</strong> Check configuration, connectivity, name resolution, ports, services, permissions, and the application in order.</li>
-<li><strong>Create a checkpoint before making risky changes.</strong> Recovery is part of administration, not an afterthought.</li>
-<li><strong>Verification matters more than clicking.</strong> I use commands, logs, service status, account context, and repeat tests to prove the final state.</li>
-<li><strong>Least privilege reduces risk.</strong> Administrator rights should be used only when necessary.</li>
-<li><strong>Security includes deciding whether a system is still trustworthy.</strong> Sometimes removal is enough; sometimes a reset or clean installation is the safer answer.</li>
-<li><strong>A failed lab still produces useful evidence.</strong> Recording symptoms, attempted fixes, errors, and the final state is better than hiding an unresolved problem.</li>
-<li><strong>Documentation turns practice into experience.</strong> Screenshots, commands, diagrams, Git commits, and lessons learned make the lab explainable during an interview.</li>
-</ol>
-</section>
-<section class="project-section">
-  <h2>Current Status and Next Steps</h2>
-<p>Completed work includes the Hyper-V environment, Windows and Ubuntu virtual machines, the BATCAVE Active Directory and DNS lab, Windows and Linux administration practice, remote access, security exercises, backup and recovery practice, home-network administration, and deployment of headleylab.com.</p>
-<p>Next steps include improving the site&#x27;s CSS and JavaScript, adding screenshots and diagrams, creating individual project pages, expanding the Linux server documentation, adding recovery testing, and completing and validating VLAN-based segmentation, documenting firewall rules between networks, and adding diagrams of the managed network topology.</p>
-</section>
-    </article>
-  </main>
+I built Headley Lab to turn certification study into practical experience.
 
-  <footer class="site-footer">
-    <p>Headley Lab — Hands-on IT and cybersecurity learning.</p>
-  </footer>
-</body>
-</html>
+Instead of only memorizing commands and definitions, I used Windows 11 Pro, Hyper-V, Windows Server, Ubuntu Linux, Raspberry Pi OS, and my home network to practice installation, administration, networking, security, troubleshooting, recovery, automation, and documentation.
+
+My normal workflow is:
+
+**Plan → Build → Test → Troubleshoot → Verify → Document**
+
+I create checkpoints before risky virtual machine changes, make one change at a time, verify results with commands or management tools, and document both successful and unsuccessful outcomes.
+
+---
+
+## Virtualization and Windows Administration
+
+- Configured Hyper-V on Windows 11 Pro.
+- Created and managed Windows 11, Windows Server, and Ubuntu virtual machines.
+- Used Hyper-V checkpoints before configuration changes and troubleshooting exercises.
+- Practiced Windows administration with Task Manager, Services, Event Viewer, Task Scheduler, Device Manager, Disk Management, Windows Recovery Environment, Microsoft Defender, Windows Firewall, local users, permissions, and PowerShell.
+- Created scheduled maintenance tasks for Defender updates and scans, DISM health checks, file-health checks, backup reminders, and system monitoring.
+- Enabled PowerShell transcription so administrative commands could be reviewed later.
+- Applied least privilege by removing unnecessary administrative access and verifying account configuration.
+
+---
+
+## Active Directory, DNS, and Domain Administration
+
+- Installed Active Directory Domain Services and DNS on Windows Server.
+- Created a Windows Active Directory domain.
+- Configured a domain controller and Windows client on an isolated lab network.
+- Joined Windows clients to the domain and authenticated using domain accounts.
+- Created administrator and standard-user accounts for permission and policy testing.
+- Worked with DNS forward and reverse lookup zones, domain name resolution, account permissions, password policy, and Remote Desktop access.
+- Practiced the difference between local and domain accounts.
+- Learned how DNS affects domain authentication, Group Policy, and access to network resources.
+
+---
+
+## Networking and Infrastructure
+
+- Built and administered a centrally managed network using a dedicated gateway, managed multi-gigabit switching, Power over Ethernet, and wired wireless access points.
+- Configured DHCP reservations for important infrastructure devices.
+- Worked with VLAN segmentation, tagged uplinks, access ports, subnetting, and controlled communication between trusted and IoT devices.
+- Created an IoT VLAN with restricted access to the primary LAN.
+- Allowed only required DNS traffic from the IoT VLAN to the centralized DNS server over TCP and UDP port 53.
+- Deployed Pi-hole as a centralized DNS filtering service for devices across multiple network segments.
+- Enabled dual-stack IPv4 and IPv6 networking.
+- Configured IPv6 prefix delegation, Router Advertisements, SLAAC, and RDNSS.
+- Assigned the Pi-hole server a stable IPv6 address for consistent DNS resolution.
+- Worked with ICMPv6 and Neighbor Discovery while validating IPv6 connectivity.
+- Used separate trusted, guest, and IoT wireless networks.
+- Investigated WPA3 compatibility problems and used WPA2 where device support required it.
+- Used a Wi-Fi analyzer to evaluate signal conditions and improve access-point placement.
+- Installed Ethernet cabling and wired backhaul for wireless access points.
+
+---
+
+## DNS and IPv6 Troubleshooting
+
+- Used `ipconfig`, `ping`, `nslookup`, `tracert`, `pathping`, `netstat`, `dig`, `tcpdump`, and `Test-NetConnection` to isolate network problems.
+- Diagnosed a Windows client that received an APIPA address and corrected its IPv4 and DNS configuration.
+- Learned to troubleshoot networking in layers: addressing, local connectivity, routing, DNS, ports, services, firewall rules, and applications.
+- Diagnosed an IPv6 issue where the client could successfully ping the Pi-hole server but DNS queries over IPv6 timed out.
+- Verified that Pi-hole could resolve DNS locally over IPv6 using `dig`.
+- Used `tcpdump` to confirm that IPv6 DNS requests were reaching the Linux server.
+- Used `Test-NetConnection` to confirm that TCP port 53 was blocked even though ICMPv6 connectivity worked.
+- Reviewed UFW and nftables firewall rules and identified missing IPv6 DNS permissions.
+- Added IPv6 TCP and UDP port 53 firewall rules for the local IPv6 prefix.
+- Verified successful end-to-end IPv6 DNS resolution using `nslookup`, `Test-NetConnection`, Pi-hole query logs, and packet captures.
+- Learned that successful IPv6 connectivity does not automatically mean an IPv6 application or service is reachable.
+
+---
+
+## Remote Administration
+
+- Used Remote Desktop to access Windows systems and verified account, service, and firewall requirements.
+- Configured Windows Remote Management and PowerShell Remoting.
+- Installed and used OpenSSH on Linux systems.
+- Configured SSH public-key authentication for remote Linux administration.
+- Connected to Linux systems from Windows Terminal and used SSH for command-line administration and file work.
+- Learned to verify remote access by checking reachability, listening ports, firewall rules, service status, and user authorization instead of assuming the remote tool itself was broken.
+
+---
+
+## Linux Administration and Scripting
+
+- Practiced Linux navigation, file creation, copying, moving, deletion, permissions, package management, networking, processes, and services.
+- Used commands including `ls`, `cd`, `mkdir`, `cp`, `mv`, `rm`, `chmod`, `ip`, `dig`, `nslookup`, `curl`, `ps`, `top`, `systemctl`, `apt`, and `tcpdump`.
+- Learned the difference between a process snapshot with `ps` and live monitoring with `top`.
+- Used `systemctl status` to investigate services before restarting them.
+- Created Bash scripts using variables, user input, conditionals, loops, command substitution, output redirection, and error redirection.
+- Created and executed storage and system-check scripts.
+- Practiced making scripts executable with `chmod`.
+- Learned that interface display commands show state, while commands such as `ip link set` change interface configuration.
+
+---
+
+## ARM Linux Home Server
+
+- Deployed and administered a Raspberry Pi 5 Linux server.
+- Configured network-wide DNS filtering, shared storage, automated backups, remote administration, and service monitoring.
+- Configured SSH public-key authentication from Windows.
+- Created a local SSH host shortcut for easier administration.
+- Verified storage mounts, system services, kernel logs, and system health.
+- Investigated a firmware warning and confirmed that the system had no undervoltage or thermal throttling.
+- Updated the Raspberry Pi EEPROM bootloader, rebooted the system, and verified the completed firmware update.
+- Configured a stable IPv6 address for network services.
+- Reviewed UFW, nftables, and service listeners while troubleshooting IPv6 DNS.
+
+---
+
+## Security, Malware Response, and Recovery
+
+- Practiced Microsoft Defender scans, Windows Firewall review, Controlled Folder Access testing, protection history review, and offline scanning concepts.
+- Performed a simulated malware-removal workflow: identify symptoms, isolate the system, remediate and scan, update antimalware protection, schedule future scans and updates, restore recovery settings, create a clean restore point, and educate the user.
+- Practiced the difference between quarantine, removal, recovery, and rebuilding.
+- Learned that after a serious compromise, a reset, reimage, or clean installation may be safer than attempting to trust the existing installation.
+- Investigated Defender detections inside Hyper-V backup archives and verified that the detections were associated with backed-up virtual machine files rather than immediately assuming the host had an active infection.
+- Practiced least privilege, MFA, password-manager use, and hardware-backed authentication.
+
+---
+
+## Storage, Backup, and Recovery
+
+- Worked with Windows backup locations, restore points, recovery options, virtual disks, and system-image concepts.
+- Practiced the correct order for preparing a new disk: initialize it, create a volume, assign a drive letter, format it, label it, and verify it.
+- Used Windows Recovery Environment to identify Startup Repair, Startup Settings, System Restore, Command Prompt, and other recovery options.
+- Learned that System Restore is not a complete file backup.
+- Practiced disabling and recreating restore points during malware-remediation scenarios.
+- Deployed a Raspberry Pi 5 Linux server providing shared storage and automated backup functions.
+- Verified storage mounts, file access, and service availability after configuration changes.
+
+---
+
+## Troubleshooting Results and Failures
+
+Not every lab ended with a clean fix, and I documented those results instead of pretending otherwise.
+
+- Fixed an APIPA and DNS problem that prevented a Windows client from communicating correctly with the Active Directory domain.
+- Learned that a client can have basic IP connectivity while DNS or domain services are still broken.
+- Confirmed that incorrect DNS settings can cause domain login, Group Policy, and network-resource failures.
+- Learned that the HOSTS file can override DNS and that flushing the DNS cache does not remove a bad HOSTS entry.
+- Practiced NTFS and share permissions and learned that network access is controlled by the most restrictive effective combination.
+- Troubleshot Windows Sandbox errors by checking Windows features, services, system files, containers, and related configuration. The issue remained unresolved, but the process improved my ability to document attempted fixes and stop making random changes.
+- Investigated Windows activation and virtual-machine licensing issues and learned to separate licensing problems from operating-system or network problems.
+- Diagnosed an IPv6 DNS failure by proving connectivity first, then testing the DNS service, port access, packet flow, and firewall rules until the root cause was identified.
+- Learned that packet capture can show whether a failure exists on the client, network path, host firewall, or application layer.
+
+---
+
+## HeadleyLab.com Portfolio Deployment
+
+- Purchased and configured the `headleylab.com` domain.
+- Created a public GitHub repository for the portfolio.
+- Deployed the site using GitHub Pages.
+- Configured DNS records for the root domain and `www`.
+- Corrected custom-domain and HTTPS issues until the site worked properly.
+- Organized the site into sections for projects, lessons learned, completed labs, certifications, screenshots, and technical experience.
+- Used Git and GitHub as both version control and public documentation of technical work.
+
+---
+
+## Main Lessons Learned
+
+1. **DNS is foundational.** A system can have working IP connectivity and still fail authentication, name-based access, or application communication because DNS is wrong.
+
+2. **Troubleshoot one layer at a time.** Check addressing, connectivity, routing, name resolution, ports, services, firewall rules, permissions, and the application in order.
+
+3. **IPv6 requires service-level testing.** Successful ICMPv6 connectivity does not prove that DNS, web services, or other application ports are allowed.
+
+4. **Packet capture is one of the fastest ways to isolate a network problem.** It can show whether traffic reaches the destination and whether a response leaves.
+
+5. **Create a checkpoint before risky changes.** Recovery is part of administration, not an afterthought.
+
+6. **Verification matters more than clicking.** Commands, logs, packet captures, service status, account context, and repeat tests provide evidence that a configuration actually works.
+
+7. **Least privilege reduces risk.** Administrative access should be used only when necessary.
+
+8. **Security includes deciding whether a system is still trustworthy.** Sometimes removal is enough; sometimes rebuilding is the safer option.
+
+9. **A failed lab still produces useful evidence.** Recording symptoms, attempted fixes, errors, and the final state is better than hiding an unresolved problem.
+
+10. **Documentation turns practice into experience.** Screenshots, commands, diagrams, packet captures, Git commits, and lessons learned make technical work explainable during an interview.
+
+---
+
+## Current Status and Next Steps
+
+Completed work includes Hyper-V virtualization, Windows and Linux administration, Active Directory and DNS, remote administration, scripting and automation, Raspberry Pi server deployment, managed switching, VLAN segmentation, Pi-hole DNS filtering, IPv4 and IPv6 networking, wireless deployment, security exercises, backup and recovery practice, network troubleshooting, and deployment of headleylab.com.
+
+Planned next steps include expanding the lab with additional infrastructure and redundancy:
+
+- Deploy a dedicated mini PC as a router/firewall platform to gain more hands-on experience with routing, firewall policy, VLANs, and network services.
+- Add a secondary DNS service on separate hardware to provide DNS redundancy if the primary Pi-hole server becomes unavailable.
+- Build out a dedicated NAS for centralized storage, backups, and file sharing.
+- Convert an existing laptop to Linux for additional daily-use Linux administration, networking, scripting, and troubleshooting practice.
+- Continue expanding IPv6 and VLAN design across additional network segments.
+- Document routing, ACL, firewall, and DNS behavior in more detail.
+- Add network diagrams, packet-capture examples, and dedicated project pages for the strongest infrastructure projects.
+- Repurpose the current router as a separate lab router on its own VLAN or isolated network segment for routing, firewall, NAT, DHCP, VPN, and troubleshooting practice without disrupting the primary network.
