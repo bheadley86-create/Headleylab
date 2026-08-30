@@ -49,6 +49,8 @@
 </head>
 
 <body>
+
+  <!-- HEADER -->
   <header class="site-header">
     <div class="container">
       <p class="eyebrow">IT Homelab Portfolio</p>
@@ -62,14 +64,14 @@
 
       <nav aria-label="Main navigation">
         <a href="#projects">Projects</a>
-        <a href="#experience">What I've Done</a>
+        <a href="projects.html">Detailed Experience</a>
         <a href="lessons-learned.html">Lessons Learned</a>
         <a href="completed-labs.html">Completed Labs</a>
         <a href="Pictures.html">Pictures</a>
         <a href="#certificates">Certificates</a>
         <a href="#contact">Contact</a>
         <a
-          href="Robert-Headley-IT-Resume.pdf"
+          href="resume.pdf"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -86,119 +88,72 @@
       <h2>About</h2>
 
       <p>
-        Headley Lab is where I turn certification study into practical
-        experience by building systems, configuring networks, troubleshooting
-        failures, and documenting what I learn.
+        Headley Lab is where certification study becomes practical experience.
+        I use the lab to build systems, configure networks, troubleshoot real
+        problems, test security controls, and document the results.
       </p>
 
       <p class="workflow">
-        <strong>Plan → Build → Test → Troubleshoot → Verify → Document</strong>
+        <strong>
+          Plan → Build → Test → Troubleshoot → Verify → Document
+        </strong>
       </p>
     </section>
 
-    <!-- FEATURED PROJECTS -->
+    <!-- PROJECT HIGHLIGHTS -->
     <section id="projects">
-      <h2>Featured Projects</h2>
+      <h2>Project Highlights</h2>
 
       <div class="project-grid">
 
         <article class="project-card">
-          <h3>Managed Network and VLAN Segmentation</h3>
+          <h3>Networking & Infrastructure</h3>
 
           <p>
-            Built a centrally managed network using a dedicated gateway,
-            managed multi-gigabit switching, Power over Ethernet, and wired
-            Wi-Fi access points.
+            Built a centrally managed dual-stack network using a dedicated
+            gateway, multi-gigabit managed switching, Power over Ethernet,
+            wired wireless access points, and VLAN segmentation.
           </p>
 
           <p>
-            Configured VLAN segmentation, tagged uplinks, access ports,
-            DHCP, DNS, wireless networks, and controlled communication between
-            trusted and IoT devices.
-          </p>
-        </article>
-
-        <article class="project-card">
-          <h3>Pi-hole and Dual-Stack DNS</h3>
-
-          <p>
-            Deployed Pi-hole as a centralized DNS filtering service for IPv4
-            and IPv6 clients across a segmented network.
-          </p>
-
-          <p>
-            Configured IPv6 prefix delegation, SLAAC, Router Advertisements,
-            RDNSS, static server addressing, and firewall rules for TCP and
-            UDP port 53.
-          </p>
-
-          <p>
-            Diagnosed an IPv6 DNS failure using ping, dig, nslookup,
-            Test-NetConnection, tcpdump, UFW, and packet-level analysis.
+            Configured centralized Pi-hole DNS filtering, IoT isolation,
+            controlled inter-VLAN DNS access, IPv6 prefix delegation,
+            SLAAC, RDNSS, and host-based firewall rules.
           </p>
         </article>
 
         <article class="project-card">
-          <h3>ARM Linux Home Server</h3>
+          <h3>Systems & Virtualization</h3>
 
           <p>
-            Deployed and administered a Raspberry Pi 5 Linux server providing
-            DNS filtering, shared storage, automated backups, remote
-            administration, and service monitoring.
+            Built a Hyper-V lab environment using Windows 11, Windows Server,
+            and Ubuntu for administration, networking, Active Directory,
+            DNS, recovery, and troubleshooting practice.
           </p>
 
           <p>
-            Configured SSH key authentication, storage mounts, system
-            services, logging, firmware updates, and health monitoring.
-          </p>
-        </article>
-
-        <article class="project-card">
-          <h3>Windows Server, Active Directory, and Virtualization</h3>
-
-          <p>
-            Built a Hyper-V lab using Windows 11, Windows Server, and Ubuntu
-            virtual machines for isolated testing and administration practice.
-          </p>
-
-          <p>
-            Created an Active Directory domain, configured DNS, joined
-            clients, managed users, and troubleshot domain connectivity.
+            Deployed a Raspberry Pi 5 Linux server for DNS filtering, shared
+            storage, automated backups, remote administration, monitoring,
+            and network services.
           </p>
         </article>
 
         <article class="project-card">
-          <h3>Systems Administration and Automation</h3>
+          <h3>Cybersecurity & Operations</h3>
 
           <p>
-            Practiced Windows and Linux administration including permissions,
-            services, networking, security controls, recovery tools,
-            PowerShell, Bash, and remote administration.
-          </p>
-
-          <p>
-            Created scheduled tasks and scripts for monitoring, logging,
-            system inventory, maintenance, and troubleshooting.
-          </p>
-        </article>
-
-        <article class="project-card">
-          <h3>Custom PC Build and Hardware Validation</h3>
-
-          <p>
-            Planned, assembled, and configured a custom Windows 11 Pro desktop
-            using modern AMD hardware, DDR5 memory, NVMe storage, and dedicated
-            graphics.
-          </p>
-
-          <p>
-            Installed drivers and security tools, enabled virtualization, and
-            verified memory, storage, networking, temperatures, and system
-            stability.
+            Practiced practical security and operations tasks including
+            least privilege, SSH public-key authentication, Microsoft Defender,
+            Windows Firewall, UFW, PowerShell automation, logging, recovery,
+            and malware-response procedures.
           </p>
         </article>
 
       </div>
+
+      <a class="button" href="projects.html">
+        View Detailed Experience
+      </a>
     </section>
 
     <!-- WHAT I'VE DONE -->
@@ -206,29 +161,51 @@
       <h2>What I've Done</h2>
 
       <p>
-        My lab work includes Windows and Linux administration, Active
-        Directory, DNS, Hyper-V virtualization, PowerShell and Bash scripting,
-        managed switching, VLAN segmentation, inter-VLAN communication,
-        IPv4 and IPv6 networking, Wi-Fi deployment, firewall configuration,
-        Pi-hole DNS filtering, and network troubleshooting.
+        My hands-on work includes Windows and Linux administration,
+        Active Directory, DNS, Hyper-V virtualization, managed switching,
+        VLAN segmentation, inter-VLAN communication, IPv4 and IPv6 networking,
+        Wi-Fi deployment, firewall configuration, scripting, automation,
+        storage, backups, and remote administration.
       </p>
 
       <p>
-        I have worked with DHCP reservations, SLAAC, Router Advertisements,
-        RDNSS, ICMPv6, Neighbor Discovery, TCP and UDP services, UFW firewall
-        rules, packet captures, SSH authentication, system logs, storage,
-        backups, and service monitoring.
+        I have worked with DHCP, SLAAC, Router Advertisements, RDNSS,
+        ICMPv6, Neighbor Discovery, TCP and UDP services, Pi-hole,
+        UFW and nftables, SSH, system logs, packet captures, and
+        network-service troubleshooting.
       </p>
 
       <p>
         Troubleshooting has included isolating DNS failures, testing ports,
-        reviewing firewall rules, analyzing packet captures, validating
-        routing and addressing, and verifying fixes from both client and
-        server perspectives.
+        validating addressing and routes, reviewing firewall rules,
+        analyzing packet captures, checking service listeners, and verifying
+        fixes from both client and server perspectives.
+      </p>
+
+      <a class="button" href="projects.html">
+        View Full Technical Experience
+      </a>
+    </section>
+
+    <!-- LABS AND LESSONS -->
+    <section id="learning">
+      <h2>Labs & Lessons Learned</h2>
+
+      <p>
+        The lab is not limited to successful configurations. I also document
+        failed attempts, troubleshooting paths, root causes, verification
+        steps, and what I would do differently next time.
+      </p>
+
+      <p>
+        Recent troubleshooting included an IPv6 DNS failure where basic
+        connectivity worked but DNS traffic was blocked by host firewall
+        rules. Packet capture and port testing were used to isolate and
+        correct the problem.
       </p>
 
       <a class="button" href="lessons-learned.html">
-        View Detailed Experience
+        View Lessons Learned
       </a>
     </section>
 
@@ -237,7 +214,7 @@
       <h2>Completed Hands-On Labs</h2>
 
       <p>
-        Completed more than 80 hands-on CompTIA labs covering networking,
+        Completed more than 80 CompTIA hands-on labs covering networking,
         hardware, Windows, Linux, virtualization, cloud technologies,
         security, troubleshooting, and support procedures.
       </p>
@@ -253,6 +230,7 @@
 
       <div class="cert-grid">
 
+        <!-- A+ BADGE -->
         <article class="certificate-card">
           <div class="certificate-content">
             <h3>CompTIA A+ Badge</h3>
@@ -285,6 +263,7 @@
           </div>
         </article>
 
+        <!-- A+ CERTIFICATE -->
         <article class="certificate-card">
           <div class="certificate-content">
             <h3>CompTIA A+ Certificate</h3>
@@ -312,6 +291,7 @@
                 href="CompTIA-A-Plus-Certificate.png"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Open CompTIA A+ certificate"
               >
                 <img
                   src="CompTIA-A-Plus-Certificate.png"
@@ -331,6 +311,7 @@
           </div>
         </article>
 
+        <!-- HARDWARE AND NETWORK SUPPORT -->
         <article class="certificate-card">
           <div class="certificate-content">
             <h3>CompTIA Hardware and Network Support</h3>
@@ -358,6 +339,7 @@
                 href="CompTIA-Hardware-Network-Support_copy.png"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Open CompTIA Hardware and Network Support certificate"
               >
                 <img
                   src="CompTIA-Hardware-Network-Support_copy.png"
@@ -377,6 +359,7 @@
           </div>
         </article>
 
+        <!-- SOFTWARE AND SYSTEMS SUPPORT -->
         <article class="certificate-card">
           <div class="certificate-content">
             <h3>CompTIA Software and Systems Support</h3>
@@ -404,6 +387,7 @@
                 href="CompTIA-Software-Systems-Support_copy.png"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Open CompTIA Software and Systems Support certificate"
               >
                 <img
                   src="CompTIA-Software-Systems-Support_copy.png"
@@ -435,7 +419,10 @@
         administration, and technical support opportunities.
       </p>
 
-      <a class="button" href="mailto:bheadley86@gmail.com">
+      <a
+        class="button"
+        href="mailto:bheadley86@gmail.com"
+      >
         Email Me
       </a>
 
@@ -451,24 +438,32 @@
 
   </main>
 
+  <!-- FOOTER -->
   <footer>
     <div class="container">
-      <p>Headley Lab — Hands-on IT and cybersecurity learning.</p>
+      <p>
+        Headley Lab — Hands-on IT and cybersecurity learning.
+      </p>
     </div>
   </footer>
 
-  <!-- Credly badge embed -->
+  <!-- CREDLY -->
   <script
     async
     src="https://cdn.credly.com/assets/utilities/embed.js"
   ></script>
 
-  <!-- Certificate show/hide controls -->
+  <!-- CERTIFICATE TOGGLES -->
   <script>
     document.querySelectorAll(".certificate-toggle").forEach((button) => {
       button.addEventListener("click", () => {
         const certificateId = button.getAttribute("aria-controls");
         const certificate = document.getElementById(certificateId);
+
+        if (!certificate) {
+          return;
+        }
+
         const isHidden = certificate.hasAttribute("hidden");
 
         const showText =
@@ -490,11 +485,12 @@
     });
   </script>
 
-  <!-- Cloudflare Web Analytics -->
+  <!-- CLOUDFLARE WEB ANALYTICS -->
   <script
     type="module"
     src="https://static.cloudflareinsights.com/beacon.min.js"
     data-cf-beacon='{"token":"bc6c568b20b046939691383c7d23c6a4"}'
   ></script>
+
 </body>
 </html>
