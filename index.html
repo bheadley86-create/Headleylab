@@ -157,55 +157,82 @@
     </section>
 
     <!-- WHAT I'VE DONE -->
-    <section id="experience">
+   <section id="experience">
 
-      <h2>What I've Done</h2>
+  <h2>What I've Done</h2>
 
-      <p>
-        My hands-on work includes Windows and Linux administration,
-        Active Directory, DNS, Hyper-V virtualization, managed switching,
-        VLAN segmentation, IPv4 and IPv6 networking, Wi-Fi deployment,
-        firewall configuration, scripting, automation, storage, backups,
-        and remote administration.
-      </p>
+  <div class="project-grid">
+
+    <article class="project-card">
+      <h3>Networking</h3>
 
       <p>
-        I have worked with DHCP, SLAAC, Router Advertisements, RDNSS,
-        ICMPv6, Neighbor Discovery, TCP and UDP services, Pi-hole,
-        UFW, nftables, SSH, system logs, packet captures, and
-        network-service troubleshooting.
+        Managed switching, VLAN segmentation, tagged uplinks, access ports,
+        DHCP reservations, PoE, wired access-point backhaul, IPv4 and IPv6,
+        inter-VLAN DNS access, and network troubleshooting.
       </p>
+    </article>
 
-      <a class="button" href="projects.html">
-        View Full Technical Experience
-      </a>
-
-    </section>
-
-    <!-- LESSONS -->
-    <section id="learning">
-
-      <h2>Lessons Learned</h2>
+    <article class="project-card">
+      <h3>DNS & IPv6</h3>
 
       <p>
-        I document successful configurations as well as failed attempts,
-        troubleshooting paths, root causes, verification steps, and what I
-        would do differently next time.
+        Pi-hole DNS filtering, IPv6 prefix delegation, SLAAC, Router
+        Advertisements, RDNSS, ICMPv6, Neighbor Discovery, stable server
+        addressing, and IPv6 firewall configuration.
       </p>
+    </article>
+
+    <article class="project-card">
+      <h3>Windows & Active Directory</h3>
 
       <p>
-        Recent work included troubleshooting an IPv6 DNS failure where
-        basic connectivity succeeded but DNS traffic was blocked by missing
-        host firewall rules. Packet capture and port testing were used to
-        isolate and correct the problem.
+        Windows 11, Windows Server, Active Directory Domain Services, DNS,
+        domain joins, user accounts, permissions, Group Policy-related
+        troubleshooting, Event Viewer, Defender, Windows Firewall, and
+        PowerShell.
       </p>
+    </article>
 
-      <a class="button" href="lessons-learned.html">
-        View Lessons Learned
-      </a>
+    <article class="project-card">
+      <h3>Linux & Server Administration</h3>
 
-    </section>
+      <p>
+        Ubuntu and Raspberry Pi OS administration, SSH public-key
+        authentication, services, logs, package management, storage mounts,
+        shared storage, backups, Bash scripting, firmware updates, and
+        system monitoring.
+      </p>
+    </article>
 
+    <article class="project-card">
+      <h3>Virtualization & Automation</h3>
+
+      <p>
+        Hyper-V virtual machines, checkpoints, isolated testing, Windows
+        Task Scheduler, PowerShell scripts, logging, system-health checks,
+        and maintenance automation.
+      </p>
+    </article>
+
+    <article class="project-card">
+      <h3>Troubleshooting & Security</h3>
+
+      <p>
+        Packet capture with tcpdump, DNS testing with dig and nslookup,
+        port testing with Test-NetConnection, UFW and nftables inspection,
+        least privilege, malware-response procedures, recovery planning,
+        MFA, and hardware-backed authentication.
+      </p>
+    </article>
+
+  </div>
+
+  <a class="button" href="projects.html">
+    View Full Technical Experience
+  </a>
+
+</section>
     <!-- COMPLETED LABS -->
     <section id="completed-labs">
 
