@@ -1,33 +1,508 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pictures | Headley Lab</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-
 <body>
 
-<main>
+  <header class="site-header">
+    <div class="container">
+      <p class="eyebrow">Project Gallery</p>
+
+      <h1>Headley Lab Pictures</h1>
+
+      <p class="intro">
+        Screenshots and photos from networking, systems administration,
+        virtualization, Linux, hardware, and troubleshooting projects.
+      </p>
+
+      <nav aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="lessons-learned.html">Lessons Learned</a>
+        <a href="completed-labs.html">Completed Labs</a>
+        <a href="Pictures.html">Pictures</a>
+        <a href="index.html#certificates">Certificates</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+
     <section>
-        <h1>Home Lab Pictures</h1>
+      <h2>Gallery Overview</h2>
 
-        <p>
-            Photos of my home networking and IT lab environment.
-        </p>
+      <p>
+        This gallery provides visual documentation of completed lab work,
+        system configurations, troubleshooting results, and infrastructure
+        used throughout Headley Lab.
+      </p>
 
-        <img src="images/Network Wall.jpg"
-             alt="Home lab network wall">
-
-        <img src="images/Network Wall 2.jpg"
-             alt="Home lab network wall">
-
-        <p>
-            <a class="button" href="index.html">Back to Home</a>
-        </p>
+      <p>
+        Images are grouped by project area so they can be viewed alongside
+        the detailed technical write-ups on the Projects and Lessons Learned
+        pages.
+      </p>
     </section>
-</main>
+
+    <section>
+      <h2>Networking & Infrastructure</h2>
+
+      <div class="project-grid">
+
+        <article class="project-card">
+          <h3>Managed Network</h3>
+
+          <p>
+            Images showing the managed gateway, switches, wireless access
+            points, controller, cabling, and other network infrastructure.
+          </p>
+
+          <!-- Replace with your actual image filename -->
+          <a
+            class="certificate-image-link"
+            href="network-overview.jpg"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="network-overview.jpg"
+              alt="Managed home network infrastructure"
+            >
+          </a>
+
+          <p>
+            Centrally managed network infrastructure using managed switching,
+            PoE, wired access points, and dedicated routing equipment.
+          </p>
+        </article>
+
+        <article class="project-card">
+          <h3>VLAN Segmentation</h3>
+
+          <p>
+            Screenshots documenting VLAN configuration, network segmentation,
+            tagged uplinks, access ports, or related management settings.
+          </p>
+
+          <!-- Replace with your actual image filename -->
+          <a
+            class="certificate-image-link"
+            href="vlan-configuration.png"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="vlan-configuration.png"
+              alt="VLAN segmentation configuration"
+            >
+          </a>
+
+          <p>
+            VLAN segmentation used to separate trusted and IoT devices while
+            allowing only required services between networks.
+          </p>
+        </article>
+
+        <article class="project-card">
+          <h3>Wireless Infrastructure</h3>
+
+          <p>
+            Photos or screenshots showing access-point deployment, signal
+            analysis, wired backhaul, and wireless network configuration.
+          </p>
+
+          <!-- Replace with your actual image filename -->
+          <a
+            class="certificate-image-link"
+            href="wireless-ap.jpg"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="wireless-ap.jpg"
+              alt="Wireless access point installation"
+            >
+          </a>
+
+          <p>
+            Wired access-point deployment and wireless coverage planning
+            supported by signal analysis and Ethernet backhaul.
+          </p>
+        </article>
+
+      </div>
+    </section>
+
+    <section>
+      <h2>Pi-hole, DNS & IPv6</h2>
+
+      <div class="project-grid">
+
+        <article class="project-card">
+          <h3>Pi-hole Dashboard</h3>
+
+          <p>
+            Screenshots showing Pi-hole running as a centralized DNS filtering
+            service.
+          </p>
+
+          <!-- Replace with your actual image filename -->
+          <a
+            class="certificate-image-link"
+            href="pihole-dashboard.png"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="pihole-dashboard.png"
+              alt="Pi-hole DNS dashboard"
+            >
+          </a>
+
+          <p>
+            Pi-hole used for centralized DNS filtering across IPv4 and IPv6
+            clients.
+          </p>
+        </article>
+
+        <article class="project-card">
+          <h3>IPv6 DNS Resolution</h3>
+
+          <p>
+            Screenshots showing successful DNS resolution to Pi-hole over IPv6.
+          </p>
+
+          <!-- Replace with your actual image filename -->
+          <a
+            class="certificate-image-link"
+            href="ipv6-dns-success.png"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="ipv6-dns-success.png"
+              alt="Successful IPv6 DNS resolution through Pi-hole"
+            >
+          </a>
+
+          <p>
+            Successful IPv6 DNS resolution verified from a Windows client
+            after firewall troubleshooting.
+          </p>
+        </article>
+
+        <article class="project-card">
+          <h3>Packet Capture Troubleshooting</h3>
+
+          <p>
+            Packet captures used to verify whether DNS requests reached the
+            Linux server during IPv6 troubleshooting.
+          </p>
+
+          <!-- Replace with your actual image filename -->
+          <a
+            class="certificate-image-link"
+            href="tcpdump-ipv6-dns.png"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="tcpdump-ipv6-dns.png"
+              alt="tcpdump capture of IPv6 DNS traffic"
+            >
+          </a>
+
+          <p>
+            Packet capture helped isolate an IPv6 DNS failure to the host
+            firewall rather than the router or switching path.
+          </p>
+        </article>
+
+      </div>
+    </section>
+
+    <section>
+      <h2>Linux Home Server</h2>
+
+      <div class="project-grid">
+
+        <article class="project-card">
+          <h3>Raspberry Pi 5 Server</h3>
+
+          <p>
+            Photos and screenshots showing the ARM Linux server used for DNS,
+            storage, backups, monitoring, and remote administration.
+          </p>
+
+          <!-- Replace with your actual image filename -->
+          <a
+            class="certificate-image-link"
+            href="raspberry-pi-server.jpg"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="raspberry-pi-server.jpg"
+              alt="Raspberry Pi 5 Linux home server"
+            >
+          </a>
+
+          <p>
+            Raspberry Pi 5 deployed as a Linux home server supporting multiple
+            network and storage services.
+          </p>
+        </article>
+
+        <article class="project-card">
+          <h3>Linux Administration</h3>
+
+          <p>
+            Screenshots showing SSH sessions, service management, network
+            configuration, logs, storage, and command-line administration.
+          </p>
+
+          <!-- Replace with your actual image filename -->
+          <a
+            class="certificate-image-link"
+            href="linux-admin.png"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="linux-admin.png"
+              alt="Linux command-line administration"
+            >
+          </a>
+
+          <p>
+            Linux administration performed through SSH and local command-line
+            tools.
+          </p>
+        </article>
+
+      </div>
+    </section>
+
+    <section>
+      <h2>Virtualization & Active Directory</h2>
+
+      <div class="project-grid">
+
+        <article class="project-card">
+          <h3>Hyper-V Lab</h3>
+
+          <p>
+            Screenshots showing the virtual lab environment used for Windows,
+            Windows Server, and Ubuntu testing.
+          </p>
+
+          <!-- Replace with your actual image filename -->
+          <a
+            class="certificate-image-link"
+            href="hyper-v-lab.png"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="hyper-v-lab.png"
+              alt="Hyper-V virtual lab environment"
+            >
+          </a>
+
+          <p>
+            Hyper-V virtual machines used for administration, networking,
+            recovery, and troubleshooting practice.
+          </p>
+        </article>
+
+        <article class="project-card">
+          <h3>Active Directory</h3>
+
+          <p>
+            Screenshots showing the Windows Server domain, user accounts,
+            DNS, and joined clients.
+          </p>
+
+          <!-- Replace with your actual image filename -->
+          <a
+            class="certificate-image-link"
+            href="active-directory.png"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="active-directory.png"
+              alt="Active Directory domain configuration"
+            >
+          </a>
+
+          <p>
+            Windows Server lab used to practice Active Directory, DNS,
+            authentication, account management, and domain troubleshooting.
+          </p>
+        </article>
+
+      </div>
+    </section>
+
+    <section>
+      <h2>Windows Administration & Automation</h2>
+
+      <div class="project-grid">
+
+        <article class="project-card">
+          <h3>Windows Administration</h3>
+
+          <p>
+            Screenshots showing Windows administrative tools, services,
+            firewall configuration, recovery tools, and troubleshooting.
+          </p>
+
+          <!-- Replace with your actual image filename -->
+          <a
+            class="certificate-image-link"
+            href="windows-admin.png"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="windows-admin.png"
+              alt="Windows administration tools"
+            >
+          </a>
+
+          <p>
+            Hands-on Windows administration using built-in management and
+            troubleshooting tools.
+          </p>
+        </article>
+
+        <article class="project-card">
+          <h3>PowerShell & Task Automation</h3>
+
+          <p>
+            Screenshots showing scripts, scheduled tasks, logging, and
+            maintenance automation.
+          </p>
+
+          <!-- Replace with your actual image filename -->
+          <a
+            class="certificate-image-link"
+            href="powershell-automation.png"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="powershell-automation.png"
+              alt="PowerShell automation and Task Scheduler"
+            >
+          </a>
+
+          <p>
+            PowerShell and Task Scheduler used to automate system checks,
+            logging, and maintenance tasks.
+          </p>
+        </article>
+
+      </div>
+    </section>
+
+    <section>
+      <h2>Hardware & PC Build</h2>
+
+      <div class="project-grid">
+
+        <article class="project-card">
+          <h3>Custom PC Build</h3>
+
+          <p>
+            Photos documenting the custom desktop build and hardware
+            configuration.
+          </p>
+
+          <!-- Replace with your actual image filename -->
+          <a
+            class="certificate-image-link"
+            href="custom-pc-build.jpg"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="custom-pc-build.jpg"
+              alt="Custom desktop computer build"
+            >
+          </a>
+
+          <p>
+            Custom Windows workstation assembled, configured, tested, and
+            validated for stability and virtualization use.
+          </p>
+        </article>
+
+        <article class="project-card">
+          <h3>Cabling & Installation</h3>
+
+          <p>
+            Photos documenting Ethernet termination, RJ45 connectors,
+            infrastructure cabling, and wired network installation.
+          </p>
+
+          <!-- Replace with your actual image filename -->
+          <a
+            class="certificate-image-link"
+            href="ethernet-cabling.jpg"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="ethernet-cabling.jpg"
+              alt="Ethernet cable termination and installation"
+            >
+          </a>
+
+          <p>
+            Ethernet cabling installed and terminated to support wired
+            backhaul and network infrastructure.
+          </p>
+        </article>
+
+      </div>
+    </section>
+
+    <section>
+      <h2>Certificates</h2>
+
+      <p>
+        Certification images and badges are available from the Certificates
+        section on the main page.
+      </p>
+
+      <a class="button" href="index.html#certificates">
+        View Certificates
+      </a>
+    </section>
+
+    <section>
+      <h2>Explore the Technical Details</h2>
+
+      <p>
+        The Projects page explains what was built, while Lessons Learned
+        focuses on troubleshooting results, failures, root causes, and
+        technical takeaways.
+      </p>
+
+      <a class="button" href="projects.html">
+        View Projects
+      </a>
+
+      <a class="button" href="lessons-learned.html">
+        View Lessons Learned
+      </a>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>Headley Lab — Hands-on IT and cybersecurity learning.</p>
+    </div>
+  </footer>
 
 </body>
-</html>
