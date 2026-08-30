@@ -91,70 +91,133 @@
     <!-- PROJECT HIGHLIGHTS -->
     <section id="projects">
 
-      <h2>Project Highlights</h2>
+  <h2>Project Highlights</h2>
 
-      <div class="project-grid">
+  <div class="project-grid">
 
-        <article class="project-card">
-          <h3>Networking & Infrastructure</h3>
+    <article class="project-card">
+      <h3>Networking & Infrastructure</h3>
 
-          <p>
-            Built a centrally managed dual-stack network using a dedicated
-            gateway, multi-gigabit managed switching, Power over Ethernet,
-            wired access points, and VLAN segmentation.
-          </p>
+      <p>
+        Built and administer a centrally managed dual-stack network using
+        a dedicated gateway, multi-gigabit managed switching, Power over
+        Ethernet, wired wireless-access-point backhaul, and VLAN
+        segmentation.
+      </p>
 
-          <p>
-            Configured Pi-hole DNS filtering, IoT isolation, controlled
-            inter-VLAN DNS access, IPv6 prefix delegation, SLAAC, RDNSS,
-            and host-based firewall rules.
-          </p>
-        </article>
+      <p>
+        Configured managed switch ports, tagged uplinks, access ports,
+        DHCP reservations, IPv4 and IPv6 addressing, and segmented IoT
+        connectivity.
+      </p>
 
-        <article class="project-card">
-          <h3>Systems & Virtualization</h3>
+      <p>
+        Implemented controlled inter-VLAN communication so isolated devices
+        can reach required infrastructure services without providing
+        unrestricted access to the primary network.
+      </p>
 
-          <p>
-            Built a Hyper-V lab using Windows 11, Windows Server, and Ubuntu
-            for systems administration, Active Directory, DNS, networking,
-            recovery, and troubleshooting practice.
-          </p>
+      <p>
+        Worked with Ethernet cabling, wireless deployment, network-path
+        testing, jumbo-frame testing, and end-to-end MTU verification.
+      </p>
+    </article>
 
-          <p>
-            Deployed a Raspberry Pi 5 Linux server for DNS filtering, shared
-            storage, automated backups, monitoring, remote administration,
-            and network services.
-          </p>
-        </article>
 
-        <article class="project-card">
-          <h3>Cybersecurity & Operations</h3>
+    <article class="project-card">
+      <h3>DNS, IPv6 & Network Services</h3>
 
-          <p>
-            Practiced least privilege, SSH public-key authentication,
-            Microsoft Defender, Windows Firewall, UFW, PowerShell
-            automation, system logging, recovery, and malware-response
-            procedures.
-          </p>
-        </article>
+      <p>
+        Deployed a Raspberry Pi 5 running Pi-hole as a centralized DNS
+        filtering server for both IPv4 and IPv6 clients.
+      </p>
 
-        <article class="project-card">
-          <h3>Troubleshooting & Verification</h3>
+      <p>
+        Configured IPv6 prefix delegation, Router Advertisements, SLAAC,
+        RDNSS, ICMPv6, Neighbor Discovery, and stable IPv6 server
+        addressing.
+      </p>
 
-          <p>
-            Used tools including ping, dig, nslookup, Test-NetConnection,
-            tcpdump, system logs, service inspection, and firewall rules to
-            isolate faults and verify fixes.
-          </p>
-        </article>
+      <p>
+        Configured firewall and access-control rules allowing DNS over
+        TCP and UDP port 53 while preserving network segmentation.
+      </p>
 
-      </div>
+      <p>
+        Used Pi-hole query logs and client-side DNS testing to verify
+        name resolution across the network and confirm that clients were
+        using the intended DNS services.
+      </p>
+    </article>
 
-      <a class="button" href="projects.html">
-        View Detailed Experience
-      </a>
 
-    </section>
+    <article class="project-card">
+      <h3>Systems, Virtualization & Administration</h3>
+
+      <p>
+        Built a Hyper-V lab using Windows 11, Windows Server, and Ubuntu
+        virtual machines for systems administration, networking,
+        troubleshooting, and recovery practice.
+      </p>
+
+      <p>
+        Installed and configured Active Directory Domain Services and DNS,
+        joined Windows clients to the domain, created administrative and
+        standard-user accounts, and worked with authentication,
+        permissions, and domain connectivity.
+      </p>
+
+      <p>
+        Administer Windows and Linux systems using PowerShell, Bash, SSH,
+        services, logs, permissions, storage tools, networking utilities,
+        Task Scheduler, and remote-management technologies.
+      </p>
+
+      <p>
+        Use the Raspberry Pi 5 as an ARM Linux home server for DNS,
+        shared storage, backups, monitoring, SSH administration, and
+        additional network services.
+      </p>
+    </article>
+
+
+    <article class="project-card">
+      <h3>Security, Automation & Troubleshooting</h3>
+
+      <p>
+        Practiced least privilege, SSH public-key authentication,
+        Microsoft Defender, Windows Firewall, UFW, nftables, MFA,
+        malware-response procedures, recovery planning, and
+        hardware-backed authentication.
+      </p>
+
+      <p>
+        Created PowerShell automation and scheduled tasks for system
+        administration, logging, monitoring, configuration collection,
+        and routine maintenance.
+      </p>
+
+      <p>
+        Troubleshoot by testing each layer independently using tools such
+        as ping, dig, nslookup, Test-NetConnection, tcpdump, system logs,
+        service status, firewall inspection, and packet captures.
+      </p>
+
+      <p>
+        One troubleshooting project isolated an IPv6 DNS failure where
+        ping succeeded but DNS did not. Packet capture confirmed queries
+        reached the server, port testing identified the blocked service,
+        and missing IPv6 firewall rules were corrected and verified.
+      </p>
+    </article>
+
+  </div>
+
+  <a class="button" href="projects.html">
+    View Detailed Experience
+  </a>
+
+</section>
 
     <!-- WHAT I'VE DONE -->
    <section id="experience">
