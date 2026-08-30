@@ -180,6 +180,40 @@
           </p>
         </article>
 
+<article class="project-card">
+    <h3>Pi-hole DNS, VLAN Segmentation, and IPv6 Integration</h3>
+
+    <p>
+        Deployed and configured Pi-hole as a centralized DNS filtering service
+        for a segmented dual-stack home network.
+    </p>
+
+    <p>
+        Configured a dedicated IoT VLAN with restricted access to the primary
+        LAN while allowing required DNS traffic to the Pi-hole server over
+        TCP and UDP port 53.
+    </p>
+
+    <p>
+        Enabled IPv6 using ISP prefix delegation, Router Advertisements,
+        SLAAC, and RDNSS, then assigned the Pi-hole server a stable IPv6
+        address for consistent client resolution.
+    </p>
+
+    <p>
+        Troubleshot an IPv6 DNS failure by testing ICMPv6 connectivity,
+        local DNS resolution, TCP port 53, and packet captures with tcpdump.
+        Identified missing IPv6 UFW firewall rules as the root cause, added
+        the required TCP and UDP port 53 permissions, and verified successful
+        DNS resolution from Windows clients over IPv6.
+    </p>
+
+    <p>
+        Validated end-to-end operation using ping, dig, nslookup,
+        Test-NetConnection, Pi-hole query logs, and firewall rule inspection.
+    </p>
+</article>
+        
         <article class="project-card">
           <h3>Managed Home Network</h3>
 
