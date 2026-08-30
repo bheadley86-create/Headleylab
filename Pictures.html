@@ -29,15 +29,13 @@
       <h2>Project Gallery</h2>
 
       <p>
-        This page is used to document the physical equipment, configurations,
-        troubleshooting results, and lab environments used throughout
-        Headley Lab.
+        This gallery provides visual documentation of the equipment,
+        configurations, and infrastructure used throughout Headley Lab.
       </p>
 
       <p>
-        Images are organized by project area so they can be viewed alongside
-        the technical details documented on the Projects and Lessons Learned
-        pages.
+        Additional screenshots and project images will be added as the lab
+        expands.
       </p>
     </section>
 
@@ -49,65 +47,89 @@
         <article class="project-card">
           <h3>Managed Network</h3>
 
+          <a
+            class="certificate-image-link"
+            href="images/Network Wall.jpg"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="images/Network Wall.jpg"
+              alt="Managed network equipment wall"
+            >
+          </a>
+
           <p>
-            Network infrastructure including the gateway, managed switches,
-            PoE equipment, wireless access points, controller, and structured
-            Ethernet connections.
+            Managed network infrastructure including routing, switching,
+            Power over Ethernet, centralized management, and structured
+            network connections.
           </p>
         </article>
+
+        <article class="project-card">
+          <h3>Network Infrastructure</h3>
+
+          <a
+            class="certificate-image-link"
+            href="images/Network Wall 2.jpg"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="images/Network Wall 2.jpg"
+              alt="Network infrastructure and cabling"
+            >
+          </a>
+
+          <p>
+            Additional view of the network equipment, cabling, and physical
+            infrastructure used in the home lab.
+          </p>
+        </article>
+
+      </div>
+    </section>
+
+    <section>
+      <h2>Networking Projects</h2>
+
+      <div class="project-grid">
 
         <article class="project-card">
           <h3>VLAN Segmentation</h3>
 
           <p>
-            Configuration and troubleshooting related to VLANs, tagged
-            uplinks, access ports, IoT isolation, and controlled communication
-            between network segments.
+            Configured VLAN segmentation for trusted and IoT devices,
+            including controlled communication between network segments.
           </p>
         </article>
-
-        <article class="project-card">
-          <h3>Wireless & Wired Backhaul</h3>
-
-          <p>
-            Wireless access-point placement, signal testing, Ethernet
-            termination, and wired backhaul deployment.
-          </p>
-        </article>
-
-      </div>
-    </section>
-
-    <section>
-      <h2>Pi-hole, DNS & IPv6</h2>
-
-      <div class="project-grid">
 
         <article class="project-card">
           <h3>Pi-hole DNS</h3>
 
           <p>
-            Pi-hole configuration and query logging used to provide
-            centralized DNS filtering across the network.
+            Deployed centralized DNS filtering for IPv4 and IPv6 clients,
+            including inter-VLAN DNS access and host firewall configuration.
           </p>
         </article>
 
         <article class="project-card">
-          <h3>IPv6 Configuration</h3>
+          <h3>IPv6 Deployment</h3>
 
           <p>
-            IPv6 prefix delegation, SLAAC, Router Advertisements, RDNSS,
-            stable server addressing, and dual-stack client configuration.
+            Worked with IPv6 prefix delegation, Router Advertisements,
+            SLAAC, RDNSS, stable server addressing, ICMPv6, and Neighbor
+            Discovery.
           </p>
         </article>
 
         <article class="project-card">
-          <h3>IPv6 DNS Troubleshooting</h3>
+          <h3>DNS Troubleshooting</h3>
 
           <p>
-            DNS troubleshooting using ping, nslookup, dig,
-            Test-NetConnection, tcpdump, Pi-hole logs, and Linux firewall
-            inspection.
+            Used ping, dig, nslookup, Test-NetConnection, tcpdump,
+            Pi-hole query logs, and firewall inspection to diagnose and
+            correct IPv6 DNS failures.
           </p>
         </article>
 
@@ -115,43 +137,27 @@
     </section>
 
     <section>
-      <h2>Linux Home Server</h2>
+      <h2>Systems & Virtualization</h2>
 
       <div class="project-grid">
 
         <article class="project-card">
-          <h3>Raspberry Pi 5 Server</h3>
+          <h3>ARM Linux Home Server</h3>
 
           <p>
-            ARM Linux server used for DNS filtering, storage, backups,
-            monitoring, remote administration, and network services.
+            Raspberry Pi 5 Linux server used for DNS filtering, shared
+            storage, backups, monitoring, remote administration, and
+            network services.
           </p>
         </article>
-
-        <article class="project-card">
-          <h3>Linux Administration</h3>
-
-          <p>
-            SSH administration, service management, system logs, networking,
-            storage configuration, firewall rules, and command-line
-            troubleshooting.
-          </p>
-        </article>
-
-      </div>
-    </section>
-
-    <section>
-      <h2>Virtualization & Active Directory</h2>
-
-      <div class="project-grid">
 
         <article class="project-card">
           <h3>Hyper-V Lab</h3>
 
           <p>
-            Virtual lab environment using Windows 11, Windows Server, and
-            Ubuntu virtual machines for isolated testing and administration.
+            Virtual lab environment using Windows 11, Windows Server,
+            and Ubuntu for administration, networking, recovery, and
+            troubleshooting practice.
           </p>
         </article>
 
@@ -159,8 +165,19 @@
           <h3>Active Directory & DNS</h3>
 
           <p>
-            Windows Server domain configuration, client joins, user accounts,
-            DNS, authentication, and domain troubleshooting.
+            Windows Server domain environment used for authentication,
+            user administration, DNS, permissions, and domain
+            troubleshooting.
+          </p>
+        </article>
+
+        <article class="project-card">
+          <h3>Windows & Linux Administration</h3>
+
+          <p>
+            Hands-on administration using PowerShell, Bash, SSH, system
+            services, logs, permissions, networking tools, recovery tools,
+            and automation.
           </p>
         </article>
 
@@ -168,33 +185,7 @@
     </section>
 
     <section>
-      <h2>Windows Administration & Automation</h2>
-
-      <div class="project-grid">
-
-        <article class="project-card">
-          <h3>Windows Administration</h3>
-
-          <p>
-            Administrative tools, services, event logs, permissions,
-            Microsoft Defender, Windows Firewall, storage, and recovery.
-          </p>
-        </article>
-
-        <article class="project-card">
-          <h3>PowerShell & Automation</h3>
-
-          <p>
-            PowerShell scripts, scheduled tasks, monitoring, logging,
-            maintenance, and system configuration checks.
-          </p>
-        </article>
-
-      </div>
-    </section>
-
-    <section>
-      <h2>Hardware & Cabling</h2>
+      <h2>Hardware & Installation</h2>
 
       <div class="project-grid">
 
@@ -202,17 +193,17 @@
           <h3>Custom PC Build</h3>
 
           <p>
-            Hardware installation, operating-system deployment, driver
-            configuration, system validation, and virtualization setup.
+            Planned, assembled, configured, and validated a custom Windows
+            workstation for daily use and virtualization.
           </p>
         </article>
 
         <article class="project-card">
-          <h3>Ethernet Cabling</h3>
+          <h3>Ethernet Cabling & Backhaul</h3>
 
           <p>
-            Ethernet cable installation, RJ45 termination, wired network
-            connections, and access-point backhaul.
+            Installed and terminated Ethernet cabling to support wired
+            network connections and wireless access-point backhaul.
           </p>
         </article>
 
@@ -224,8 +215,8 @@
 
       <p>
         Detailed technical write-ups are available on the Projects page.
-        Troubleshooting results, failures, and technical takeaways are
-        documented on the Lessons Learned page.
+        Troubleshooting results, failures, and lessons learned are documented
+        separately.
       </p>
 
       <a class="button" href="projects.html">
