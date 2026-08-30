@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Google tag (gtag.js) -->
+  <!-- Google Analytics -->
   <script
     async
     src="https://www.googletagmanager.com/gtag/js?id=G-4KG2R39GV9"
@@ -29,23 +29,6 @@
   >
 
   <link rel="stylesheet" href="style.css">
-
-  <style>
-    .certificate-toggle {
-      border: 0;
-      cursor: pointer;
-      font: inherit;
-    }
-
-    .certificate-details {
-      width: 100%;
-      margin-top: 18px;
-    }
-
-    .certificate-details[hidden] {
-      display: none;
-    }
-  </style>
 </head>
 
 <body>
@@ -53,6 +36,7 @@
   <!-- HEADER -->
   <header class="site-header">
     <div class="container">
+
       <p class="eyebrow">IT Homelab Portfolio</p>
 
       <h1>Headley Lab</h1>
@@ -63,11 +47,10 @@
       </p>
 
       <nav aria-label="Main navigation">
-        <a href="#projects">Projects</a>
-        <a href="projects.html">Detailed Experience</a>
+        <a href="#projects">Highlights</a>
+        <a href="projects.html">Projects</a>
         <a href="lessons-learned.html">Lessons Learned</a>
         <a href="completed-labs.html">Completed Labs</a>
-        <a href="
         <a href="Pictures.html">Pictures</a>
         <a href="#certificates">Certificates</a>
         <a href="#contact">Contact</a>
@@ -79,6 +62,7 @@
           Resume
         </a>
       </nav>
+
     </div>
   </header>
 
@@ -86,12 +70,14 @@
 
     <!-- ABOUT -->
     <section id="about">
+
       <h2>About</h2>
 
       <p>
-        Headley Lab is where certification study becomes practical experience.
-        I use the lab to build systems, configure networks, troubleshoot real
-        problems, test security controls, and document the results.
+        Headley Lab is where certification study becomes practical
+        experience. I use the lab to build systems, configure networks,
+        troubleshoot problems, test security controls, and document the
+        results.
       </p>
 
       <p class="workflow">
@@ -99,10 +85,12 @@
           Plan → Build → Test → Troubleshoot → Verify → Document
         </strong>
       </p>
+
     </section>
 
     <!-- PROJECT HIGHLIGHTS -->
     <section id="projects">
+
       <h2>Project Highlights</h2>
 
       <div class="project-grid">
@@ -113,13 +101,13 @@
           <p>
             Built a centrally managed dual-stack network using a dedicated
             gateway, multi-gigabit managed switching, Power over Ethernet,
-            wired wireless access points, and VLAN segmentation.
+            wired access points, and VLAN segmentation.
           </p>
 
           <p>
-            Configured centralized Pi-hole DNS filtering, IoT isolation,
-            controlled inter-VLAN DNS access, IPv6 prefix delegation,
-            SLAAC, RDNSS, and host-based firewall rules.
+            Configured Pi-hole DNS filtering, IoT isolation, controlled
+            inter-VLAN DNS access, IPv6 prefix delegation, SLAAC, RDNSS,
+            and host-based firewall rules.
           </p>
         </article>
 
@@ -127,14 +115,14 @@
           <h3>Systems & Virtualization</h3>
 
           <p>
-            Built a Hyper-V lab environment using Windows 11, Windows Server,
-            and Ubuntu for administration, networking, Active Directory,
-            DNS, recovery, and troubleshooting practice.
+            Built a Hyper-V lab using Windows 11, Windows Server, and Ubuntu
+            for systems administration, Active Directory, DNS, networking,
+            recovery, and troubleshooting practice.
           </p>
 
           <p>
             Deployed a Raspberry Pi 5 Linux server for DNS filtering, shared
-            storage, automated backups, remote administration, monitoring,
+            storage, automated backups, monitoring, remote administration,
             and network services.
           </p>
         </article>
@@ -143,10 +131,20 @@
           <h3>Cybersecurity & Operations</h3>
 
           <p>
-            Practiced practical security and operations tasks including
-            least privilege, SSH public-key authentication, Microsoft Defender,
-            Windows Firewall, UFW, PowerShell automation, logging, recovery,
-            and malware-response procedures.
+            Practiced least privilege, SSH public-key authentication,
+            Microsoft Defender, Windows Firewall, UFW, PowerShell
+            automation, system logging, recovery, and malware-response
+            procedures.
+          </p>
+        </article>
+
+        <article class="project-card">
+          <h3>Troubleshooting & Verification</h3>
+
+          <p>
+            Used tools including ping, dig, nslookup, Test-NetConnection,
+            tcpdump, system logs, service inspection, and firewall rules to
+            isolate faults and verify fixes.
           </p>
         </article>
 
@@ -155,85 +153,105 @@
       <a class="button" href="projects.html">
         View Detailed Experience
       </a>
+
     </section>
 
     <!-- WHAT I'VE DONE -->
     <section id="experience">
+
       <h2>What I've Done</h2>
 
       <p>
         My hands-on work includes Windows and Linux administration,
         Active Directory, DNS, Hyper-V virtualization, managed switching,
-        VLAN segmentation, inter-VLAN communication, IPv4 and IPv6 networking,
-        Wi-Fi deployment, firewall configuration, scripting, automation,
-        storage, backups, and remote administration.
+        VLAN segmentation, IPv4 and IPv6 networking, Wi-Fi deployment,
+        firewall configuration, scripting, automation, storage, backups,
+        and remote administration.
       </p>
 
       <p>
         I have worked with DHCP, SLAAC, Router Advertisements, RDNSS,
         ICMPv6, Neighbor Discovery, TCP and UDP services, Pi-hole,
-        UFW and nftables, SSH, system logs, packet captures, and
+        UFW, nftables, SSH, system logs, packet captures, and
         network-service troubleshooting.
-      </p>
-
-      <p>
-        Troubleshooting has included isolating DNS failures, testing ports,
-        validating addressing and routes, reviewing firewall rules,
-        analyzing packet captures, checking service listeners, and verifying
-        fixes from both client and server perspectives.
       </p>
 
       <a class="button" href="projects.html">
         View Full Technical Experience
       </a>
+
     </section>
 
-    <!-- LABS AND LESSONS -->
+    <!-- LESSONS -->
     <section id="learning">
-      <h2>Labs & Lessons Learned</h2>
+
+      <h2>Lessons Learned</h2>
 
       <p>
-        The lab is not limited to successful configurations. I also document
-        failed attempts, troubleshooting paths, root causes, verification
-        steps, and what I would do differently next time.
+        I document successful configurations as well as failed attempts,
+        troubleshooting paths, root causes, verification steps, and what I
+        would do differently next time.
       </p>
 
       <p>
-        Recent troubleshooting included an IPv6 DNS failure where basic
-        connectivity worked but DNS traffic was blocked by host firewall
-        rules. Packet capture and port testing were used to isolate and
-        correct the problem.
+        Recent work included troubleshooting an IPv6 DNS failure where
+        basic connectivity succeeded but DNS traffic was blocked by missing
+        host firewall rules. Packet capture and port testing were used to
+        isolate and correct the problem.
       </p>
 
       <a class="button" href="lessons-learned.html">
         View Lessons Learned
       </a>
+
     </section>
 
     <!-- COMPLETED LABS -->
     <section id="completed-labs">
+
       <h2>Completed Hands-On Labs</h2>
 
       <p>
         Completed more than 80 CompTIA hands-on labs covering networking,
         hardware, Windows, Linux, virtualization, cloud technologies,
-        security, troubleshooting, and support procedures.
+        security, troubleshooting, and technical support procedures.
       </p>
 
       <a class="button" href="completed-labs.html">
         View Completed Labs
       </a>
+
+    </section>
+
+    <!-- PROJECT GALLERY -->
+    <section id="gallery">
+
+      <h2>Project Gallery</h2>
+
+      <p>
+        Photos and screenshots document network infrastructure,
+        configuration work, systems, troubleshooting results, and other
+        hands-on projects.
+      </p>
+
+      <a class="button" href="Pictures.html">
+        View Project Pictures
+      </a>
+
     </section>
 
     <!-- CERTIFICATES -->
     <section id="certificates">
+
       <h2>Certificates</h2>
 
       <div class="cert-grid">
 
         <!-- A+ BADGE -->
         <article class="certificate-card">
+
           <div class="certificate-content">
+
             <h3>CompTIA A+ Badge</h3>
 
             <p>Certified July 9, 2026</p>
@@ -261,12 +279,15 @@
                 data-share-badge-host="https://www.credly.com"
               ></div>
             </div>
+
           </div>
         </article>
 
         <!-- A+ CERTIFICATE -->
         <article class="certificate-card">
+
           <div class="certificate-content">
+
             <h3>CompTIA A+ Certificate</h3>
 
             <p>Certification date: July 9, 2026</p>
@@ -287,6 +308,7 @@
               id="aplus-certificate"
               hidden
             >
+
               <a
                 class="certificate-image-link"
                 href="CompTIA-A-Plus-Certificate.png"
@@ -308,13 +330,17 @@
               >
                 Open Full Certificate
               </a>
+
             </div>
+
           </div>
         </article>
 
         <!-- HARDWARE AND NETWORK SUPPORT -->
         <article class="certificate-card">
+
           <div class="certificate-content">
+
             <h3>CompTIA Hardware and Network Support</h3>
 
             <p>Certificate date: June 5, 2026</p>
@@ -335,6 +361,7 @@
               id="hardware-certificate"
               hidden
             >
+
               <a
                 class="certificate-image-link"
                 href="CompTIA-Hardware-Network-Support_copy.png"
@@ -356,13 +383,17 @@
               >
                 Open Full Certificate
               </a>
+
             </div>
+
           </div>
         </article>
 
         <!-- SOFTWARE AND SYSTEMS SUPPORT -->
         <article class="certificate-card">
+
           <div class="certificate-content">
+
             <h3>CompTIA Software and Systems Support</h3>
 
             <p>Certificate date: July 9, 2026</p>
@@ -383,6 +414,7 @@
               id="software-certificate"
               hidden
             >
+
               <a
                 class="certificate-image-link"
                 href="CompTIA-Software-Systems-Support_copy.png"
@@ -404,15 +436,19 @@
               >
                 Open Full Certificate
               </a>
+
             </div>
+
           </div>
         </article>
 
       </div>
+
     </section>
 
     <!-- CONTACT -->
     <section id="contact">
+
       <h2>Contact</h2>
 
       <p>
@@ -435,6 +471,16 @@
       >
         View GitHub
       </a>
+
+      <a
+        class="button"
+        href="resume.pdf"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        View Resume
+      </a>
+
     </section>
 
   </main>
@@ -486,7 +532,7 @@
     });
   </script>
 
-  <!-- CLOUDFLARE WEB ANALYTICS -->
+  <!-- Cloudflare Web Analytics -->
   <script
     type="module"
     src="https://static.cloudflareinsights.com/beacon.min.js"
