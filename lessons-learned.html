@@ -292,20 +292,34 @@
       </p>
 
       <div class="project-grid">
+        
+           <article class="project-card">
+  <h3>Windows Sandbox</h3>
 
-        <article class="project-card">
-          <h3>Windows Sandbox Troubleshooting</h3>
+  <p>
+    Investigated Windows Sandbox failures involving errors 0x80070003
+    and 0x80070002 by reviewing Windows features, virtualization
+    services, system files, container components, and graphics-related
+    configuration.
+  </p>
 
-          <p>
-            Investigated Windows Sandbox errors by reviewing Windows
-            features, services, system files, container components, and
-            related settings.
-          </p>
+  <p>
+    Troubleshooting isolated the problem to the system's physical GPU
+    configuration rather than Windows Sandbox itself.
+  </p>
 
-          <p>
-            The issue was not fully resolved, but the process reinforced the
-            importance of documenting attempted fixes and avoiding random
-            changes.
+  <p>
+    After correcting the GPU-related setting, Windows Sandbox launched
+    successfully and operated normally, confirming the graphics
+    configuration as the root cause.
+  </p>
+
+  <p>
+    The issue reinforced the value of isolating hardware and software
+    dependencies, changing one setting at a time, and verifying the result
+    before continuing with additional troubleshooting.
+  </p>
+</article>
           </p>
         </article>
 
