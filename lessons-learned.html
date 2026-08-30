@@ -1,203 +1,479 @@
-# Headley Lab — What I Built and Lessons Learned
+<header class="site-header">
+  <div class="container">
+    <p class="eyebrow">Lessons Learned</p>
 
-## Overview
+    <h1>What I Learned</h1>
 
-I built Headley Lab to turn certification study into practical experience.
+    <p class="intro">
+      Technical lessons, troubleshooting results, failed attempts, and next
+      steps from building and maintaining Headley Lab.
+    </p>
 
-Instead of only memorizing commands and definitions, I used Windows 11 Pro, Hyper-V, Windows Server, Ubuntu Linux, Raspberry Pi OS, and my home network to practice installation, administration, networking, security, troubleshooting, recovery, automation, and documentation.
+    <nav aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="projects.html">Projects</a>
+      <a href="lessons-learned.html">Lessons Learned</a>
+      <a href="completed-labs.html">Completed Labs</a>
+      <a href="Pictures.html">Pictures</a>
+      <a href="index.html#certificates">Certificates</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+  </div>
+</header>
 
-My normal workflow is:
+<main class="container">
 
-**Plan → Build → Test → Troubleshoot → Verify → Document**
+  <section>
+    <h2>How I Approach Troubleshooting</h2>
 
-I create checkpoints before risky virtual machine changes, make one change at a time, verify results with commands or management tools, and document both successful and unsuccessful outcomes.
+    <p>
+      One of the biggest lessons from the lab has been to avoid changing
+      multiple things at once. I try to isolate the problem, test one layer
+      at a time, make a controlled change, and verify the result before
+      moving on.
+    </p>
 
----
+    <p class="workflow">
+      <strong>
+        Plan → Build → Test → Troubleshoot → Verify → Document
+      </strong>
+    </p>
 
-## Virtualization and Windows Administration
+    <p>
+      Commands, logs, packet captures, service status, firewall rules, and
+      repeat testing are more useful than assuming a change worked because
+      a configuration screen looked correct.
+    </p>
+  </section>
 
-- Configured Hyper-V on Windows 11 Pro.
-- Created and managed Windows 11, Windows Server, and Ubuntu virtual machines.
-- Used Hyper-V checkpoints before configuration changes and troubleshooting exercises.
-- Practiced Windows administration with Task Manager, Services, Event Viewer, Task Scheduler, Device Manager, Disk Management, Windows Recovery Environment, Microsoft Defender, Windows Firewall, local users, permissions, and PowerShell.
-- Created scheduled maintenance tasks for Defender updates and scans, DISM health checks, file-health checks, backup reminders, and system monitoring.
-- Enabled PowerShell transcription so administrative commands could be reviewed later.
-- Applied least privilege by removing unnecessary administrative access and verifying account configuration.
+  <section>
+    <h2>Networking and DNS Lessons</h2>
 
----
+    <article class="project-card">
+      <h3>DNS Can Fail While Basic Connectivity Still Works</h3>
 
-## Active Directory, DNS, and Domain Administration
+      <p>
+        I learned that successful ping tests do not prove DNS is functioning.
+        A client can have valid addressing and network connectivity while
+        name resolution, authentication, or application access is still
+        broken.
+      </p>
 
-- Installed Active Directory Domain Services and DNS on Windows Server.
-- Created a Windows Active Directory domain.
-- Configured a domain controller and Windows client on an isolated lab network.
-- Joined Windows clients to the domain and authenticated using domain accounts.
-- Created administrator and standard-user accounts for permission and policy testing.
-- Worked with DNS forward and reverse lookup zones, domain name resolution, account permissions, password policy, and Remote Desktop access.
-- Practiced the difference between local and domain accounts.
-- Learned how DNS affects domain authentication, Group Policy, and access to network resources.
+      <p>
+        This became especially clear while troubleshooting both Windows
+        domain DNS and Pi-hole DNS services.
+      </p>
+    </article>
 
----
+    <article class="project-card">
+      <h3>Troubleshoot the Network in Layers</h3>
 
-## Networking and Infrastructure
+      <p>
+        A consistent troubleshooting order makes network problems easier to
+        isolate:
+      </p>
 
-- Built and administered a centrally managed network using a dedicated gateway, managed multi-gigabit switching, Power over Ethernet, and wired wireless access points.
-- Configured DHCP reservations for important infrastructure devices.
-- Worked with VLAN segmentation, tagged uplinks, access ports, subnetting, and controlled communication between trusted and IoT devices.
-- Created an IoT VLAN with restricted access to the primary LAN.
-- Allowed only required DNS traffic from the IoT VLAN to the centralized DNS server over TCP and UDP port 53.
-- Deployed Pi-hole as a centralized DNS filtering service for devices across multiple network segments.
-- Enabled dual-stack IPv4 and IPv6 networking.
-- Configured IPv6 prefix delegation, Router Advertisements, SLAAC, and RDNSS.
-- Assigned the Pi-hole server a stable IPv6 address for consistent DNS resolution.
-- Worked with ICMPv6 and Neighbor Discovery while validating IPv6 connectivity.
-- Used separate trusted, guest, and IoT wireless networks.
-- Investigated WPA3 compatibility problems and used WPA2 where device support required it.
-- Used a Wi-Fi analyzer to evaluate signal conditions and improve access-point placement.
-- Installed Ethernet cabling and wired backhaul for wireless access points.
+      <p>
+        Addressing → Local connectivity → Gateway or route → DNS → Port →
+        Service → Firewall → Application
+      </p>
 
----
+      <p>
+        This approach helped prevent unnecessary changes to switches,
+        routers, and applications when the actual problem existed somewhere
+        else.
+      </p>
+    </article>
 
-## DNS and IPv6 Troubleshooting
+    <article class="project-card">
+      <h3>VLAN Isolation Requires Intentional Exceptions</h3>
 
-- Used `ipconfig`, `ping`, `nslookup`, `tracert`, `pathping`, `netstat`, `dig`, `tcpdump`, and `Test-NetConnection` to isolate network problems.
-- Diagnosed a Windows client that received an APIPA address and corrected its IPv4 and DNS configuration.
-- Learned to troubleshoot networking in layers: addressing, local connectivity, routing, DNS, ports, services, firewall rules, and applications.
-- Diagnosed an IPv6 issue where the client could successfully ping the Pi-hole server but DNS queries over IPv6 timed out.
-- Verified that Pi-hole could resolve DNS locally over IPv6 using `dig`.
-- Used `tcpdump` to confirm that IPv6 DNS requests were reaching the Linux server.
-- Used `Test-NetConnection` to confirm that TCP port 53 was blocked even though ICMPv6 connectivity worked.
-- Reviewed UFW and nftables firewall rules and identified missing IPv6 DNS permissions.
-- Added IPv6 TCP and UDP port 53 firewall rules for the local IPv6 prefix.
-- Verified successful end-to-end IPv6 DNS resolution using `nslookup`, `Test-NetConnection`, Pi-hole query logs, and packet captures.
-- Learned that successful IPv6 connectivity does not automatically mean an IPv6 application or service is reachable.
+      <p>
+        VLAN segmentation is useful only when communication between networks
+        is controlled deliberately.
+      </p>
 
----
+      <p>
+        I configured an IoT VLAN with restricted access to the primary LAN
+        while allowing required DNS traffic to the Pi-hole server over TCP
+        and UDP port 53.
+      </p>
 
-## Remote Administration
+      <p>
+        This reinforced the importance of allowing only the services that
+        need to cross network boundaries instead of permitting unrestricted
+        inter-VLAN access.
+      </p>
+    </article>
+  </section>
 
-- Used Remote Desktop to access Windows systems and verified account, service, and firewall requirements.
-- Configured Windows Remote Management and PowerShell Remoting.
-- Installed and used OpenSSH on Linux systems.
-- Configured SSH public-key authentication for remote Linux administration.
-- Connected to Linux systems from Windows Terminal and used SSH for command-line administration and file work.
-- Learned to verify remote access by checking reachability, listening ports, firewall rules, service status, and user authorization instead of assuming the remote tool itself was broken.
+  <section>
+    <h2>IPv6 Lessons</h2>
 
----
+    <article class="project-card">
+      <h3>IPv6 Connectivity Does Not Prove a Service Is Reachable</h3>
 
-## Linux Administration and Scripting
+      <p>
+        During Pi-hole testing, a Windows client could successfully ping the
+        server over IPv6 while DNS queries still timed out.
+      </p>
 
-- Practiced Linux navigation, file creation, copying, moving, deletion, permissions, package management, networking, processes, and services.
-- Used commands including `ls`, `cd`, `mkdir`, `cp`, `mv`, `rm`, `chmod`, `ip`, `dig`, `nslookup`, `curl`, `ps`, `top`, `systemctl`, `apt`, and `tcpdump`.
-- Learned the difference between a process snapshot with `ps` and live monitoring with `top`.
-- Used `systemctl status` to investigate services before restarting them.
-- Created Bash scripts using variables, user input, conditionals, loops, command substitution, output redirection, and error redirection.
-- Created and executed storage and system-check scripts.
-- Practiced making scripts executable with `chmod`.
-- Learned that interface display commands show state, while commands such as `ip link set` change interface configuration.
+      <p>
+        ICMPv6 connectivity proved that addressing and Neighbor Discovery
+        were working, but it did not prove that TCP or UDP port 53 was
+        permitted.
+      </p>
+    </article>
 
----
+    <article class="project-card">
+      <h3>IPv6 Depends on More Than Address Assignment</h3>
 
-## ARM Linux Home Server
+      <p>
+        Working with IPv6 required understanding prefix delegation, Router
+        Advertisements, SLAAC, RDNSS, ICMPv6, Neighbor Discovery, and host
+        firewall rules.
+      </p>
 
-- Deployed and administered a Raspberry Pi 5 Linux server.
-- Configured network-wide DNS filtering, shared storage, automated backups, remote administration, and service monitoring.
-- Configured SSH public-key authentication from Windows.
-- Created a local SSH host shortcut for easier administration.
-- Verified storage mounts, system services, kernel logs, and system health.
-- Investigated a firmware warning and confirmed that the system had no undervoltage or thermal throttling.
-- Updated the Raspberry Pi EEPROM bootloader, rebooted the system, and verified the completed firmware update.
-- Configured a stable IPv6 address for network services.
-- Reviewed UFW, nftables, and service listeners while troubleshooting IPv6 DNS.
+      <p>
+        IPv6 services must be tested independently from IPv4 because firewall
+        rules and service behavior can differ between the two protocol
+        versions.
+      </p>
+    </article>
 
----
+    <article class="project-card">
+      <h3>Packet Capture Can Quickly Identify the Failure Point</h3>
 
-## Security, Malware Response, and Recovery
+      <p>
+        I used tcpdump to confirm that IPv6 DNS requests were reaching the
+        Linux server.
+      </p>
 
-- Practiced Microsoft Defender scans, Windows Firewall review, Controlled Folder Access testing, protection history review, and offline scanning concepts.
-- Performed a simulated malware-removal workflow: identify symptoms, isolate the system, remediate and scan, update antimalware protection, schedule future scans and updates, restore recovery settings, create a clean restore point, and educate the user.
-- Practiced the difference between quarantine, removal, recovery, and rebuilding.
-- Learned that after a serious compromise, a reset, reimage, or clean installation may be safer than attempting to trust the existing installation.
-- Investigated Defender detections inside Hyper-V backup archives and verified that the detections were associated with backed-up virtual machine files rather than immediately assuming the host had an active infection.
-- Practiced least privilege, MFA, password-manager use, and hardware-backed authentication.
+      <p>
+        Because the request reached the destination but no DNS response
+        returned, I was able to focus on the server instead of the router or
+        switching path.
+      </p>
 
----
+      <p>
+        Testing TCP port 53 then confirmed the traffic was being blocked by
+        the host firewall. Missing IPv6 UFW rules were added and DNS began
+        working immediately.
+      </p>
+    </article>
+  </section>
 
-## Storage, Backup, and Recovery
+  <section>
+    <h2>Windows, Active Directory, and Virtualization Lessons</h2>
 
-- Worked with Windows backup locations, restore points, recovery options, virtual disks, and system-image concepts.
-- Practiced the correct order for preparing a new disk: initialize it, create a volume, assign a drive letter, format it, label it, and verify it.
-- Used Windows Recovery Environment to identify Startup Repair, Startup Settings, System Restore, Command Prompt, and other recovery options.
-- Learned that System Restore is not a complete file backup.
-- Practiced disabling and recreating restore points during malware-remediation scenarios.
-- Deployed a Raspberry Pi 5 Linux server providing shared storage and automated backup functions.
-- Verified storage mounts, file access, and service availability after configuration changes.
+    <article class="project-card">
+      <h3>Active Directory Depends Heavily on DNS</h3>
 
----
+      <p>
+        I learned that Active Directory authentication, Group Policy, and
+        access to domain resources can fail even when a client has basic IP
+        connectivity.
+      </p>
 
-## Troubleshooting Results and Failures
+      <p>
+        Incorrect DNS settings can make a domain problem appear to be an
+        authentication or Windows problem when the actual cause is name
+        resolution.
+      </p>
+    </article>
 
-Not every lab ended with a clean fix, and I documented those results instead of pretending otherwise.
+    <article class="project-card">
+      <h3>Checkpoints Make Risky Changes Easier to Test</h3>
 
-- Fixed an APIPA and DNS problem that prevented a Windows client from communicating correctly with the Active Directory domain.
-- Learned that a client can have basic IP connectivity while DNS or domain services are still broken.
-- Confirmed that incorrect DNS settings can cause domain login, Group Policy, and network-resource failures.
-- Learned that the HOSTS file can override DNS and that flushing the DNS cache does not remove a bad HOSTS entry.
-- Practiced NTFS and share permissions and learned that network access is controlled by the most restrictive effective combination.
-- Troubleshot Windows Sandbox errors by checking Windows features, services, system files, containers, and related configuration. The issue remained unresolved, but the process improved my ability to document attempted fixes and stop making random changes.
-- Investigated Windows activation and virtual-machine licensing issues and learned to separate licensing problems from operating-system or network problems.
-- Diagnosed an IPv6 DNS failure by proving connectivity first, then testing the DNS service, port access, packet flow, and firewall rules until the root cause was identified.
-- Learned that packet capture can show whether a failure exists on the client, network path, host firewall, or application layer.
+      <p>
+        Hyper-V checkpoints provided a safe way to test configuration
+        changes, troubleshooting exercises, and recovery procedures without
+        rebuilding a virtual machine every time something went wrong.
+      </p>
 
----
+      <p>
+        Recovery planning is part of administration, not something that
+        should be considered only after a failure occurs.
+      </p>
+    </article>
 
-## HeadleyLab.com Portfolio Deployment
+    <article class="project-card">
+      <h3>Local and Domain Context Matters</h3>
 
-- Purchased and configured the `headleylab.com` domain.
-- Created a public GitHub repository for the portfolio.
-- Deployed the site using GitHub Pages.
-- Configured DNS records for the root domain and `www`.
-- Corrected custom-domain and HTTPS issues until the site worked properly.
-- Organized the site into sections for projects, lessons learned, completed labs, certifications, screenshots, and technical experience.
-- Used Git and GitHub as both version control and public documentation of technical work.
+      <p>
+        I practiced the difference between local accounts and domain
+        accounts and learned to verify which security context a user is
+        operating under before troubleshooting permissions or access.
+      </p>
+    </article>
+  </section>
 
----
+  <section>
+    <h2>Linux and Server Administration Lessons</h2>
 
-## Main Lessons Learned
+    <article class="project-card">
+      <h3>Check Service State Before Restarting</h3>
 
-1. **DNS is foundational.** A system can have working IP connectivity and still fail authentication, name-based access, or application communication because DNS is wrong.
+      <p>
+        Commands such as systemctl status, journal logs, network listeners,
+        and firewall rules provide useful evidence before restarting a
+        service.
+      </p>
 
-2. **Troubleshoot one layer at a time.** Check addressing, connectivity, routing, name resolution, ports, services, firewall rules, permissions, and the application in order.
+      <p>
+        Restarting first can erase useful symptoms or make it harder to
+        understand the original problem.
+      </p>
+    </article>
 
-3. **IPv6 requires service-level testing.** Successful ICMPv6 connectivity does not prove that DNS, web services, or other application ports are allowed.
+    <article class="project-card">
+      <h3>Display Commands and Configuration Commands Are Different</h3>
 
-4. **Packet capture is one of the fastest ways to isolate a network problem.** It can show whether traffic reaches the destination and whether a response leaves.
+      <p>
+        I learned to distinguish commands that show interface state from
+        commands that actually change it.
+      </p>
 
-5. **Create a checkpoint before risky changes.** Recovery is part of administration, not an afterthought.
+      <p>
+        For example, viewing an interface with the ip command does not change
+        its state, while commands such as ip link set can modify the
+        interface configuration.
+      </p>
+    </article>
 
-6. **Verification matters more than clicking.** Commands, logs, packet captures, service status, account context, and repeat tests provide evidence that a configuration actually works.
+    <article class="project-card">
+      <h3>Remote Access Problems Should Be Verified Step by Step</h3>
 
-7. **Least privilege reduces risk.** Administrative access should be used only when necessary.
+      <p>
+        When SSH, RDP, or PowerShell Remoting does not work, I verify
+        reachability, listening ports, firewall rules, service status, and
+        user authorization instead of assuming the remote-access tool itself
+        is broken.
+      </p>
+    </article>
+  </section>
 
-8. **Security includes deciding whether a system is still trustworthy.** Sometimes removal is enough; sometimes rebuilding is the safer option.
+  <section>
+    <h2>Security and Recovery Lessons</h2>
 
-9. **A failed lab still produces useful evidence.** Recording symptoms, attempted fixes, errors, and the final state is better than hiding an unresolved problem.
+    <article class="project-card">
+      <h3>Least Privilege Reduces Risk</h3>
 
-10. **Documentation turns practice into experience.** Screenshots, commands, diagrams, packet captures, Git commits, and lessons learned make technical work explainable during an interview.
+      <p>
+        Administrative access should be used only when necessary.
+      </p>
 
----
+      <p>
+        I practiced removing unnecessary elevated access and verifying
+        security settings rather than leaving accounts with more privileges
+        than they require.
+      </p>
+    </article>
 
-## Current Status and Next Steps
+    <article class="project-card">
+      <h3>Security Includes Knowing When Not to Trust a System</h3>
 
-Completed work includes Hyper-V virtualization, Windows and Linux administration, Active Directory and DNS, remote administration, scripting and automation, Raspberry Pi server deployment, managed switching, VLAN segmentation, Pi-hole DNS filtering, IPv4 and IPv6 networking, wireless deployment, security exercises, backup and recovery practice, network troubleshooting, and deployment of headleylab.com.
+      <p>
+        Malware removal does not always restore confidence in a system.
+      </p>
 
-Planned next steps include expanding the lab with additional infrastructure and redundancy:
+      <p>
+        Depending on the severity of a compromise, a reset, reimage, or clean
+        installation may be safer than continuing to use the existing
+        installation.
+      </p>
+    </article>
 
-- Deploy a dedicated mini PC as a router/firewall platform to gain more hands-on experience with routing, firewall policy, VLANs, and network services.
-- Add a secondary DNS service on separate hardware to provide DNS redundancy if the primary Pi-hole server becomes unavailable.
-- Build out a dedicated NAS for centralized storage, backups, and file sharing.
-- Convert an existing laptop to Linux for additional daily-use Linux administration, networking, scripting, and troubleshooting practice.
-- Continue expanding IPv6 and VLAN design across additional network segments.
-- Document routing, ACL, firewall, and DNS behavior in more detail.
-- Add network diagrams, packet-capture examples, and dedicated project pages for the strongest infrastructure projects.
-- Repurpose the current router as a separate lab router on its own VLAN or isolated network segment for routing, firewall, NAT, DHCP, VPN, and troubleshooting practice without disrupting the primary network.
+    <article class="project-card">
+      <h3>System Restore Is Not a Complete Backup</h3>
+
+      <p>
+        Restore points can help recover certain system changes, but they do
+        not replace proper backups.
+      </p>
+
+      <p>
+        Backup strategy, restore testing, and recovery planning should be
+        treated as separate parts of system administration.
+      </p>
+    </article>
+  </section>
+
+  <section>
+    <h2>Failures That Still Taught Me Something</h2>
+
+    <p>
+      Not every lab ended with a clean fix. I keep unresolved problems in my
+      documentation because the troubleshooting process is still useful.
+    </p>
+
+    <article class="project-card">
+      <h3>Windows Sandbox Troubleshooting</h3>
+
+      <p>
+        Investigated Windows Sandbox errors by reviewing Windows features,
+        services, system files, container components, and related settings.
+      </p>
+
+      <p>
+        The issue was not fully resolved, but the process reinforced the
+        importance of documenting attempted fixes and stopping when further
+        random changes are unlikely to produce useful information.
+      </p>
+    </article>
+
+    <article class="project-card">
+      <h3>Licensing and Activation</h3>
+
+      <p>
+        Investigated Windows activation and virtual-machine licensing issues
+        and learned to separate licensing problems from networking,
+        operating-system, or application failures.
+      </p>
+    </article>
+  </section>
+
+  <section>
+    <h2>Main Lessons Learned</h2>
+
+    <ol>
+      <li>
+        <strong>DNS is foundational.</strong>
+        Working IP connectivity does not guarantee that name-based services
+        will function.
+      </li>
+
+      <li>
+        <strong>Troubleshoot one layer at a time.</strong>
+        Addressing, routing, DNS, ports, firewalls, services, permissions,
+        and applications should be tested separately.
+      </li>
+
+      <li>
+        <strong>IPv6 must be tested independently.</strong>
+        IPv4 working correctly does not prove IPv6 services are configured
+        correctly.
+      </li>
+
+      <li>
+        <strong>Packet captures provide evidence.</strong>
+        They can show whether traffic reaches a destination and whether the
+        destination responds.
+      </li>
+
+      <li>
+        <strong>Verification matters more than configuration changes.</strong>
+        Logs, commands, service status, and repeat testing should prove the
+        final state.
+      </li>
+
+      <li>
+        <strong>Recovery should be planned before changes are made.</strong>
+        Checkpoints and backups make experimentation safer.
+      </li>
+
+      <li>
+        <strong>Least privilege reduces unnecessary risk.</strong>
+        Administrative access should be limited to when it is actually
+        required.
+      </li>
+
+      <li>
+        <strong>Failed troubleshooting still produces useful experience.</strong>
+        Symptoms, attempted fixes, errors, and final results are worth
+        documenting.
+      </li>
+
+      <li>
+        <strong>Documentation makes technical work explainable.</strong>
+        Commands, screenshots, diagrams, packet captures, and notes make it
+        easier to reproduce and discuss the work later.
+      </li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>Current Status and Next Steps</h2>
+
+    <p>
+      Current lab work includes virtualization, Windows and Linux
+      administration, Active Directory and DNS, Raspberry Pi server
+      administration, managed switching, VLAN segmentation, Pi-hole DNS
+      filtering, IPv4 and IPv6 networking, wireless infrastructure,
+      scripting, security exercises, backup and recovery, and network
+      troubleshooting.
+    </p>
+
+    <p>
+      Planned next steps include:
+    </p>
+
+    <ul>
+      <li>
+        Deploy a dedicated mini PC as the primary router/firewall platform
+        for additional routing, VLAN, firewall, VPN, and network-service
+        experience.
+      </li>
+
+      <li>
+        Add a secondary DNS service on separate hardware to provide DNS
+        redundancy if the primary DNS server becomes unavailable.
+      </li>
+
+      <li>
+        Build a dedicated NAS for centralized storage, backups, and file
+        sharing.
+      </li>
+
+      <li>
+        Convert an existing laptop to Linux for daily-use Linux
+        administration, networking, scripting, and troubleshooting practice.
+      </li>
+
+      <li>
+        Repurpose the current router as a separate lab router on an isolated
+        VLAN or network segment for routing, NAT, DHCP, firewall, VPN, and
+        troubleshooting experiments without disrupting the primary network.
+      </li>
+
+      <li>
+        Continue expanding VLAN and IPv6 design across additional network
+        segments.
+      </li>
+
+      <li>
+        Document routing, ACL, firewall, DNS, and packet-flow behavior in
+        more detail.
+      </li>
+
+      <li>
+        Add additional network diagrams, packet-capture examples, and
+        dedicated project pages as the lab expands.
+      </li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Continue Exploring</h2>
+
+    <p>
+      For a detailed breakdown of completed technical projects and hands-on
+      experience, view the Projects page.
+    </p>
+
+    <a class="button" href="projects.html">
+      View Projects
+    </a>
+
+    <a class="button" href="Pictures.html">
+      View Project Pictures
+    </a>
+  </section>
+
+</main>
+
+<footer>
+  <div class="container">
+    <p>Headley Lab — Hands-on IT and cybersecurity learning.</p>
+  </div>
+</footer>
