@@ -157,6 +157,43 @@ code {
 
 /* Project cards */
 
+.project-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin: 24px 0;
+  padding: 16px;
+  background: #161b22;
+  border: 1px solid #30363d;
+  border-radius: 12px;
+}
+
+.project-nav a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 40px;
+  padding: 8px 14px;
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: #e8edf3;
+  text-decoration: none;
+  background: #0d1117;
+  border: 1px solid #30363d;
+  border-radius: 999px;
+}
+
+.project-nav a:hover,
+.project-nav a:focus-visible {
+  color: #ffffff;
+  border-color: #58a6ff;
+}
+
+section[id] {
+  scroll-margin-top: 16px;
+}
+
 .project-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -178,6 +215,20 @@ code {
 
 .project-card p:last-child {
   margin-bottom: 0;
+}
+
+.roadmap {
+  padding: 22px 28px;
+}
+
+.roadmap-list {
+  margin-bottom: 0;
+  columns: 2;
+  column-gap: 44px;
+}
+
+.roadmap-list li {
+  break-inside: avoid;
 }
 
 /* Gallery images */
@@ -320,6 +371,14 @@ footer p {
   .site-header nav a {
     flex: 1 1 140px;
     min-width: 0;
+  }
+
+  .project-nav a {
+    flex: 1 1 135px;
+  }
+
+  .roadmap-list {
+    columns: 1;
   }
 
   section {

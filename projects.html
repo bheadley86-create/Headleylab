@@ -3,38 +3,32 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>Headley Lab | Projects</title>
-
   <meta
     name="description"
-    content="Detailed hands-on projects in networking, systems administration, virtualization, Linux, Windows, troubleshooting, and cybersecurity."
+    content="Hands-on projects in networking, systems administration, Microsoft 365, IT support, security, automation, backup, and technical documentation."
   >
-
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-
   <header class="site-header">
     <div class="container">
       <p class="eyebrow">Technical Experience</p>
-
       <h1>Projects and Hands-On Experience</h1>
-
       <p class="intro">
-        Detailed examples of networking, systems administration,
-        virtualization, troubleshooting, and security work completed in
-        Headley Lab.
+        Practical work organized around the technical areas employers
+        evaluate for IT support, networking, and systems-administration roles.
       </p>
 
       <nav aria-label="Main navigation">
         <a href="index.html">Home</a>
         <a href="projects.html">Projects</a>
         <a href="lessons-learned.html">Lessons Learned</a>
+        <a href="index.html#certificates">Certificates</a>
+        <a href="index.html#about">About</a>
         <a href="completed-labs.html">Completed Labs</a>
         <a href="Pictures.html">Pictures</a>
-        <a href="index.html#certificates">Certificates</a>
         <a href="index.html#contact">Contact</a>
         <a href="resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
       </nav>
@@ -42,21 +36,25 @@
   </header>
 
   <main class="container">
+    <nav class="project-nav" aria-label="Project categories">
+      <a href="#networking">Networking</a>
+      <a href="#systems">Systems</a>
+      <a href="#m365">Microsoft 365</a>
+      <a href="#support">IT Support</a>
+      <a href="#security">Security</a>
+      <a href="#automation">Automation</a>
+    </nav>
 
-    <section>
+    <section id="networking">
       <h2>Networking & Infrastructure</h2>
-
       <div class="project-grid">
-
         <article class="project-card">
           <h3>Managed Multi-Gigabit Network</h3>
-
           <p>
             Built and administer a centrally managed network using a dedicated
             gateway, managed multi-gigabit switching, Power over Ethernet,
             Wi-Fi 7 access points, and wired backhaul.
           </p>
-
           <ul>
             <li>Configured DHCP reservations, managed switch ports, and wireless networks.</li>
             <li>Worked with tagged uplinks, access ports, PoE, IPv4, and IPv6.</li>
@@ -65,13 +63,11 @@
         </article>
 
         <article class="project-card">
-          <h3>VLAN Segmentation & Inter-VLAN Routing</h3>
-
+          <h3>VLANs & Inter-VLAN Routing</h3>
           <p>
             Segmented trusted and IoT devices while allowing only the
             cross-network services they require.
           </p>
-
           <ul>
             <li>Configured separate VLANs, gateways, switch ports, and wireless SSIDs.</li>
             <li>Compared router-based routing with Layer 3 switch routing.</li>
@@ -82,12 +78,10 @@
 
         <article class="project-card">
           <h3>Pi-hole & Dual-Stack DNS</h3>
-
           <p>
             Deployed Pi-hole on a Raspberry Pi 5 as a centralized DNS filtering
             service for IPv4 and IPv6 clients.
           </p>
-
           <ul>
             <li>Configured IPv6 prefix delegation, Router Advertisements, SLAAC, and RDNSS.</li>
             <li>Worked with ICMPv6, Neighbor Discovery, and stable server addressing.</li>
@@ -98,12 +92,10 @@
 
         <article class="project-card">
           <h3>DNS & Packet-Capture Troubleshooting</h3>
-
           <p>
             Diagnosed DNS failures by testing connectivity, ports, services,
             firewalls, and packet flow independently.
           </p>
-
           <ul>
             <li>Used <code>ping</code>, <code>dig</code>, <code>nslookup</code>, and <code>Test-NetConnection</code>.</li>
             <li>Captured DNS traffic with <code>tcpdump</code> to verify requests reached the server.</li>
@@ -113,97 +105,82 @@
         </article>
 
         <article class="project-card">
-          <h3>Wireless Deployment & Wired Backhaul</h3>
-
-          <p>
-            Used Wi-Fi analysis to evaluate access-point placement, signal
-            conditions, channel use, and client performance.
-          </p>
-
-          <ul>
-            <li>Installed and terminated Ethernet cabling for wired AP backhaul.</li>
-            <li>Connected PoE access points through managed switching.</li>
-            <li>Tested wired and wireless throughput and network paths.</li>
-          </ul>
-        </article>
-
-        <article class="project-card">
           <h3>MTU & Packet-Size Testing</h3>
-
           <p>
             Tested maximum packet size across multiple switches to verify
             end-to-end Ethernet behavior.
           </p>
-
           <ul>
             <li>Used <code>ping -f -l 1472</code> to test a 1500-byte IPv4 packet without fragmentation.</li>
             <li>Verified successful transmission across the switching path.</li>
-            <li>Compared configured jumbo-frame support with the actual end-to-end MTU.</li>
+            <li>Compared jumbo-frame support with the actual end-to-end MTU.</li>
           </ul>
         </article>
 
+        <article class="project-card">
+          <h3>VPN & Remote Connectivity</h3>
+          <p>
+            Configured and tested secure remote connectivity to lab systems
+            and services from outside the local network.
+          </p>
+          <ul>
+            <li>Used VPN connectivity, SSH, RDP, and PowerShell Remoting.</li>
+            <li>Verified reachability, listening ports, firewall rules, services, and authorization.</li>
+            <li>Tested remote access to BatPi and shared resources.</li>
+          </ul>
+        </article>
       </div>
     </section>
 
-    <section>
-      <h2>Systems, Cloud & Virtualization</h2>
-
+    <section id="systems">
+      <h2>Windows & Systems Administration</h2>
       <div class="project-grid">
+        <article class="project-card">
+          <h3>Active Directory, DNS & DHCP</h3>
+          <p>
+            Installed Active Directory Domain Services and DNS, created a lab
+            domain, joined Windows clients, and practiced Windows Server
+            administration.
+          </p>
+          <ul>
+            <li>Created organizational units, groups, administrative users, and standard users.</li>
+            <li>Worked with domain authentication, DNS zones, DHCP, and permissions.</li>
+            <li>Practiced account lockout and domain-connectivity troubleshooting.</li>
+          </ul>
+        </article>
+
+        <article class="project-card">
+          <h3>Group Policy & Access Administration</h3>
+          <p>
+            Practiced domain policy, security context, and access-control
+            administration in the Windows Server lab.
+          </p>
+          <ul>
+            <li>Worked with password policies and account restrictions.</li>
+            <li>Used <code>gpupdate /force</code> during policy testing.</li>
+            <li>Compared local and domain accounts when troubleshooting access.</li>
+          </ul>
+        </article>
 
         <article class="project-card">
           <h3>Hyper-V Lab</h3>
-
           <p>
             Built a virtual lab using Windows 11, Windows Server, and Ubuntu
             for isolated administration and troubleshooting practice.
           </p>
-
           <ul>
             <li>Configured virtual machines, storage, networking, and resource allocation.</li>
             <li>Used checkpoints before changes to support testing and recovery.</li>
-            <li>Troubleshot virtual-switch and guest connectivity problems.</li>
-          </ul>
-        </article>
-
-        <article class="project-card">
-          <h3>Active Directory & DNS</h3>
-
-          <p>
-            Installed Active Directory Domain Services and DNS, created a lab
-            domain, and joined Windows clients.
-          </p>
-
-          <ul>
-            <li>Created organizational units, groups, administrative users, and standard users.</li>
-            <li>Worked with domain authentication, DNS zones, permissions, and password policies.</li>
-            <li>Practiced account lockout, domain connectivity, and Group Policy troubleshooting.</li>
-          </ul>
-        </article>
-
-        <article class="project-card">
-          <h3>Microsoft 365 & Exchange Online</h3>
-
-          <p>
-            Configured a standalone Microsoft 365 tenant and practiced
-            Exchange Online administration and support workflows.
-          </p>
-
-          <ul>
-            <li>Created and managed users, mailboxes, and a shared Help Desk mailbox.</li>
-            <li>Configured Send As and Send on Behalf permissions.</li>
-            <li>Enabled shared-mailbox sent-item copies.</li>
-            <li>Used Exchange Online PowerShell and message tracing for verification.</li>
+            <li>Troubleshot virtual-switch and guest-connectivity problems.</li>
           </ul>
         </article>
 
         <article class="project-card">
           <h3>Windows Administration</h3>
-
           <p>
             Administered Windows 11 and Windows Server through graphical
             tools, command-line utilities, and PowerShell.
           </p>
-
           <ul>
             <li>Worked with accounts, permissions, services, logs, storage, and scheduled tasks.</li>
             <li>Used Event Viewer, Device Manager, Disk Management, Defender, and Windows Firewall.</li>
@@ -213,12 +190,10 @@
 
         <article class="project-card">
           <h3>Linux Administration</h3>
-
           <p>
             Used Ubuntu and Raspberry Pi OS for command-line administration,
             networking, services, storage, and troubleshooting.
           </p>
-
           <ul>
             <li>Managed packages, permissions, processes, services, and logs.</li>
             <li>Used <code>systemctl</code>, <code>ip</code>, <code>dig</code>, <code>curl</code>, <code>top</code>, and <code>tcpdump</code>.</li>
@@ -227,255 +202,306 @@
         </article>
 
         <article class="project-card">
-          <h3>Azure Virtual Machine</h3>
-
-          <p>
-            Deployed and administered a Windows Server virtual machine in
-            Microsoft Azure.
-          </p>
-
-          <ul>
-            <li>Worked with VM sizing, remote access, networking, and security groups.</li>
-            <li>Used RDP and verified access controls before exposing required services.</li>
-            <li>Reviewed cost and resource-management considerations.</li>
-          </ul>
-        </article>
-
-      </div>
-    </section>
-
-    <section>
-      <h2>Linux Server & Network Services</h2>
-
-      <div class="project-grid">
-
-        <article class="project-card">
-          <h3>ARM Linux Home Server</h3>
-
+          <h3>Raspberry Pi Services</h3>
           <p>
             Deployed a Raspberry Pi 5 as a headless Linux server for DNS,
             shared storage, backups, printing, monitoring, and remote access.
           </p>
-
           <ul>
-            <li>Configured storage mounts, firmware updates, firewall rules, and service monitoring.</li>
-            <li>Used SSH public-key authentication for remote administration.</li>
-            <li>Performed system-health checks and reviewed service logs.</li>
+            <li>Configured SMB file sharing and troubleshot permissions from Windows and Android.</li>
+            <li>Configured CUPS, IPP, and SNMP for a Brother network printer.</li>
+            <li>Managed storage mounts, firewall rules, firmware, services, and logs.</li>
           </ul>
         </article>
-
-        <article class="project-card">
-          <h3>SMB File Services</h3>
-
-          <p>
-            Configured Raspberry Pi-based file sharing for Windows and Android
-            clients.
-          </p>
-
-          <ul>
-            <li>Created shared folders and managed Linux and SMB permissions.</li>
-            <li>Troubleshot authentication and access-denied errors.</li>
-            <li>Tested local and VPN-based access from multiple client types.</li>
-          </ul>
-        </article>
-
-        <article class="project-card">
-          <h3>CUPS Print Server</h3>
-
-          <p>
-            Configured CUPS on the Raspberry Pi to provide centralized network
-            printing in a mixed Windows and Linux environment.
-          </p>
-
-          <ul>
-            <li>Installed CUPS and added a Brother network printer.</li>
-            <li>Worked with Internet Printing Protocol and SNMP printer communication.</li>
-            <li>Tested printer discovery, access, and jobs from network clients.</li>
-          </ul>
-        </article>
-
-        <article class="project-card">
-          <h3>VPN & Remote Administration</h3>
-
-          <p>
-            Configured and tested secure remote access to lab systems from
-            outside the local network.
-          </p>
-
-          <ul>
-            <li>Used VPN connectivity, SSH, RDP, and PowerShell Remoting.</li>
-            <li>Verified reachability, listening ports, firewall rules, services, and authorization.</li>
-            <li>Tested remote access to BatPi and shared resources.</li>
-          </ul>
-        </article>
-
       </div>
     </section>
 
-    <section>
-      <h2>Support, Security & Automation</h2>
-
+    <section id="m365">
+      <h2>Microsoft 365 & Cloud Administration</h2>
       <div class="project-grid">
+        <article class="project-card">
+          <h3>Microsoft 365 & Entra ID</h3>
+          <p>
+            Configured a standalone Microsoft 365 tenant and practiced
+            identity and user administration without permanently connecting
+            it to the local Active Directory lab.
+          </p>
+          <ul>
+            <li>Created and managed cloud users and groups.</li>
+            <li>Worked with administrative roles, account access, and MFA.</li>
+            <li>Practiced help-desk-style identity and access troubleshooting.</li>
+          </ul>
+        </article>
 
         <article class="project-card">
-          <h3>Help Desk Support Practice</h3>
+          <h3>Exchange Online & Shared Mailboxes</h3>
+          <p>
+            Created and administered mailboxes in Exchange Online, including
+            a shared Help Desk mailbox.
+          </p>
+          <ul>
+            <li>Configured Send As and Send on Behalf permissions.</li>
+            <li>Enabled shared-mailbox sent-item copies.</li>
+            <li>Used Exchange Online PowerShell to configure and verify settings.</li>
+            <li>Used message tracing to investigate mail flow and delivery.</li>
+          </ul>
+        </article>
 
+        <article class="project-card">
+          <h3>Microsoft 365 Collaboration Services</h3>
+          <p>
+            Worked with the Microsoft 365 admin environment and the
+            relationships among users, groups, Teams, SharePoint, and OneDrive.
+          </p>
+          <ul>
+            <li>Reviewed service administration and group-based access.</li>
+            <li>Practiced identifying which Microsoft 365 service owns a setting or resource.</li>
+            <li>Documented Intune and endpoint management as a future lab expansion.</li>
+          </ul>
+        </article>
+
+        <article class="project-card">
+          <h3>Azure Virtual Machine</h3>
+          <p>
+            Deployed and administered a Windows Server virtual machine in
+            Microsoft Azure.
+          </p>
+          <ul>
+            <li>Worked with VM sizing, remote access, networking, and network security groups.</li>
+            <li>Used RDP and verified access controls before exposing required services.</li>
+            <li>Reviewed cost and resource-management considerations.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section id="support">
+      <h2>IT Support & Troubleshooting</h2>
+      <div class="project-grid">
+        <article class="project-card">
+          <h3>Help Desk Support Practice</h3>
           <p>
             Practiced structured support workflows using realistic account,
             access, mailbox, printer, and connectivity issues.
           </p>
-
           <ul>
             <li>Identified symptoms, tested likely causes, applied fixes, and verified results.</li>
-            <li>Worked with password resets, permissions, shared mailboxes, and remote support.</li>
-            <li>Documented results and practiced deciding when to escalate.</li>
+            <li>Practiced deciding whether to resolve an issue or escalate it.</li>
+            <li>Documented symptoms, troubleshooting steps, changes, and outcomes.</li>
           </ul>
         </article>
 
         <article class="project-card">
-          <h3>Security Administration</h3>
-
+          <h3>Printer & Peripheral Troubleshooting</h3>
           <p>
-            Applied endpoint and account-security practices across Windows,
-            Linux, and cloud services.
+            Configured and troubleshot local and network printing across
+            Windows and Linux systems.
           </p>
-
           <ul>
-            <li>Practiced least privilege, firewall review, patching, and malware response.</li>
-            <li>Used Microsoft Defender, Windows Firewall, UFW, and nftables.</li>
-            <li>Implemented MFA, password management, and hardware-backed authentication.</li>
+            <li>Worked with drivers, printer discovery, IPP, SNMP, and CUPS.</li>
+            <li>Added and tested a Brother printer from multiple network clients.</li>
+            <li>Checked network reachability, services, permissions, queues, and jobs.</li>
           </ul>
         </article>
 
         <article class="project-card">
-          <h3>Monitoring, Logging & Automation</h3>
-
+          <h3>User Accounts & File Permissions</h3>
           <p>
-            Created PowerShell scripts and scheduled tasks for routine
-            administration, health checks, and evidence collection.
+            Troubleshot local, domain, Linux, SMB, and Microsoft 365 account
+            and access problems.
           </p>
-
           <ul>
-            <li>Collected logs and system-configuration information.</li>
-            <li>Enabled PowerShell transcription.</li>
-            <li>Used repeat testing and output logs to verify changes.</li>
+            <li>Worked with password resets, account lockout, group membership, and least privilege.</li>
+            <li>Compared share permissions with file-system permissions.</li>
+            <li>Diagnosed access-denied errors from Windows and Android clients.</li>
           </ul>
         </article>
 
         <article class="project-card">
-          <h3>Storage, Backup & Recovery</h3>
-
+          <h3>Mail Flow & Mailbox Troubleshooting</h3>
           <p>
-            Practiced Windows and Linux storage administration, backup
-            planning, and recovery procedures.
+            Practiced mailbox support by checking identity, permissions,
+            client behavior, configuration, and message flow separately.
           </p>
-
           <ul>
-            <li>Worked with disks, partitions, volumes, file systems, mounts, and shared storage.</li>
-            <li>Used Windows Recovery Environment, restore points, and system-image concepts.</li>
-            <li>Configured automated backup functions and verified service availability.</li>
+            <li>Verified Send As and Send on Behalf permissions.</li>
+            <li>Checked shared-mailbox sent-item behavior.</li>
+            <li>Used Exchange Online PowerShell and message tracing as evidence.</li>
           </ul>
         </article>
 
+        <article class="project-card">
+          <h3>Layered Network Troubleshooting</h3>
+          <p>
+            Used a repeatable process to isolate addressing, routing, DNS,
+            port, service, firewall, permission, and application failures.
+          </p>
+          <ul>
+            <li>Tested one layer and changed one variable at a time.</li>
+            <li>Used commands, logs, packet captures, and service status to verify conclusions.</li>
+            <li>Recorded failed attempts when they provided useful diagnostic evidence.</li>
+          </ul>
+        </article>
+
+        <article class="project-card">
+          <h3>Ticket-Style Documentation</h3>
+          <p>
+            Converted lab troubleshooting into concise support documentation
+            that explains the problem, investigation, resolution, and result.
+          </p>
+          <ul>
+            <li>Recorded symptoms, scope, affected systems, and error messages.</li>
+            <li>Documented commands, configuration changes, and verification steps.</li>
+            <li>Separated confirmed evidence from assumptions and follow-up work.</li>
+          </ul>
+        </article>
       </div>
     </section>
 
-    <section>
-      <h2>Hardware & Documentation</h2>
-
+    <section id="security">
+      <h2>Security</h2>
       <div class="project-grid">
-
         <article class="project-card">
-          <h3>Custom PC Build</h3>
-
+          <h3>Identity & Authentication Security</h3>
           <p>
-            Planned, assembled, configured, and validated a Windows 11 Pro
-            workstation using modern AMD hardware, DDR5 memory, NVMe storage,
-            and dedicated graphics.
+            Applied stronger authentication and credential-management
+            practices to personal and lab accounts.
           </p>
-
           <ul>
-            <li>Installed the operating system, drivers, security tools, and Hyper-V.</li>
-            <li>Verified memory, storage, networking, temperatures, and stability.</li>
+            <li>Used MFA, Bitwarden password management, and YubiKey hardware authentication.</li>
+            <li>Practiced least privilege and removal of unnecessary administrative access.</li>
+            <li>Worked with SSH public-key authentication for remote Linux administration.</li>
           </ul>
         </article>
 
         <article class="project-card">
-          <h3>Headley Lab Portfolio</h3>
+          <h3>Endpoint Protection & Hardening</h3>
+          <p>
+            Practiced Windows endpoint protection, encryption concepts,
+            patching, recovery planning, and security verification.
+          </p>
+          <ul>
+            <li>Used Microsoft Defender and Windows Firewall.</li>
+            <li>Worked with BitLocker, account security, updates, and recovery options.</li>
+            <li>Practiced malware-response procedures and clean-rebuild decision making.</li>
+          </ul>
+        </article>
 
+        <article class="project-card">
+          <h3>Firewall, ACL & Segmentation Controls</h3>
+          <p>
+            Applied network and host controls to limit communication while
+            preserving access to required services.
+          </p>
+          <ul>
+            <li>Worked with router firewall rules, switch ACL concepts, UFW, and nftables.</li>
+            <li>Restricted IoT access to the trusted LAN.</li>
+            <li>Allowed narrowly scoped DNS traffic over TCP and UDP port 53.</li>
+            <li>Verified policy behavior with port tests, logs, and packet captures.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section id="automation">
+      <h2>Automation & Backup</h2>
+      <div class="project-grid">
+        <article class="project-card">
+          <h3>PowerShell & Task Scheduler</h3>
+          <p>
+            Created PowerShell scripts and scheduled tasks for routine
+            administration, maintenance, and evidence collection.
+          </p>
+          <ul>
+            <li>Collected system-health and configuration information.</li>
+            <li>Scheduled Defender, DISM, backup, and maintenance-related tasks.</li>
+            <li>Enabled PowerShell transcription and retained output for review.</li>
+          </ul>
+        </article>
+
+        <article class="project-card">
+          <h3>Backup & Restore Testing</h3>
+          <p>
+            Practiced Windows and Linux backup planning, storage
+            administration, and recovery procedures.
+          </p>
+          <ul>
+            <li>Worked with Windows system images, restore points, and Windows Recovery Environment.</li>
+            <li>Configured shared storage and automated backup functions on the Linux server.</li>
+            <li>Verified storage mounts, backup destinations, and service availability.</li>
+          </ul>
+        </article>
+
+        <article class="project-card">
+          <h3>Monitoring & Verification</h3>
+          <p>
+            Used scripts, logs, and repeat testing to confirm system state
+            instead of assuming a configuration change succeeded.
+          </p>
+          <ul>
+            <li>Monitored service status, system health, storage, and network behavior.</li>
+            <li>Recorded configuration information before and after changes.</li>
+            <li>Used repeatable verification steps to support troubleshooting and recovery.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section id="documentation">
+      <h2>Portfolio & Documentation</h2>
+      <div class="project-grid">
+        <article class="project-card">
+          <h3>Headley Lab Website</h3>
           <p>
             Built and deployed this technical portfolio using GitHub Pages
             and a custom domain.
           </p>
-
           <ul>
             <li>Configured DNS records, HTTPS, navigation, and responsive page layouts.</li>
             <li>Used Git and GitHub for version control and deployment.</li>
-            <li>Documented projects with explanations, troubleshooting results, and images.</li>
+            <li>Organized project evidence around skills employers can evaluate.</li>
           </ul>
         </article>
 
+        <article class="project-card">
+          <h3>Technical Documentation & Lessons Learned</h3>
+          <p>
+            Documented projects with explanations, screenshots, commands,
+            troubleshooting evidence, and final verification.
+          </p>
+          <ul>
+            <li>Recorded successful configurations and unresolved problems.</li>
+            <li>Explained technical decisions and lessons in plain language.</li>
+            <li>Used screenshots, logs, and packet captures to support project claims.</li>
+          </ul>
+        </article>
       </div>
     </section>
 
-    <section>
-      <h2>Next Projects & Lab Expansion</h2>
-
+    <section class="roadmap" id="roadmap">
+      <h2>Next Projects</h2>
       <p>
-        Planned work focuses on greater redundancy, storage, Linux practice,
-        and advanced routing and firewall administration.
+        Planned work is kept separate so completed projects remain the focus.
       </p>
-
-      <div class="project-grid">
-
-        <article class="project-card">
-          <h3>Dedicated Router & Firewall Platform</h3>
-          <p>
-            Deploy a mini PC for advanced routing, VLANs, firewall policy,
-            VPN services, and isolated network testing.
-          </p>
-        </article>
-
-        <article class="project-card">
-          <h3>Secondary DNS Service</h3>
-          <p>
-            Add DNS redundancy on separate hardware and test client behavior
-            during primary-server outages.
-          </p>
-        </article>
-
-        <article class="project-card">
-          <h3>Dedicated NAS</h3>
-          <p>
-            Build centralized storage for file sharing, backups, restore
-            testing, and recovery practice.
-          </p>
-        </article>
-
-        <article class="project-card">
-          <h3>Linux Daily-Use System</h3>
-          <p>
-            Convert an existing laptop to Linux for daily administration,
-            scripting, networking, and troubleshooting practice.
-          </p>
-        </article>
-
-      </div>
+      <ul class="roadmap-list">
+        <li>Practice Microsoft Intune and endpoint management.</li>
+        <li>Add a secondary DNS service and test failover behavior.</li>
+        <li>Build a dedicated NAS for backups and restore testing.</li>
+        <li>Expand routing, firewall, and isolated-network testing.</li>
+        <li>Use Linux as a daily administration and troubleshooting platform.</li>
+      </ul>
     </section>
 
     <section>
       <h2>Continue Exploring</h2>
-
       <p>
         Troubleshooting results and technical takeaways are documented on
         the Lessons Learned page. Photos and screenshots are available in the
         project gallery.
       </p>
-
       <a class="button" href="lessons-learned.html">View Lessons Learned</a>
       <a class="button" href="Pictures.html">View Project Pictures</a>
     </section>
-
   </main>
 
   <footer>
@@ -483,6 +509,5 @@
       <p>Headley Lab — Hands-on IT and cybersecurity learning.</p>
     </div>
   </footer>
-
 </body>
 </html>
