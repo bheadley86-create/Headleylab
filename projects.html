@@ -85,6 +85,40 @@
             and IPv6 clients.
           </p>
 
+
+<article class="project-card">
+  <h3>Raspberry Pi File Services</h3>
+
+  <p>
+    Configured Raspberry Pi-based file services for shared storage and remote access.
+  </p>
+
+  <ul>
+    <li>Configured network file sharing on BatPi.</li>
+    <li>Troubleshot SMB access from Windows and Android devices.</li>
+    <li>Worked with file and folder permissions.</li>
+    <li>Tested remote access to shared files.</li>
+    <li>Used the Raspberry Pi as part of a small home server environment.</li>
+  </ul>
+</article>
+
+<article class="project-card">
+  <h3>CUPS Print Server</h3>
+
+  <p>
+    Configured a Raspberry Pi as a network print server using CUPS.
+  </p>
+
+  <ul>
+    <li>Installed and configured CUPS.</li>
+    <li>Added and managed a Brother network printer.</li>
+    <li>Worked with IPP and SNMP printer communication.</li>
+    <li>Troubleshot printer connectivity and access.</li>
+    <li>Tested printing from network devices.</li>
+    <li>Used Linux-based print services in a mixed Windows/Linux environment.</li>
+  </ul>
+</article>
+
           <p>
             Configured IPv6 prefix delegation, Router Advertisements, SLAAC,
             RDNSS, stable server addressing, and host-based firewall rules.
@@ -98,7 +132,92 @@
             Diagnosed an issue where IPv6 ping succeeded but DNS queries
             timed out.
           </p>
+<article class="project-card">
+  <h3>VPN and Remote Access</h3>
 
+  <p>
+    Configured and tested secure remote access to lab systems.
+  </p>
+
+  <ul>
+    <li>Worked with VPN-based remote connectivity.</li>
+    <li>Tested remote access to BatPi from outside the local network.</li>
+    <li>Used SSH for Linux administration.</li>
+    <li>Used RDP and other remote-management tools for Windows systems.</li>
+    <li>Practiced secure remote administration and troubleshooting.</li>
+    <li>Verified connectivity and access across different networks.</li>
+  </ul>
+</article>
+
+<article class="project-card">
+  <h3>VLAN and Inter-VLAN Routing</h3>
+
+  <p>
+    Built and tested a segmented network using VLANs and managed switches.
+  </p>
+
+  <ul>
+    <li>Configured separate VLANs for different device groups.</li>
+    <li>Worked with IoT and primary-device network separation.</li>
+    <li>Tested inter-VLAN communication.</li>
+    <li>Compared router-based routing with Layer 3 switch routing.</li>
+    <li>Troubleshot VLAN connectivity and gateway configuration.</li>
+    <li>Verified traffic paths between switches, endpoints, and network services.</li>
+    <li>Used managed switch and router configuration tools to control network traffic.</li>
+  </ul>
+</article>
+
+<article class="project-card">
+  <h3>DNS and Packet Capture Troubleshooting</h3>
+
+  <p>
+    Used packet-level analysis to troubleshoot DNS communication between VLANs and network services.
+  </p>
+
+  <ul>
+    <li>Used <code>tcpdump</code> to capture DNS traffic.</li>
+    <li>Verified client DNS requests reaching the Pi-hole server.</li>
+    <li>Analyzed source and destination IP addresses and UDP port 53 traffic.</li>
+    <li>Confirmed traffic flow between different network segments.</li>
+    <li>Used packet captures to verify actual network behavior instead of relying only on configuration settings.</li>
+    <li>Troubleshot DNS and routing issues across VLANs.</li>
+  </ul>
+</article>
+
+<article class="project-card">
+  <h3>MTU and Packet Size Testing</h3>
+
+  <p>
+    Performed MTU and packet-size testing across the home network.
+  </p>
+
+  <ul>
+    <li>Used <code>ping</code> with the Don't Fragment option to test maximum packet size.</li>
+    <li>Verified successful transmission of 1472-byte ICMP payloads.</li>
+    <li>Tested connectivity across multiple switches.</li>
+    <li>Used MTU testing to confirm end-to-end network behavior.</li>
+    <li>Compared expected Ethernet MTU limits with real-world results.</li>
+    <li>Practiced troubleshooting fragmentation and packet-size issues.</li>
+  </ul>
+</article>
+
+<article class="project-card">
+  <h3>Help Desk and IT Support Simulation</h3>
+
+  <p>
+    Built and practiced common help desk support workflows in a lab environment.
+  </p>
+
+  <ul>
+    <li>Troubleshot user account and access issues.</li>
+    <li>Worked with shared mailbox permissions.</li>
+    <li>Practiced password reset and account-access scenarios.</li>
+    <li>Verified fixes using PowerShell and administrative tools.</li>
+    <li>Documented troubleshooting steps and results.</li>
+    <li>Practiced identifying when an issue should be resolved directly or escalated.</li>
+    <li>Used a structured troubleshooting process: identify the problem, test possible causes, apply a fix, verify the result, and document the resolution.</li>
+  </ul>
+</article>
           <p>
             Used dig, nslookup, Test-NetConnection, tcpdump, Pi-hole query logs,
             UFW, and nftables inspection to isolate the failure to missing IPv6
@@ -156,6 +275,24 @@
             Server, created a lab domain, joined Windows clients, and created
             administrator and standard-user accounts.
           </p>
+
+
+<section>
+  <h2>Microsoft 365 & Exchange Administration</h2>  <p>
+    Configured and administered Microsoft 365 and Exchange Online services in a lab environment.
+    Created and managed user and shared mailboxes, configured mailbox permissions, and used
+    PowerShell and message tracing to verify configuration and troubleshoot mail flow.
+  </p>  <ul>
+    <li>Created and managed Microsoft 365 users and mailboxes.</li>
+    <li>Created a shared Help Desk mailbox.</li>
+    <li>Configured Send As and Send on Behalf permissions.</li>
+    <li>Enabled sent-item copies for shared mailbox activity.</li>
+    <li>Used Exchange Online PowerShell for administration and verification.</li>
+    <li>Used message tracing to troubleshoot mail delivery.</li>
+    <li>Practiced help desk-style mailbox and access troubleshooting.</li>
+  </ul>
+</section>
+
 
           <p>
             Worked with authentication, DNS zones, permissions, password
@@ -363,22 +500,6 @@
         file storage, backups, recovery testing, and network file sharing.
       </p>
     </article>
-
-<section>
-  <h2>Microsoft 365 & Exchange Administration</h2>  <p>
-    Configured and administered Microsoft 365 and Exchange Online services in a lab environment.
-    Created and managed user and shared mailboxes, configured mailbox permissions, and used
-    PowerShell and message tracing to verify configuration and troubleshoot mail flow.
-  </p>  <ul>
-    <li>Created and managed Microsoft 365 users and mailboxes.</li>
-    <li>Created a shared Help Desk mailbox.</li>
-    <li>Configured Send As and Send on Behalf permissions.</li>
-    <li>Enabled sent-item copies for shared mailbox activity.</li>
-    <li>Used Exchange Online PowerShell for administration and verification.</li>
-    <li>Used message tracing to troubleshoot mail delivery.</li>
-    <li>Practiced help desk-style mailbox and access troubleshooting.</li>
-  </ul>
-</section>
 
     <article class="project-card">
       <h3>Linux Daily-Use System</h3>
