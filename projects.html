@@ -36,6 +36,7 @@
         <a href="Pictures.html">Pictures</a>
         <a href="index.html#certificates">Certificates</a>
         <a href="index.html#contact">Contact</a>
+        <a href="resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
       </nav>
     </div>
   </header>
@@ -48,207 +49,104 @@
       <div class="project-grid">
 
         <article class="project-card">
-          <h3>Managed Home Network</h3>
+          <h3>Managed Multi-Gigabit Network</h3>
 
           <p>
-            Built and administered a centrally managed network using a
-            dedicated gateway, managed multi-gigabit switching, Power over
-            Ethernet, wired access points, and centralized device management.
+            Built and administer a centrally managed network using a dedicated
+            gateway, managed multi-gigabit switching, Power over Ethernet,
+            Wi-Fi 7 access points, and wired backhaul.
           </p>
 
-          <p>
-            Configured DHCP reservations, network segmentation, tagged uplinks,
-            access ports, wireless networks, and wired backhaul.
-          </p>
+          <ul>
+            <li>Configured DHCP reservations, managed switch ports, and wireless networks.</li>
+            <li>Worked with tagged uplinks, access ports, PoE, IPv4, and IPv6.</li>
+            <li>Verified physical and logical traffic paths across multiple switches.</li>
+          </ul>
         </article>
 
         <article class="project-card">
-          <h3>VLAN Segmentation</h3>
+          <h3>VLAN Segmentation & Inter-VLAN Routing</h3>
 
           <p>
-            Configured a dedicated IoT VLAN with restricted access to the
-            primary LAN while permitting required DNS traffic to the
-            centralized DNS server over TCP and UDP port 53.
+            Segmented trusted and IoT devices while allowing only the
+            cross-network services they require.
           </p>
 
-          <p>
-            Applied firewall and ACL concepts to preserve segmentation while
-            still allowing shared infrastructure services where required.
-          </p>
+          <ul>
+            <li>Configured separate VLANs, gateways, switch ports, and wireless SSIDs.</li>
+            <li>Compared router-based routing with Layer 3 switch routing.</li>
+            <li>Allowed controlled DNS access without opening unrestricted LAN access.</li>
+            <li>Troubleshot addressing, gateway, tagging, and ACL behavior.</li>
+          </ul>
         </article>
 
         <article class="project-card">
           <h3>Pi-hole & Dual-Stack DNS</h3>
 
           <p>
-            Deployed Pi-hole as a centralized DNS filtering service for IPv4
-            and IPv6 clients.
+            Deployed Pi-hole on a Raspberry Pi 5 as a centralized DNS filtering
+            service for IPv4 and IPv6 clients.
           </p>
 
-
-<article class="project-card">
-  <h3>Raspberry Pi File Services</h3>
-
-  <p>
-    Configured Linux headless Raspberry Pi-based file services for shared storage and remote access.
-  </p>
-
-  <ul>
-    <li>Configured network file sharing on Pi.</li>
-    <li>Troubleshot SMB access from Windows and Android devices.</li>
-    <li>Worked with file and folder permissions.</li>
-    <li>Tested remote access to shared files.</li>
-    <li>Used the Raspberry Pi as part of a small home server environment.</li>
-  </ul>
-</article>
-
-<article class="project-card">
-  <h3>CUPS Print Server</h3>
-
-  <p>
-    Configured a Raspberry Pi as a network print server using CUPS.
-  </p>
-
-  <ul>
-    <li>Installed and configured CUPS.</li>
-    <li>Added and managed a Brother network printer.</li>
-    <li>Worked with IPP and SNMP printer communication.</li>
-    <li>Troubleshot printer connectivity and access.</li>
-    <li>Tested printing from network devices.</li>
-    <li>Used Linux-based print services in a mixed Windows/Linux environment.</li>
-  </ul>
-</article>
-
-          <p>
-            Configured IPv6 prefix delegation, Router Advertisements, SLAAC,
-            RDNSS, stable server addressing, and host-based firewall rules.
-          </p>
+          <ul>
+            <li>Configured IPv6 prefix delegation, Router Advertisements, SLAAC, and RDNSS.</li>
+            <li>Worked with ICMPv6, Neighbor Discovery, and stable server addressing.</li>
+            <li>Verified client DNS assignments and query logging.</li>
+            <li>Configured TCP and UDP port 53 firewall access.</li>
+          </ul>
         </article>
 
         <article class="project-card">
-          <h3>IPv6 DNS Troubleshooting</h3>
+          <h3>DNS & Packet-Capture Troubleshooting</h3>
 
           <p>
-            Diagnosed an issue where IPv6 ping succeeded but DNS queries
-            timed out.
-          </p>
-<article class="project-card">
-  <h3>VPN and Remote Access</h3>
-
-  <p>
-    Configured and tested secure remote access to lab systems.
-  </p>
-
-  <ul>
-    <li>Worked with VPN-based remote connectivity.</li>
-    <li>Tested remote access to BatPi from outside the local network.</li>
-    <li>Used SSH for Linux administration.</li>
-    <li>Used RDP and other remote-management tools for Windows systems.</li>
-    <li>Practiced secure remote administration and troubleshooting.</li>
-    <li>Verified connectivity and access across different networks.</li>
-  </ul>
-</article>
-
-<article class="project-card">
-  <h3>VLAN and Inter-VLAN Routing</h3>
-
-  <p>
-    Built and tested a segmented network using VLANs and managed switches.
-  </p>
-
-  <ul>
-    <li>Configured separate VLANs for different device groups.</li>
-    <li>Worked with IoT and primary-device network separation.</li>
-    <li>Tested inter-VLAN communication.</li>
-    <li>Compared router-based routing with Layer 3 switch routing.</li>
-    <li>Troubleshot VLAN connectivity and gateway configuration.</li>
-    <li>Verified traffic paths between switches, endpoints, and network services.</li>
-    <li>Used managed switch and router configuration tools to control network traffic.</li>
-  </ul>
-</article>
-
-<article class="project-card">
-  <h3>DNS and Packet Capture Troubleshooting</h3>
-
-  <p>
-    Used packet-level analysis to troubleshoot DNS communication between VLANs and network services.
-  </p>
-
-  <ul>
-    <li>Used <code>tcpdump</code> to capture DNS traffic.</li>
-    <li>Verified client DNS requests reaching the Pi-hole server.</li>
-    <li>Analyzed source and destination IP addresses and UDP port 53 traffic.</li>
-    <li>Confirmed traffic flow between different network segments.</li>
-    <li>Used packet captures to verify actual network behavior instead of relying only on configuration settings.</li>
-    <li>Troubleshot DNS and routing issues across VLANs.</li>
-  </ul>
-</article>
-
-<article class="project-card">
-  <h3>MTU and Packet Size Testing</h3>
-
-  <p>
-    Performed MTU and packet-size testing across the home network.
-  </p>
-
-  <ul>
-    <li>Used <code>ping</code> with the Don't Fragment option to test maximum packet size.</li>
-    <li>Verified successful transmission of 1472-byte ICMP payloads.</li>
-    <li>Tested connectivity across multiple switches.</li>
-    <li>Used MTU testing to confirm end-to-end network behavior.</li>
-    <li>Compared expected Ethernet MTU limits with real-world results.</li>
-    <li>Practiced troubleshooting fragmentation and packet-size issues.</li>
-  </ul>
-</article>
-
-<article class="project-card">
-  <h3>Help Desk and IT Support Simulation</h3>
-
-  <p>
-    Built and practiced common help desk support workflows in a lab environment.
-  </p>
-
-  <ul>
-    <li>Troubleshot user account and access issues.</li>
-    <li>Worked with shared mailbox permissions.</li>
-    <li>Practiced password reset and account-access scenarios.</li>
-    <li>Verified fixes using PowerShell and administrative tools.</li>
-    <li>Documented troubleshooting steps and results.</li>
-    <li>Practiced identifying when an issue should be resolved directly or escalated.</li>
-    <li>Used a structured troubleshooting process: identify the problem, test possible causes, apply a fix, verify the result, and document the resolution.</li>
-  </ul>
-</article>
-          <p>
-            Used dig, nslookup, Test-NetConnection, tcpdump, Pi-hole query logs,
-            UFW, and nftables inspection to isolate the failure to missing IPv6
-            DNS firewall rules.
+            Diagnosed DNS failures by testing connectivity, ports, services,
+            firewalls, and packet flow independently.
           </p>
 
-          <p>
-            Added the required TCP and UDP port 53 permissions and verified
-            successful DNS resolution from Windows clients over IPv6.
-          </p>
+          <ul>
+            <li>Used <code>ping</code>, <code>dig</code>, <code>nslookup</code>, and <code>Test-NetConnection</code>.</li>
+            <li>Captured DNS traffic with <code>tcpdump</code> to verify requests reached the server.</li>
+            <li>Inspected Pi-hole logs, UFW, and nftables.</li>
+            <li>Corrected missing IPv6 DNS rules and verified successful resolution.</li>
+          </ul>
         </article>
 
         <article class="project-card">
-          <h3>Wireless & Wired Backhaul</h3>
+          <h3>Wireless Deployment & Wired Backhaul</h3>
 
           <p>
-            Used Wi-Fi analysis to evaluate signal conditions and access-point
-            placement.
+            Used Wi-Fi analysis to evaluate access-point placement, signal
+            conditions, channel use, and client performance.
           </p>
 
+          <ul>
+            <li>Installed and terminated Ethernet cabling for wired AP backhaul.</li>
+            <li>Connected PoE access points through managed switching.</li>
+            <li>Tested wired and wireless throughput and network paths.</li>
+          </ul>
+        </article>
+
+        <article class="project-card">
+          <h3>MTU & Packet-Size Testing</h3>
+
           <p>
-            Installed and terminated Ethernet cabling to provide wired
-            backhaul for wireless access points.
+            Tested maximum packet size across multiple switches to verify
+            end-to-end Ethernet behavior.
           </p>
+
+          <ul>
+            <li>Used <code>ping -f -l 1472</code> to test a 1500-byte IPv4 packet without fragmentation.</li>
+            <li>Verified successful transmission across the switching path.</li>
+            <li>Compared configured jumbo-frame support with the actual end-to-end MTU.</li>
+          </ul>
         </article>
 
       </div>
     </section>
 
     <section>
-      <h2>Systems & Virtualization</h2>
+      <h2>Systems, Cloud & Virtualization</h2>
 
       <div class="project-grid">
 
@@ -256,113 +154,234 @@
           <h3>Hyper-V Lab</h3>
 
           <p>
-            Built a Hyper-V environment using Windows 11, Windows Server,
-            and Ubuntu virtual machines for isolated testing, administration,
-            and troubleshooting practice.
+            Built a virtual lab using Windows 11, Windows Server, and Ubuntu
+            for isolated administration and troubleshooting practice.
           </p>
 
-          <p>
-            Used checkpoints before configuration changes to support controlled
-            experimentation and recovery.
-          </p>
+          <ul>
+            <li>Configured virtual machines, storage, networking, and resource allocation.</li>
+            <li>Used checkpoints before changes to support testing and recovery.</li>
+            <li>Troubleshot virtual-switch and guest connectivity problems.</li>
+          </ul>
         </article>
 
         <article class="project-card">
           <h3>Active Directory & DNS</h3>
 
           <p>
-            Installed Active Directory Domain Services and DNS on Windows
-            Server, created a lab domain, joined Windows clients, and created
-            administrator and standard-user accounts.
+            Installed Active Directory Domain Services and DNS, created a lab
+            domain, and joined Windows clients.
           </p>
 
+          <ul>
+            <li>Created organizational units, groups, administrative users, and standard users.</li>
+            <li>Worked with domain authentication, DNS zones, permissions, and password policies.</li>
+            <li>Practiced account lockout, domain connectivity, and Group Policy troubleshooting.</li>
+          </ul>
+        </article>
 
-<section>
-  <h2>Microsoft 365 & Exchange Administration</h2>  <p>
-    Configured and administered Microsoft 365 and Exchange Online services in a lab environment.
-    Created and managed user and shared mailboxes, configured mailbox permissions, and used
-    PowerShell and message tracing to verify configuration and troubleshoot mail flow.
-  </p>  <ul>
-    <li>Created and managed Microsoft 365 users and mailboxes.</li>
-    <li>Created a shared Help Desk mailbox.</li>
-    <li>Configured Send As and Send on Behalf permissions.</li>
-    <li>Enabled sent-item copies for shared mailbox activity.</li>
-    <li>Used Exchange Online PowerShell for administration and verification.</li>
-    <li>Used message tracing to troubleshoot mail delivery.</li>
-    <li>Practiced help desk-style mailbox and access troubleshooting.</li>
-  </ul>
-</section>
-
+        <article class="project-card">
+          <h3>Microsoft 365 & Exchange Online</h3>
 
           <p>
-            Worked with authentication, DNS zones, permissions, password
-            policies, and domain connectivity troubleshooting.
+            Configured a standalone Microsoft 365 tenant and practiced
+            Exchange Online administration and support workflows.
           </p>
+
+          <ul>
+            <li>Created and managed users, mailboxes, and a shared Help Desk mailbox.</li>
+            <li>Configured Send As and Send on Behalf permissions.</li>
+            <li>Enabled shared-mailbox sent-item copies.</li>
+            <li>Used Exchange Online PowerShell and message tracing for verification.</li>
+          </ul>
         </article>
 
         <article class="project-card">
           <h3>Windows Administration</h3>
 
           <p>
-            Practiced account management, permissions, Event Viewer, Services,
-            Task Scheduler, Device Manager, Disk Management, Windows Recovery
-            Environment, Microsoft Defender, Windows Firewall, and PowerShell.
-<article class="project-card">
-  <h3>Microsoft 365 & Exchange Online Administration</h3>
+            Administered Windows 11 and Windows Server through graphical
+            tools, command-line utilities, and PowerShell.
+          </p>
 
-  <p>
-    Configured and administered Microsoft 365 and Exchange Online services in a lab environment.
-  </p>
-
-  <ul>
-    <li>Created and managed Microsoft 365 users and mailboxes.</li>
-    <li>Created and configured a shared Help Desk mailbox.</li>
-    <li>Configured Send As and Send on Behalf mailbox permissions.</li>
-    <li>Enabled sent-item copies for shared mailbox activity.</li>
-    <li>Used Exchange Online PowerShell to configure and verify settings.</li>
-    <li>Used message tracing to investigate mail flow and delivery.</li>
-    <li>Practiced mailbox access and help desk-style troubleshooting.</li>
-  </ul>
-</article>
-
-   
+          <ul>
+            <li>Worked with accounts, permissions, services, logs, storage, and scheduled tasks.</li>
+            <li>Used Event Viewer, Device Manager, Disk Management, Defender, and Windows Firewall.</li>
+            <li>Practiced recovery, remote administration, and configuration verification.</li>
+          </ul>
+        </article>
 
         <article class="project-card">
           <h3>Linux Administration</h3>
 
           <p>
             Used Ubuntu and Raspberry Pi OS for command-line administration,
-            SSH, package management, permissions, processes, networking,
-            services, logs, and Bash scripting.
+            networking, services, storage, and troubleshooting.
           </p>
 
-          <p>
-            Worked with tools including systemctl, ip, dig, nslookup, curl,
-            ps, top, and tcpdump.
-          </p>
+          <ul>
+            <li>Managed packages, permissions, processes, services, and logs.</li>
+            <li>Used <code>systemctl</code>, <code>ip</code>, <code>dig</code>, <code>curl</code>, <code>top</code>, and <code>tcpdump</code>.</li>
+            <li>Worked with Bash scripting and SSH public-key authentication.</li>
+          </ul>
         </article>
 
         <article class="project-card">
-          <h3>ARM Linux Home Server</h3>
+          <h3>Azure Virtual Machine</h3>
 
           <p>
-            Deployed and administered a Raspberry Pi 5 Linux server providing
-            network-wide DNS filtering, shared storage, automated backups,
-            remote administration, and service monitoring.
+            Deployed and administered a Windows Server virtual machine in
+            Microsoft Azure.
           </p>
 
-          <p>
-            Configured SSH public-key authentication, storage mounts,
-            firmware updates, firewall rules, service monitoring, and system
-            health checks.
-          </p>
+          <ul>
+            <li>Worked with VM sizing, remote access, networking, and security groups.</li>
+            <li>Used RDP and verified access controls before exposing required services.</li>
+            <li>Reviewed cost and resource-management considerations.</li>
+          </ul>
         </article>
 
       </div>
     </section>
 
     <section>
-      <h2>Hardware, Storage & Automation</h2>
+      <h2>Linux Server & Network Services</h2>
+
+      <div class="project-grid">
+
+        <article class="project-card">
+          <h3>ARM Linux Home Server</h3>
+
+          <p>
+            Deployed a Raspberry Pi 5 as a headless Linux server for DNS,
+            shared storage, backups, printing, monitoring, and remote access.
+          </p>
+
+          <ul>
+            <li>Configured storage mounts, firmware updates, firewall rules, and service monitoring.</li>
+            <li>Used SSH public-key authentication for remote administration.</li>
+            <li>Performed system-health checks and reviewed service logs.</li>
+          </ul>
+        </article>
+
+        <article class="project-card">
+          <h3>SMB File Services</h3>
+
+          <p>
+            Configured Raspberry Pi-based file sharing for Windows and Android
+            clients.
+          </p>
+
+          <ul>
+            <li>Created shared folders and managed Linux and SMB permissions.</li>
+            <li>Troubleshot authentication and access-denied errors.</li>
+            <li>Tested local and VPN-based access from multiple client types.</li>
+          </ul>
+        </article>
+
+        <article class="project-card">
+          <h3>CUPS Print Server</h3>
+
+          <p>
+            Configured CUPS on the Raspberry Pi to provide centralized network
+            printing in a mixed Windows and Linux environment.
+          </p>
+
+          <ul>
+            <li>Installed CUPS and added a Brother network printer.</li>
+            <li>Worked with Internet Printing Protocol and SNMP printer communication.</li>
+            <li>Tested printer discovery, access, and jobs from network clients.</li>
+          </ul>
+        </article>
+
+        <article class="project-card">
+          <h3>VPN & Remote Administration</h3>
+
+          <p>
+            Configured and tested secure remote access to lab systems from
+            outside the local network.
+          </p>
+
+          <ul>
+            <li>Used VPN connectivity, SSH, RDP, and PowerShell Remoting.</li>
+            <li>Verified reachability, listening ports, firewall rules, services, and authorization.</li>
+            <li>Tested remote access to BatPi and shared resources.</li>
+          </ul>
+        </article>
+
+      </div>
+    </section>
+
+    <section>
+      <h2>Support, Security & Automation</h2>
+
+      <div class="project-grid">
+
+        <article class="project-card">
+          <h3>Help Desk Support Practice</h3>
+
+          <p>
+            Practiced structured support workflows using realistic account,
+            access, mailbox, printer, and connectivity issues.
+          </p>
+
+          <ul>
+            <li>Identified symptoms, tested likely causes, applied fixes, and verified results.</li>
+            <li>Worked with password resets, permissions, shared mailboxes, and remote support.</li>
+            <li>Documented results and practiced deciding when to escalate.</li>
+          </ul>
+        </article>
+
+        <article class="project-card">
+          <h3>Security Administration</h3>
+
+          <p>
+            Applied endpoint and account-security practices across Windows,
+            Linux, and cloud services.
+          </p>
+
+          <ul>
+            <li>Practiced least privilege, firewall review, patching, and malware response.</li>
+            <li>Used Microsoft Defender, Windows Firewall, UFW, and nftables.</li>
+            <li>Implemented MFA, password management, and hardware-backed authentication.</li>
+          </ul>
+        </article>
+
+        <article class="project-card">
+          <h3>Monitoring, Logging & Automation</h3>
+
+          <p>
+            Created PowerShell scripts and scheduled tasks for routine
+            administration, health checks, and evidence collection.
+          </p>
+
+          <ul>
+            <li>Collected logs and system-configuration information.</li>
+            <li>Enabled PowerShell transcription.</li>
+            <li>Used repeat testing and output logs to verify changes.</li>
+          </ul>
+        </article>
+
+        <article class="project-card">
+          <h3>Storage, Backup & Recovery</h3>
+
+          <p>
+            Practiced Windows and Linux storage administration, backup
+            planning, and recovery procedures.
+          </p>
+
+          <ul>
+            <li>Worked with disks, partitions, volumes, file systems, mounts, and shared storage.</li>
+            <li>Used Windows Recovery Environment, restore points, and system-image concepts.</li>
+            <li>Configured automated backup functions and verified service availability.</li>
+          </ul>
+        </article>
+
+      </div>
+    </section>
+
+    <section>
+      <h2>Hardware & Documentation</h2>
 
       <div class="project-grid">
 
@@ -370,105 +389,74 @@
           <h3>Custom PC Build</h3>
 
           <p>
-            Planned, assembled, and configured a custom Windows 11 Pro desktop
-            using modern AMD hardware, DDR5 memory, NVMe storage, and
-            dedicated graphics.
+            Planned, assembled, configured, and validated a Windows 11 Pro
+            workstation using modern AMD hardware, DDR5 memory, NVMe storage,
+            and dedicated graphics.
           </p>
 
-          <p>
-            Installed drivers, security tools, and Hyper-V, then verified
-            memory, storage, networking, temperatures, and system stability.
-          </p>
+          <ul>
+            <li>Installed the operating system, drivers, security tools, and Hyper-V.</li>
+            <li>Verified memory, storage, networking, temperatures, and stability.</li>
+          </ul>
         </article>
-
-        <article class="project-card">
-          <h3>Monitoring, Logging & Automation</h3>
-
-          <p>
-            Created Windows Task Scheduler jobs and PowerShell scripts to
-            collect logs, monitor system health, record configuration
-            information, and support routine maintenance.
-          </p>
-
-          <p>
-            Enabled PowerShell transcription and used repeat testing and logs
-            to verify administrative changes.
-          </p>
-        </article>
-
-        <article class="project-card">
-          <h3>Storage, Backup & Recovery</h3>
-
-          <p>
-            Practiced disk initialization, volume creation, formatting,
-            restore points, Windows Recovery Environment, virtual disks, and
-            system-image concepts.
-          </p>
-
-          <p>
-            Configured shared storage and automated backup functions on the
-            Linux home server and verified mounts and service availability.
-          </p>
-        </article>
-
-      </div>
-    </section>
-
-    <section>
-      <h2>Security & Remote Administration</h2>
-
-      <div class="project-grid">
-
-        <article class="project-card">
-          <h3>Security Administration</h3>
-
-          <p>
-            Practiced Microsoft Defender scanning, Windows Firewall review,
-            UFW firewall management, least privilege, malware-response
-            procedures, recovery planning, and account security.
-          </p>
-
-          <p>
-            Worked with MFA, password management, and hardware-backed
-            authentication.
-          </p>
-        </article>
-
-        <article class="project-card">
-          <h3>Remote Administration</h3>
-
-          <p>
-            Used Remote Desktop, PowerShell Remoting, Windows Remote
-            Management, OpenSSH, and SSH public-key authentication to
-            administer Windows and Linux systems remotely.
-          </p>
-
-          <p>
-            Verified remote access by checking reachability, listening ports,
-            firewall rules, service status, and user authorization.
-          </p>
-        </article>
-
-      </div>
-    </section>
-
-    <section>
-      <h2>Portfolio & Documentation</h2>
-
-      <div class="project-grid">
 
         <article class="project-card">
           <h3>Headley Lab Portfolio</h3>
 
           <p>
-            Built and deployed a technical portfolio using GitHub Pages and
-            a custom domain.
+            Built and deployed this technical portfolio using GitHub Pages
+            and a custom domain.
           </p>
 
+          <ul>
+            <li>Configured DNS records, HTTPS, navigation, and responsive page layouts.</li>
+            <li>Used Git and GitHub for version control and deployment.</li>
+            <li>Documented projects with explanations, troubleshooting results, and images.</li>
+          </ul>
+        </article>
+
+      </div>
+    </section>
+
+    <section>
+      <h2>Next Projects & Lab Expansion</h2>
+
+      <p>
+        Planned work focuses on greater redundancy, storage, Linux practice,
+        and advanced routing and firewall administration.
+      </p>
+
+      <div class="project-grid">
+
+        <article class="project-card">
+          <h3>Dedicated Router & Firewall Platform</h3>
           <p>
-            Configured DNS records, HTTPS, page structure, project
-            documentation, screenshots, certificates, and Git-based version
-            control.
+            Deploy a mini PC for advanced routing, VLANs, firewall policy,
+            VPN services, and isolated network testing.
+          </p>
+        </article>
+
+        <article class="project-card">
+          <h3>Secondary DNS Service</h3>
+          <p>
+            Add DNS redundancy on separate hardware and test client behavior
+            during primary-server outages.
+          </p>
+        </article>
+
+        <article class="project-card">
+          <h3>Dedicated NAS</h3>
+          <p>
+            Build centralized storage for file sharing, backups, restore
+            testing, and recovery practice.
+          </p>
+        </article>
+
+        <article class="project-card">
+          <h3>Linux Daily-Use System</h3>
+          <p>
+            Convert an existing laptop to Linux for daily administration,
+            scripting, networking, and troubleshooting practice.
           </p>
         </article>
 
@@ -476,109 +464,23 @@
     </section>
 
     <section>
-<section>
-  <h2>Next Projects & Lab Expansion</h2>
-
-  <p>
-    Headley Lab is continuing to expand beyond the current networking,
-    systems administration, virtualization, and security environment.
-    Planned projects are focused on creating more realistic infrastructure,
-    improving redundancy, and increasing hands-on experience with routing,
-    firewalls, Linux, storage, and network services.
-  </p>
-
-  <div class="project-grid">
-
-    <article class="project-card">
-      <h3>Dedicated Router & Firewall Platform</h3>
-
-      <p>
-        Deploy a dedicated mini PC as the primary router and firewall
-        platform to gain additional hands-on experience with routing,
-        VLANs, firewall policies, VPN services, and network management.
-      </p>
-    </article>
-
-    <article class="project-card">
-      <h3>Secondary DNS Server</h3>
-
-      <p>
-        Add a secondary DNS service on separate hardware to provide
-        redundancy if the primary DNS server becomes unavailable and to
-        gain experience designing more resilient network services.
-      </p>
-    </article>
-
-    <article class="project-card">
-      <h3>Dedicated NAS</h3>
-
-      <p>
-        Build a dedicated network-attached storage system for centralized
-        file storage, backups, recovery testing, and network file sharing.
-      </p>
-    </article>
-
-    <article class="project-card">
-      <h3>Linux Daily-Use System</h3>
-
-      <p>
-        Convert an existing laptop to Linux for regular administration,
-        networking, scripting, troubleshooting, package management, and
-        command-line practice outside the virtual lab.
-      </p>
-    </article>
-
-    <article class="project-card">
-      <h3>Isolated Lab Router</h3>
-
-      <p>
-        Repurpose the current router as a separate lab router on an isolated
-        VLAN or network segment for routing, NAT, DHCP, firewall, VPN, and
-        troubleshooting experiments without affecting the primary network.
-      </p>
-    </article>
-
-    <article class="project-card">
-      <h3>Advanced Network Design</h3>
-
-      <p>
-        Continue expanding VLAN and IPv6 design while documenting routing,
-        ACLs, firewall behavior, DNS, and packet flow in greater detail.
-      </p>
-    </article>
-
-  </div>
-
-  <p>
-    Future documentation will also include additional network diagrams,
-    packet captures, troubleshooting examples, and dedicated project pages
-    as the environment grows.
-  </p>
-</section>
-      
       <h2>Continue Exploring</h2>
 
       <p>
-        Troubleshooting results, failed attempts, and technical takeaways are
-        documented on the Lessons Learned page.
+        Troubleshooting results and technical takeaways are documented on
+        the Lessons Learned page. Photos and screenshots are available in the
+        project gallery.
       </p>
 
-      <a class="button" href="lessons-learned.html">
-        View Lessons Learned
-      </a>
-
-      <a class="button" href="Pictures.html">
-        View Project Pictures
-      </a>
+      <a class="button" href="lessons-learned.html">View Lessons Learned</a>
+      <a class="button" href="Pictures.html">View Project Pictures</a>
     </section>
 
   </main>
 
   <footer>
     <div class="container">
-      <p>
-        Headley Lab — Hands-on IT and cybersecurity learning.
-      </p>
+      <p>Headley Lab — Hands-on IT and cybersecurity learning.</p>
     </div>
   </footer>
 
