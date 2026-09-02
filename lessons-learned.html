@@ -96,6 +96,86 @@
           </p>
         </article>
 
+<section class="project-section">
+  <h2>BatPi Backup Troubleshooting – USB HDD Power Issue</h2>
+
+  <h3>Problem</h3>
+  <p>
+    An external USB hard drive connected to BatPi was intended to serve as a local
+    backup destination. The drive intermittently failed to initialize and occasionally
+    caused Raspberry Pi boot and stability problems.
+  </p>
+
+  <h3>Symptoms</h3>
+  <ul>
+    <li>HDD failed to mount consistently</li>
+    <li>Clicking and repeated spin-up attempts</li>
+    <li>BatPi occasionally failed to boot with the HDD connected</li>
+    <li>Drive sometimes required power cycling before becoming available</li>
+    <li>Backup storage could not be considered reliable</li>
+  </ul>
+
+  <h3>Troubleshooting</h3>
+  <p>
+    I checked USB devices, storage devices, mounted filesystems, and kernel messages:
+  </p>
+
+  <pre><code>lsusb
+lsblk
+sudo fdisk -l
+df -h
+dmesg | tail -50</code></pre>
+
+  <p>
+    BatPi operated normally when the HDD was disconnected. Reconnecting the drive
+    reproduced the issue, isolating the problem to the external HDD and its power
+    requirements.
+  </p>
+
+  <h3>Root Cause</h3>
+  <p>
+    The mechanical hard drive required more power during spin-up than the Raspberry
+    Pi USB connection could reliably provide. This caused intermittent initialization
+    and unreliable backup operation.
+  </p>
+
+  <h3>Resolution</h3>
+  <p>
+    I moved the HDD backup workload to a Windows system with more reliable power and
+    storage connectivity.
+  </p>
+
+  <p>BatPi continues to provide:</p>
+  <ul>
+    <li>Pi-hole DNS</li>
+    <li>SMB file sharing</li>
+    <li>CUPS printing</li>
+    <li>Network monitoring and packet capture</li>
+    <li>Remote-access testing</li>
+  </ul>
+
+  <h3>Windows Verification</h3>
+  <p>I verified the storage device in PowerShell using:</p>
+
+  <pre><code>Get-Disk
+Get-Volume
+Get-PhysicalDisk</code></pre>
+
+  <p>
+    Backup files were then checked to confirm that data was successfully written
+    and accessible.
+  </p>
+
+  <h3>Lesson Learned</h3>
+  <p>
+    This issue reinforced the importance of isolating hardware problems before
+    changing software configuration. A system may support USB storage while still
+    being unable to reliably power a mechanical hard drive. Moving backups to Windows
+    provided a more dependable solution while allowing BatPi to focus on network
+    services.
+  </p>
+</section>
+
         <article class="project-card">
           <h3>VLAN Isolation Requires Intentional Exceptions</h3>
 
