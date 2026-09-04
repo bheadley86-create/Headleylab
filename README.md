@@ -9,7 +9,7 @@ The goal of the lab is to build practical hands-on experience by configuring sys
 Certifications & Current Focus
 
 - CompTIA A+
-- Studying for CompTIA Network+ N10-009
+- Network+
 - Building toward Security+ and entry-level IT / cybersecurity roles
 
 Lab Environment
