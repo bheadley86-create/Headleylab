@@ -180,6 +180,38 @@
       </p>
     </article>
 
+    <article class="project-card">
+  <h3>Automated 3-2-1 Backup Strategy</h3>
+
+  <p>
+    Implemented an automated 3-2-1 backup strategy to protect lab documentation,
+    study guides, configuration files, and other important data stored on BatPi.
+  </p>
+
+  <ul>
+    <li>Maintained the primary working copy on the Raspberry Pi 5.</li>
+    <li>Configured a local backup to a Windows 11 Pro workstation using SMB 3.1.1.</li>
+    <li>Configured an offsite cloud backup to Microsoft 365 OneDrive using rclone.</li>
+    <li>Created a dedicated <code>batpibackup</code> Windows account with limited permissions.</li>
+    <li>Protected stored SMB credentials with restricted Linux file permissions.</li>
+    <li>Created a Bash script to back up files to both Windows and OneDrive.</li>
+    <li>Used versioned backup directories to preserve replaced files.</li>
+    <li>Configured a systemd service and timer for automatic daily backups.</li>
+    <li>Added logging and exit-status verification for both backup destinations.</li>
+    <li>Verified SMB writes, OneDrive uploads, automatic mounting, and scheduled execution.</li>
+  </ul>
+
+  <p>
+    <strong>Backup Flow:</strong><br>
+    BatPi &rarr; Windows PC &rarr; Microsoft 365 OneDrive
+  </p>
+
+  <p>
+    The setup follows the 3-2-1 backup model by maintaining three copies of
+    important data across separate systems, with one copy stored offsite in
+    Microsoft 365 OneDrive.
+  </p>
+</article>
 
     <article class="project-card">
       <h3>Security, Automation & Troubleshooting</h3>
