@@ -88,220 +88,250 @@
 
     </section>
 
-    <!-- PROJECT HIGHLIGHTS -->
-    <section id="projects">
+    <<!-- PROJECT HIGHLIGHTS -->
+<section id="projects">
 
   <h2>Project Highlights</h2>
 
   <div class="project-grid">
 
+    <!-- NETWORKING & INFRASTRUCTURE -->
     <article class="project-card">
       <h3>Networking & Infrastructure</h3>
 
       <p>
-        Built and administer a centrally managed dual-stack network using
-        a dedicated gateway, multi-gigabit managed switching, Power over
-        Ethernet, wired wireless-access-point backhaul, and VLAN
-        segmentation.
+        Built and administer a centrally managed dual-stack home lab network
+        using a dedicated gateway, multi-gigabit managed switching, Power over
+        Ethernet, wired wireless-access-point backhaul, and VLAN segmentation.
       </p>
 
-      <p>
-        Configured managed switch ports, tagged uplinks, access ports,
-        DHCP reservations, IPv4 and IPv6 addressing, and segmented IoT
-        connectivity.
-      </p>
+      <ul>
+        <li>Configured managed switches, tagged uplinks, access ports, and VLAN assignments.</li>
+        <li>Created segmented networks for trusted devices, IoT systems, and lab resources.</li>
+        <li>Configured IPv4 and IPv6 addressing, DHCP reservations, and gateway services.</li>
+        <li>Implemented controlled inter-VLAN communication using firewall rules.</li>
+        <li>Deployed and managed Wi-Fi access points with wired Ethernet backhaul.</li>
+        <li>Performed Ethernet, wireless, network-path, and MTU troubleshooting.</li>
+        <li>Verified connectivity and segmentation using ping, packet capture, and network utilities.</li>
+      </ul>
 
       <p>
-        Implemented controlled inter-VLAN communication so isolated devices
-        can reach required infrastructure services without providing
-        unrestricted access to the primary network.
-      </p>
-
-      <p>
-        Worked with Ethernet cabling, wireless deployment, network-path
-        testing, jumbo-frame testing, and end-to-end MTU verification.
+        <strong>Skills:</strong>
+        VLANs, 802.1Q, IPv4, IPv6, DHCP, Routing, Switching,
+        Wi-Fi, PoE, Firewall Rules, Network Troubleshooting
       </p>
     </article>
 
 
+    <!-- WINDOWS SERVER & ACTIVE DIRECTORY -->
     <article class="project-card">
-      <h3>DNS, IPv6 & Network Services</h3>
+      <h3>Windows Server & Active Directory</h3>
 
       <p>
-        Deployed a Raspberry Pi 5 running Pi-hole as a centralized DNS
-        filtering server for both IPv4 and IPv6 clients.
+        Built a Windows Server and Windows client environment in Hyper-V
+        for practicing centralized identity management, authentication,
+        permissions, DNS, and domain administration.
       </p>
 
-      <p>
-        Configured IPv6 prefix delegation, Router Advertisements, SLAAC,
-        RDNSS, ICMPv6, Neighbor Discovery, and stable IPv6 server
-        addressing.
-      </p>
+      <ul>
+        <li>Installed and configured Active Directory Domain Services.</li>
+        <li>Configured Active Directory-integrated DNS services.</li>
+        <li>Created users, groups, organizational units, and administrative accounts.</li>
+        <li>Joined Windows clients to the Active Directory domain.</li>
+        <li>Worked with domain authentication and user permissions.</li>
+        <li>Configured and tested shared resources and NTFS permissions.</li>
+        <li>Troubleshot domain connectivity, authentication, and name-resolution issues.</li>
+      </ul>
 
       <p>
-        Configured firewall and access-control rules allowing DNS over
-        TCP and UDP port 53 while preserving network segmentation.
-      </p>
-
-      <p>
-        Used Pi-hole query logs and client-side DNS testing to verify
-        name resolution across the network and confirm that clients were
-        using the intended DNS services.
+        <strong>Skills:</strong>
+        Active Directory, Windows Server, DNS, Windows 11,
+        Identity Management, Permissions, Authentication, Hyper-V
       </p>
     </article>
 
 
+    <!-- MICROSOFT 365 ADMINISTRATION -->
     <article class="project-card">
-      <h3>Systems, Virtualization & Administration</h3>
+      <h3>Microsoft 365 Administration</h3>
 
       <p>
-        Built a Hyper-V lab using Windows 11, Windows Server, and Ubuntu
-        virtual machines for systems administration, networking,
-        troubleshooting, and recovery practice.
+        Built a Microsoft 365 business lab using a custom domain to practice
+        cloud identity, email administration, collaboration, and Microsoft
+        cloud management.
       </p>
 
-      <p>
-        Installed and configured Active Directory Domain Services and DNS,
-        joined Windows clients to the domain, created administrative and
-        standard-user accounts, and worked with authentication,
-        permissions, and domain connectivity.
-      </p>
+      <ul>
+        <li>Connected the Headley Lab custom domain to Microsoft 365.</li>
+        <li>Configured MX, SPF, and Autodiscover DNS records.</li>
+        <li>Created and managed Exchange Online mailboxes and aliases.</li>
+        <li>Configured a shared Help Desk mailbox.</li>
+        <li>Created distribution lists and security groups.</li>
+        <li>Created and configured a SharePoint site.</li>
+        <li>Used Exchange Online message trace to verify email delivery.</li>
+        <li>Practiced Microsoft 365 administration through both the GUI and PowerShell.</li>
+      </ul>
 
       <p>
-        Administer Windows and Linux systems using PowerShell, Bash, SSH,
-        services, logs, permissions, storage tools, networking utilities,
-        Task Scheduler, and remote-management technologies.
-      </p>
-
-      <p>
-        Use the Raspberry Pi 5 as an ARM Linux home server for DNS,
-        shared storage, backups, monitoring, SSH administration, and
-        additional network services.
+        <strong>Skills:</strong>
+        Microsoft 365, Exchange Online, Entra ID, SharePoint,
+        DNS, Email Administration, PowerShell, Cloud Administration
       </p>
     </article>
 
+
+    <!-- SQL SERVER -->
     <article class="project-card">
-  <h3>Automated 3-2-1 Backup Strategy</h3>
+      <h3>SQL Server 2025 Deployment & Administration</h3>
 
-  <p>
-    Implemented an automated 3-2-1 backup strategy to protect lab documentation,
-    study guides, configuration files, and other important data stored on BatPi.
-  </p>
+      <p>
+        Deployed Microsoft SQL Server 2025 Enterprise Developer in a Hyper-V
+        environment and configured database services, authentication,
+        network connectivity, firewall access, and management tools.
+      </p>
 
-  <ul>
-    <li>Maintained the primary working copy on the Raspberry Pi 5.</li>
-    <li>Configured a local backup to a Windows 11 Pro workstation using SMB 3.1.1.</li>
-    <li>Configured an offsite cloud backup to Microsoft 365 OneDrive using rclone.</li>
-    <li>Created a dedicated Windows account with limited permissions.</li>
-    <li>Protected stored SMB credentials with restricted Linux file permissions.</li>
-    <li>Created a Bash script to back up files to both Windows and OneDrive.</li>
-    <li>Used versioned backup directories to preserve replaced files.</li>
-    <li>Configured a systemd service and timer for automatic daily backups.</li>
-    <li>Added logging and exit-status verification for both backup destinations.</li>
-    <li>Verified SMB writes, OneDrive uploads, automatic mounting, and scheduled execution.</li>
-  </ul>
+      <ul>
+        <li>Installed SQL Server 2025 Enterprise Developer.</li>
+        <li>Configured the default MSSQLSERVER instance.</li>
+        <li>Enabled Mixed Mode authentication.</li>
+        <li>Enabled SQL Server TCP/IP networking.</li>
+        <li>Verified SQL Server listening on TCP port 1433.</li>
+        <li>Configured Windows Firewall to permit SQL Server traffic.</li>
+        <li>Installed and configured SQL Server Management Studio.</li>
+        <li>Verified Windows and SQL Server authentication.</li>
+        <li>Created and queried a LabTest database.</li>
+        <li>Configured Hyper-V Dynamic Memory for the SQL virtual machine.</li>
+      </ul>
 
-  <p>
-    <strong>Backup Flow:</strong><br>
-    BatPi &rarr; Windows PC &rarr; Microsoft 365 OneDrive
-  </p>
+      <p>
+        <strong>Skills:</strong>
+        SQL Server, SSMS, TCP/IP, Windows Firewall,
+        Database Administration, Authentication, Hyper-V
+      </p>
+    </article>
 
-  <p>
-    The setup follows the 3-2-1 backup model by maintaining three copies of
-    important data across separate systems, with one copy stored offsite in
-    Microsoft 365 OneDrive.
-  </p>
-</article>
 
+    <!-- LINUX SERVER -->
+    <article class="project-card">
+      <h3>Linux Server Services & Windows Integration</h3>
+
+      <p>
+        Built and configured Ubuntu Server systems in Hyper-V to provide
+        network services, remote administration, logging, web services,
+        and cross-platform file sharing.
+      </p>
+
+      <ul>
+        <li>Configured Ubuntu Server virtual machines in Hyper-V.</li>
+        <li>Enabled SSH for secure remote administration.</li>
+        <li>Installed and configured Apache web services.</li>
+        <li>Configured rsyslog for Linux system logging.</li>
+        <li>Configured UFW host-based firewall rules.</li>
+        <li>Installed and configured Samba file sharing.</li>
+        <li>Created the LabShare SMB share.</li>
+        <li>Mapped the Linux SMB share from Windows as a network drive.</li>
+        <li>Verified file access between Linux and Windows systems.</li>
+      </ul>
+
+      <p>
+        <strong>Skills:</strong>
+        Linux, Ubuntu Server, SSH, Apache, Samba, SMB,
+        UFW, rsyslog, Bash, Hyper-V
+      </p>
+    </article>
+
+
+    <!-- RASPBERRY PI -->
+    <article class="project-card">
+      <h3>Raspberry Pi Network Services</h3>
+
+      <p>
+        Deployed a Raspberry Pi 5 as a Linux-based network services platform
+        supporting DNS filtering, file sharing, printing, remote access,
+        monitoring, and other infrastructure services.
+      </p>
+
+      <ul>
+        <li>Deployed Pi-hole as the network's centralized DNS filtering service.</li>
+        <li>Configured DNS services for IPv4 and IPv6 clients.</li>
+        <li>Configured Samba file sharing and permissions.</li>
+        <li>Deployed CUPS as a network print server.</li>
+        <li>Configured SSH remote administration.</li>
+        <li>Worked with WireGuard and Tailscale for remote connectivity.</li>
+        <li>Used Linux services, logs, permissions, and networking tools for troubleshooting.</li>
+      </ul>
+
+      <p>
+        <strong>Skills:</strong>
+        Raspberry Pi, Linux, Pi-hole, DNS, Samba,
+        CUPS, SSH, VPN, IPv6, Network Services
+      </p>
+    </article>
+
+
+    <!-- BACKUP -->
+    <article class="project-card">
+      <h3>Automated 3-2-1 Backup Strategy</h3>
+
+      <p>
+        Implemented an automated backup system to protect lab documentation,
+        study guides, configuration files, and other important data stored
+        on the Raspberry Pi server.
+      </p>
+
+      <ul>
+        <li>Maintained the primary working copy on the Raspberry Pi 5.</li>
+        <li>Configured a local Windows 11 Pro backup destination using SMB 3.1.1.</li>
+        <li>Configured an offsite Microsoft 365 OneDrive backup using rclone.</li>
+        <li>Created a dedicated Windows account with restricted permissions.</li>
+        <li>Protected stored SMB credentials with Linux file permissions.</li>
+        <li>Created a Bash backup script for both backup destinations.</li>
+        <li>Used versioned directories to preserve replaced files.</li>
+        <li>Configured a systemd service and timer for automatic daily backups.</li>
+        <li>Added logging and exit-status verification.</li>
+        <li>Verified SMB writes, cloud uploads, mounting, and scheduled execution.</li>
+      </ul>
+
+      <p>
+        <strong>Backup Flow:</strong><br>
+        BatPi &rarr; Windows 11 Pro &rarr; Microsoft 365 OneDrive
+      </p>
+
+      <p>
+        <strong>Skills:</strong>
+        Backup Administration, SMB, rclone, OneDrive,
+        Bash, systemd, Linux Permissions, Automation
+      </p>
+    </article>
+
+
+    <!-- SECURITY & TROUBLESHOOTING -->
     <article class="project-card">
       <h3>Security, Automation & Troubleshooting</h3>
 
       <p>
-        Practiced least privilege, SSH public-key authentication,
-        Microsoft Defender, Windows Firewall, UFW, nftables, MFA,
-        malware-response procedures, recovery planning, and
-        hardware-backed authentication.
+        Apply security controls and structured troubleshooting across Windows,
+        Linux, networking, and cloud environments while documenting the
+        symptoms, root cause, corrective action, and final verification.
       </p>
 
-      <p>
-        Created PowerShell automation and scheduled tasks for system
-        administration, logging, monitoring, configuration collection,
-        and routine maintenance.
-      </p>
+      <ul>
+        <li>Configured Windows Firewall, UFW, and network firewall rules.</li>
+        <li>Practiced least privilege and account permission management.</li>
+        <li>Implemented SSH public-key authentication and multi-factor authentication.</li>
+        <li>Worked with Microsoft Defender and malware-response procedures.</li>
+        <li>Created PowerShell and Bash automation for administrative tasks.</li>
+        <li>Used scheduled tasks and systemd timers for recurring operations.</li>
+        <li>Used ping, dig, nslookup, Test-NetConnection, tcpdump, logs, and packet captures.</li>
+        <li>Isolated an IPv6 DNS issue by verifying connectivity, capturing traffic, testing ports, and correcting firewall rules.</li>
+      </ul>
 
       <p>
-        Troubleshoot by testing each layer independently using tools such
-        as ping, dig, nslookup, Test-NetConnection, tcpdump, system logs,
-        service status, firewall inspection, and packet captures.
-      </p>
-
-      <p>
-        One troubleshooting project isolated an IPv6 DNS failure where
-        ping succeeded but DNS did not. Packet capture confirmed queries
-        reached the server, port testing identified the blocked service,
-        and missing IPv6 firewall rules were corrected and verified.
+        <strong>Skills:</strong>
+        Troubleshooting, Windows Firewall, UFW, MFA,
+        SSH, PowerShell, Bash, Packet Capture, Security Controls
       </p>
     </article>
-
-
-<!-- SQL Server 2025 Deployment & Validation -->
-<div class="project-card">
-  <h3>SQL Server 2025 Deployment & Validation</h3>
-  <p>
-    Deployed and validated Microsoft SQL Server 2025 Enterprise Developer
-    in a Hyper-V lab environment. Configured database services, authentication,
-    network connectivity, firewall access, and SQL Server Management Studio.
-  </p>
-
-  <ul>
-    <li>Installed SQL Server 2025 Enterprise Developer</li>
-    <li>Configured the default MSSQLSERVER instance</li>
-    <li>Enabled Mixed Mode authentication</li>
-    <li>Enabled TCP/IP connectivity</li>
-    <li>Verified SQL Server listening on TCP port 1433</li>
-    <li>Configured Windows Firewall to allow SQL Server traffic</li>
-    <li>Installed and configured SQL Server Management Studio (SSMS)</li>
-    <li>Verified Windows Authentication</li>
-    <li>Verified SQL Authentication using the sa account</li>
-    <li>Created and queried a LabTest database</li>
-    <li>Configured Hyper-V Dynamic Memory for the SQL virtual machine</li>
-  </ul>
-
-  <p>
-    <strong>Skills:</strong>
-    SQL Server, SSMS, Hyper-V, TCP/IP, Windows Firewall,
-    Database Administration, Authentication, Server Configuration
-  </p>
-</div>
-
-
-<!-- Ubuntu Server Services & Windows Integration -->
-<div class="project-card">
-  <h3>Ubuntu Server Services & Windows Integration</h3>
-  <p>
-    Built and configured an Ubuntu Server virtual machine to provide
-    Linux-based network services and integrate with Windows systems
-    in the home lab.
-  </p>
-
-  <ul>
-    <li>Configured Ubuntu Server in Hyper-V</li>
-    <li>Enabled SSH for remote administration</li>
-    <li>Installed and configured Apache web services</li>
-    <li>Configured rsyslog logging services</li>
-    <li>Configured UFW host firewall rules</li>
-    <li>Installed and configured Samba file sharing</li>
-    <li>Created the LabShare SMB share</li>
-    <li>Mapped the Samba share from Windows as a network drive</li>
-    <li>Verified cross-platform file access between Linux and Windows</li>
-  </ul>
-
-  <p>
-    <strong>Skills:</strong>
-    Linux, Ubuntu Server, SSH, Apache, Samba, SMB,
-    UFW, rsyslog, Hyper-V, Windows/Linux Integration
-  </p>
-</div>
 
   </div>
 
